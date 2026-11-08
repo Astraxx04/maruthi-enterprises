@@ -103,7 +103,7 @@ public key cannot read enquiries.
 
    | Variable | Value |
    | --- | --- |
-   | `ADMIN_PASSWORD` | a long random password — this is the only lock on `/admin` |
+   | `ADMIN_PASSWORD` | `openssl rand -base64 24` — the only lock on `/admin` (see below) |
    | `ADMIN_SESSION_SECRET` | `openssl rand -base64 32` |
    | `NEXT_PUBLIC_SITE_URL` | `https://<your-site>.netlify.app`, or the custom domain |
    | `NEXT_PUBLIC_SUPABASE_URL` | from step 2 |
@@ -112,6 +112,13 @@ public key cannot read enquiries.
    | `NEXT_PUBLIC_BUSINESS_*` | optional — only to override what is in `src/lib/site.ts` |
 
    Notification variables come later, in step 6. Skip them for now.
+
+   > **Never use the business email, phone number or name as `ADMIN_PASSWORD`.** All of
+   > those are printed in the footer of every page, so the password would be published
+   > along with the site. `npm run check:deploy` fails if it spots this.
+   >
+   > Netlify's secret scanner will flag it too, reporting the value "found" in your
+   > prerendered pages — that is the scanner working, not a bug in the site.
 
 3. **Deploy site**. First build takes three or four minutes.
 4. Attach a custom domain under **Domain management**, then update
@@ -188,6 +195,27 @@ installed rather than on Netlify. Nothing in the code changes.
 **Image uploads need Supabase Storage.** With the keys set they go to the bucket. The
 admin shows a clear message rather than failing silently if they are missing — and you
 can always paste an image URL instead.
+
+---
+
+## If Netlify's secret scanner complains
+
+It compares every environment variable's **value** against the repository and the build
+output, so a variable set to something that legitimately appears in the code gets flagged.
+
+- **`SUPABASE_STORAGE_BUCKET`** — its value is the bucket name `product-images`, which
+  has to appear in `supabase/schema.sql` to create the bucket. Not a secret.
+  `netlify.toml` already tells the scanner to skip this one key; you can also simply
+  delete the variable in Netlify, since the code defaults to the same name.
+- **`ADMIN_PASSWORD` reported inside `.netlify/deploy/...` blobs** — those blobs are the
+  prerendered pages. If the password turns up there it is because you set it to
+  something the site prints, such as the business email. **Change the password**; do not
+  silence the scanner.
+- Anything else — treat it as real until you have proved otherwise. `grep -r` the value
+  across the repository and the `.next` folder.
+
+Only ever add a key to `SECRETS_SCAN_OMIT_KEYS` when you have confirmed its value is
+genuinely public information.
 
 ---
 

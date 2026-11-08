@@ -11,6 +11,13 @@
 [build.environment]
   NODE_VERSION = "22"
 
+  # SUPABASE_STORAGE_BUCKET is a bucket name ("product-images"), not a secret:
+  # it has to appear in supabase/schema.sql to create the bucket at all. Telling
+  # the scanner to skip that one key keeps real findings visible.
+  # Nothing else belongs here — if the scanner flags another variable, it is
+  # either genuinely leaking or set to a value that is public on the site.
+  SECRETS_SCAN_OMIT_KEYS = "SUPABASE_STORAGE_BUCKET"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 

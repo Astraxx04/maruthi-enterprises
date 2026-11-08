@@ -23,8 +23,43 @@ const required = (name) => {
 
 console.log("\nAdmin");
 required("ADMIN_PASSWORD");
-if (process.env.ADMIN_PASSWORD && process.env.ADMIN_PASSWORD.length < 12) {
+const adminPassword = process.env.ADMIN_PASSWORD;
+if (adminPassword && adminPassword.length < 12) {
   warn("ADMIN_PASSWORD is short — use a long random one in production");
+}
+
+/**
+ * The admin password must not be anything printed on the public site. The
+ * business email, for instance, appears in the footer of every page — using it
+ * as the password publishes the password.
+ */
+if (adminPassword) {
+  const published = [
+    ["business email", process.env.NEXT_PUBLIC_BUSINESS_EMAIL],
+    ["enquiry email", process.env.ENQUIRY_TO_EMAIL],
+    ["phone number", process.env.NEXT_PUBLIC_BUSINESS_PHONE],
+    ["WhatsApp number", process.env.NEXT_PUBLIC_BUSINESS_WHATSAPP],
+    ["business name", process.env.NEXT_PUBLIC_BUSINESS_NAME],
+    ["GST number", process.env.NEXT_PUBLIC_BUSINESS_GSTIN],
+    ["site URL", process.env.NEXT_PUBLIC_SITE_URL],
+  ];
+
+  const lower = adminPassword.toLowerCase();
+  const clash = published.find(
+    ([, value]) =>
+      value &&
+      value.length > 4 &&
+      (value.toLowerCase().includes(lower) || lower.includes(value.toLowerCase())),
+  );
+
+  if (clash) {
+    fail(`ADMIN_PASSWORD matches the ${clash[0]}, which is printed on every page of the site.`);
+    console.log("    Anyone reading the footer can log into /admin. Change it now:");
+    console.log("      openssl rand -base64 24");
+    problems += 1;
+  } else {
+    pass("ADMIN_PASSWORD is not something published on the site");
+  }
 }
 if (process.env.ADMIN_SESSION_SECRET) pass("ADMIN_SESSION_SECRET is set");
 else {
