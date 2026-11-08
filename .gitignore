@@ -32,3 +32,4 @@ public/products
 
 # Local-development upload fallback; created on demand, never used in production.
 public/uploads
+/new
