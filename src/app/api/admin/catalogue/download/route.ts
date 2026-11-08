@@ -16,11 +16,10 @@ export async function GET(request: Request) {
 
   const { size } = await stat(file);
   const stream = Readable.toWeb(createReadStream(file)) as ReadableStream;
-  const isPdf = file.endsWith(".pdf");
 
   return new NextResponse(stream, {
     headers: {
-      "Content-Type": isPdf ? "application/pdf" : "text/html; charset=utf-8",
+      "Content-Type": "application/pdf",
       "Content-Length": String(size),
       // inline so the browser's PDF viewer opens it; the UI offers a download too
       "Content-Disposition": `inline; filename="${name.replace(/"/g, "")}"`,

@@ -1,0 +1,16 @@
+<section class="sheet cover-sheet">
+  <span class="cover-blob cover-blob--a" aria-hidden="true"></span>
+  <span class="cover-blob cover-blob--b" aria-hidden="true"></span>
+  <div class="cover">
+    <span class="cover-kicker">Product catalogue</span>
+    <h1 class="cover-title">{{businessName}}</h1>
+    {{#if tagline}}<p class="cover-tagline">{{tagline}}</p>{{/if}}
+
+    <div class="cover-card">
+      {{#if phone}}<div><dt>Call</dt><dd>{{phone}}</dd></div>{{/if}}
+      {{#if email}}<div><dt>Email</dt><dd>{{email}}</dd></div>{{/if}}
+      {{#if address}}<div class="wide"><dt>Visit</dt><dd>{{address}}</dd></div>{{/if}}
+      {{#if gstin}}<div class="wide"><dt>GST</dt><dd>{{gstin}}</dd></div>{{/if}}
+    </div>
+  </div>
+</section>

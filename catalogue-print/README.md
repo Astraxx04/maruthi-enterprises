@@ -14,16 +14,19 @@ side in `catalogue-print/out/`:
 
 ```bash
 node catalogue-print/build.mjs --template=modern-grid
-node catalogue-print/build.mjs --template=spotlight
-node catalogue-print/build.mjs --template=lookbook --only="Eye & Lens Care"
+node catalogue-print/build.mjs --template=midnight
+node catalogue-print/build.mjs --template=vivid --only="Eye & Lens Care"
 
 # name the file yourself
-node catalogue-print/build.mjs --template=spotlight --out=Hair-Care-Range
+node catalogue-print/build.mjs --template=swiss --out=Hair-Care-Range
 ```
 
-Other flags: `--featured` (featured products only), `--order=name|category|data`,
+Products are always printed grouped by category, and each card shows only the
+photograph, the name and the pack sizes (when the product has any).
+
+Other flags: `--featured` (featured products only),
 `--source=file.json` (build from a snapshot instead of `data/catalogue.json`), `--json`
-(print a machine-readable result line), `--html` (skip the PDF).
+(print a machine-readable result line), `--html` (save the HTML page for previewing, skip the PDF).
 
 To settle on one template, set `"template"` in `config.json` and `npm run catalogue:pdf`
 uses it. Set `"output": { "suffixTemplate": false }` to drop the `-<template>` suffix
@@ -55,8 +58,8 @@ data/catalogue.json
         │       │
         │       └── templates/<name>/   layout, styling, ornaments
         │
-        ├── out/…​.html         the page, exactly as it will print
-        └── out/…​.pdf          printed by headless Chrome
+        └── out/…​.pdf          printed by headless Chrome (only the PDF is kept;
+                                 --html saves the page instead, for previewing)
 ```
 
 Chrome does the printing, so there is nothing to install. The script looks for
@@ -83,7 +86,6 @@ Command line flags override the file for one run:
 
 ```bash
 node catalogue-print/build.mjs --only="Hair Care & Colour"
-node catalogue-print/build.mjs --order=name
 node catalogue-print/build.mjs --template=gold-classic --html
 ```
 
@@ -91,25 +93,24 @@ node catalogue-print/build.mjs --template=gold-classic --html
 
 ## Templates
 
-Five ship with the project — two that match the printed original, three modern ones
-built to put the photograph first:
+Five ship with the project, all 2 × 3 — two products in a row, three rows, six a page:
 
-| Template | Layout | Use it for |
-| --- | --- | --- |
-| `gold-classic` | 2 × 3, six a page, gold frames | The main catalogue — matches the printed original |
-| `compact-list` | 3 × 4, twelve a page, brands shown | A dense trade list |
-| `modern-grid` | 2 × 3, six a page, no frames | A clean modern catalogue: big photographs, brand, name and a line of copy |
-| `spotlight` | 2 a page, alternating sides | Giving each product a full band — good for a range or a new launch |
-| `lookbook` | 1 a page | A short premium leave-behind; pair it with `onlyFeatured` or `--only` |
+| Template | Look |
+| --- | --- |
+| `gold-classic` | Matches the printed original: ivy flourishes and gold bead frames |
+| `modern-grid` | Clean and white: photographs in hairline panels, sizes as pills |
+| `midnight` | Dark navy pages, photographs on white tiles, teal size pills |
+| `vivid` | Bold coloured banner per category (each category starts a new page), coral and black size chips |
+| `swiss` | Minimal hairline grid, numbered products, sizes in monospace |
 
-The three modern templates share a palette set in `template.json` → `colors.gold`
-(accent) and `colors.goldSoft` (panel tint). Change those two values and the whole
-template re-skins.
+Each template's accent comes from `template.json` → `colors.gold` and its tint from
+`colors.goldSoft`; change those two values to re-skin it. A template can set
+`"categoryPageBreak": true` to start every category on a fresh page, as `vivid` does.
+Cards can use `{{number}}` — the product's position in the whole catalogue, as `swiss` does.
 
 ```bash
-node catalogue-print/build.mjs --template=modern-grid
-node catalogue-print/build.mjs --template=spotlight --only="Hair Care & Colour"
-node catalogue-print/build.mjs --template=lookbook        # with onlyFeatured in config.json
+node catalogue-print/build.mjs --template=midnight
+node catalogue-print/build.mjs --template=vivid --only="Hair Care & Colour"
 ```
 
 ## Changing the template
@@ -165,7 +166,7 @@ and `assets`.
 two lines it ellipsises. Smaller cards want smaller numbers.
 
 Add `"assetsFrom": "gold-classic"` to borrow another template's ornaments instead
-of copying the PNGs, as `compact-list` does. `"sortOrder"` (a number) decides where the
+of copying the PNGs, as `modern-grid` does. `"sortOrder"` (a number) decides where the
 template appears in the admin picker — lower comes first.
 
 Those numbers were measured off the original catalogue. Four products per page

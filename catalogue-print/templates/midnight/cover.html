@@ -1,0 +1,15 @@
+<section class="sheet cover-sheet">
+  <div class="glow glow--cover" aria-hidden="true"></div>
+  <div class="cover">
+    <span class="cover-chip">Product Catalogue</span>
+    <h1 class="cover-title">{{businessName}}</h1>
+    {{#if tagline}}<p class="cover-tagline">{{tagline}}</p>{{/if}}
+
+    <div class="cover-details">
+      {{#if address}}<div><dt>Address</dt><dd>{{address}}</dd></div>{{/if}}
+      {{#if phone}}<div><dt>Phone</dt><dd>{{phone}}</dd></div>{{/if}}
+      {{#if email}}<div><dt>Email</dt><dd>{{email}}</dd></div>{{/if}}
+      {{#if gstin}}<div><dt>GST</dt><dd>{{gstin}}</dd></div>{{/if}}
+    </div>
+  </div>
+</section>

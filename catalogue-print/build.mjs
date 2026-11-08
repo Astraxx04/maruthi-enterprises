@@ -11,7 +11,8 @@
  */
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
-import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, mkdtempSync, rmSync, existsSync, statSync } from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { render, renderPlain, escapeHtml } from "./render.mjs";
@@ -59,19 +60,21 @@ let products = data.products.filter((product) => {
   return true;
 });
 
-const order = args.order || config.order;
+// Always grouped by category, in the admin's category order; within a
+// category by the product's own sort order, then name.
+const order = "category";
+if (args.order && args.order !== order) {
+  console.warn(`! --order=${args.order} ignored: the catalogue is always printed by category.`);
+}
 products.sort((a, b) => {
-  if (order === "name") return a.name.localeCompare(b.name);
-  if (order === "category") {
-    const left = categoryById.get(a.category_id);
-    const right = categoryById.get(b.category_id);
-    return (
-      (left?.sort_order ?? 99) - (right?.sort_order ?? 99) ||
-      (a.sort_order ?? 0) - (b.sort_order ?? 0) ||
-      a.name.localeCompare(b.name)
-    );
-  }
-  return 0;
+  const left = categoryById.get(a.category_id);
+  const right = categoryById.get(b.category_id);
+  return (
+    (left?.sort_order ?? 99) - (right?.sort_order ?? 99) ||
+    (left?.name ?? "").localeCompare(right?.name ?? "") ||
+    (a.sort_order ?? 0) - (b.sort_order ?? 0) ||
+    a.name.localeCompare(b.name)
+  );
 });
 
 if (products.length === 0) {
@@ -83,7 +86,9 @@ if (products.length === 0) {
 const perPage = template.grid.columns * template.grid.rows;
 const pages = [];
 
-if (config.categoryPageBreak && order === "category") {
+// A template can ask for every category to start on a fresh page.
+const categoryPageBreak = template.categoryPageBreak ?? config.categoryPageBreak;
+if (categoryPageBreak && order === "category") {
   const groups = new Map();
   for (const product of products) {
     const key = product.category_id;
@@ -136,6 +141,9 @@ const hasCover = template.cover?.enabled !== false;
 const pageCount = pages.length + (hasCover ? 1 : 0);
 let missingImages = 0;
 
+// Position of each product in the whole catalogue, for templates that number them.
+const numberOf = new Map(pages.flat().map((product, position) => [product, position + 1]));
+
 const renderedPages = pages.map((pageProducts, index) => {
   const cards = pageProducts
     .map((product) => {
@@ -146,14 +154,16 @@ const renderedPages = pages.map((pageProducts, index) => {
         assets: assetsUrl,
         index: pageProducts.indexOf(product),
         even: pageProducts.indexOf(product) % 2 === 1,
+        number: String(numberOf.get(product)).padStart(3, "0"),
         name: product.name,
         nameClass: nameClass(product.name),
         brand: product.brand ?? "",
-        hasBrand: Boolean(product.brand) && template.card.showBrand,
+        // Cards carry only the photograph, the name and the pack sizes.
+        hasBrand: false,
         description: product.description ?? "",
-        hasDescription: Boolean(product.description) && template.card.showDescription,
+        hasDescription: false,
         sizesHtml: sizes.map((size) => `<span>${escapeHtml(size)}</span>`).join(""),
-        hasSizes: sizes.length > 0 && template.card.showSizes,
+        hasSizes: sizes.length > 0,
         imageSrc: src,
         hasImage: Boolean(src),
         category: categoryById.get(product.category_id)?.name ?? "",
@@ -190,12 +200,24 @@ const renderedPages = pages.map((pageProducts, index) => {
   });
 });
 
+// A template may put a picture on its cover: "cover": { "image": "images/x.jpeg" },
+// a path inside public/ like a product photograph.
+const coverImageFile = template.cover?.image
+  ? path.join(imageRoot, template.cover.image.replace(/^\//, ""))
+  : null;
+if (coverImageFile && !existsSync(coverImageFile)) {
+  console.warn(`! cover image not found: ${template.cover.image}`);
+}
+const coverImage = coverImageFile && existsSync(coverImageFile) ? pathToFileURL(coverImageFile).href : "";
+
 const coverHtml =
   template.cover?.enabled === false
     ? ""
     : render(read("cover.html"), {
         assets: assetsUrl,
         ...config.cover,
+        coverImage,
+        hasCoverImage: Boolean(coverImage),
         showBlessing:
           template.cover?.showBlessing !== false &&
           existsSync(path.join(assetsDir, "cover-blessing.png")),
@@ -266,33 +288,43 @@ const baseName =
   (config.output.suffixTemplate === false
     ? config.output.fileName
     : `${config.output.fileName}-${templateName}`);
-const htmlFile = path.join(outDir, `${baseName}.html`);
-writeFileSync(htmlFile, html);
-
 console.log(`Template : ${template.name} (${templateName})`);
 console.log(`Products : ${products.length}`);
 console.log(`Pages    : ${pageCount} (${perPage} products per page)`);
 if (missingImages) console.log(`Warning  : ${missingImages} product(s) have no image`);
-console.log(`HTML     : ${path.relative(process.cwd(), htmlFile)}`);
 
 if (args.html) {
+  // Preview mode: the HTML is the output.
+  const htmlFile = path.join(outDir, `${baseName}.html`);
+  writeFileSync(htmlFile, html);
+  console.log(`HTML     : ${path.relative(process.cwd(), htmlFile)}`);
   console.log("\n--html given, stopping before the PDF. Open the file in a browser to preview.");
   process.exit(0);
 }
 
+// Only the PDF is kept. Chrome prints from a file, so the HTML goes to a
+// temporary folder and is deleted afterwards — every asset in it is an
+// absolute file:// URL, so it does not need to sit next to anything.
 const pdfFile = path.join(outDir, `${baseName}.pdf`);
 const chrome = findChrome();
+const workDir = mkdtempSync(path.join(os.tmpdir(), "catalogue-html-"));
+const htmlFile = path.join(workDir, `${baseName}.html`);
+writeFileSync(htmlFile, html);
 
-await run(chrome, [
-  "--headless=new",
-  "--disable-gpu",
-  "--no-sandbox",
-  "--run-all-compositor-stages-before-draw",
-  "--virtual-time-budget=30000",
-  "--no-pdf-header-footer",
-  `--print-to-pdf=${pdfFile}`,
-  pathToFileURL(htmlFile).href,
-], { maxBuffer: 1024 * 1024 * 64 });
+try {
+  await run(chrome, [
+    "--headless=new",
+    "--disable-gpu",
+    "--no-sandbox",
+    "--run-all-compositor-stages-before-draw",
+    "--virtual-time-budget=30000",
+    "--no-pdf-header-footer",
+    `--print-to-pdf=${pdfFile}`,
+    pathToFileURL(htmlFile).href,
+  ], { maxBuffer: 1024 * 1024 * 64 });
+} finally {
+  rmSync(workDir, { recursive: true, force: true });
+}
 
 const size = statSync(pdfFile).size;
 console.log(`PDF      : ${path.relative(process.cwd(), pdfFile)} (${(size / 1024 / 1024).toFixed(1)} MB)`);
@@ -307,7 +339,6 @@ if (args.json) {
       pages: pageCount,
       bytes: size,
       pdf: path.basename(pdfFile),
-      html: path.basename(htmlFile),
     })}`,
   );
 }

@@ -166,7 +166,8 @@ html, body {
 }
 
 /* ── Cover ───────────────────────────────────────────────────────────────── */
-.cover-sheet { background: var(--gold-soft); }
+/* Warm cream so the saffron cover picture sits naturally on the page. */
+.cover-sheet { background: #fff6e6; }
 
 .cover {
   position: absolute;
@@ -235,9 +236,37 @@ html, body {
   color: var(--ink);
 }
 
+/* The cover picture takes whatever height is left between the details and
+   the blessing, cropped to its centre. */
+.cover-image {
+  flex: 1;
+  min-height: 0;
+  margin-top: 26pt;
+  border-radius: 18pt;
+  overflow: hidden;
+  /* The picture is portrait and the panel is wide. Show the part with the
+     figure in it and fade its sides into a background that follows the
+     picture's own saffron from top to bottom, so there is no visible seam. */
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, #fc8f00 0%, #ff9700 25%, #fe9d00 50%, #ffa101 80%, #fca002 100%);
+  box-shadow: 0 10pt 30pt -14pt rgba(160, 80, 0, 0.45);
+}
+.cover-image img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  /* Rows 19%–77% of the picture: the figure with a little air around it. */
+  object-view-box: inset(19% 0 23% 0);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
+}
+
 .cover-blessing {
   margin-top: auto;
-  padding-top: 30pt;
+  padding-top: 22pt;
   opacity: 0.85;
 }
 .cover-blessing img { width: 100%; max-width: 380pt; display: block; margin: 0 auto; }

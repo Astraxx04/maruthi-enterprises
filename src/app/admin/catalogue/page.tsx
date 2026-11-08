@@ -1,11 +1,11 @@
 import { CatalogueBuilder } from "@/components/admin/catalogue-builder";
-import { catalogueBuilderAvailable, listGenerated, listTemplates } from "@/lib/catalogue-build";
+import { catalogueBuilderUnavailableReason, listGenerated, listTemplates } from "@/lib/catalogue-build";
 import { getCategories, getProducts } from "@/lib/store";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminCataloguePage() {
-  const available = catalogueBuilderAvailable();
+  const unavailable = catalogueBuilderUnavailableReason();
   const [templates, categories, products, generated] = await Promise.all([
     listTemplates(),
     getCategories(),
@@ -27,11 +27,10 @@ export default async function AdminCataloguePage() {
         products across {categories.length} categories.
       </p>
 
-      {!available ? (
+      {unavailable ? (
         <p className="mt-6 rounded-xl2 border border-[#f0d8a8] bg-[#fdf6e8] px-4 py-4 text-sm text-[#7a5a14]">
-          The catalogue builder is not available in this deployment. It needs the project files and
-          Google Chrome on the server, so it works when the site runs on your own machine or a VPS,
-          but not on a serverless host. From a terminal you can always run{" "}
+          PDF generation is not available on this server. {unavailable} It works when the site runs on
+          your own machine or a VPS with Chrome. From a terminal you can always run{" "}
           <code className="rounded bg-white px-1.5 py-0.5 font-mono text-xs">npm run catalogue:pdf</code>.
         </p>
       ) : (

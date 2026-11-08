@@ -12,14 +12,7 @@ type Result = {
   pages: number;
   bytes: number;
   pdf: string;
-  html: string;
 };
-
-const ORDERS = [
-  { value: "category", label: "Grouped by category" },
-  { value: "name", label: "Alphabetical (A → Z)" },
-  { value: "data", label: "Catalogue order" },
-] as const;
 
 export function CatalogueBuilder({
   templates,
@@ -37,7 +30,6 @@ export function CatalogueBuilder({
   generated: Generated[];
 }) {
   const [template, setTemplate] = useState(templates[0]?.id ?? "");
-  const [order, setOrder] = useState<(typeof ORDERS)[number]["value"]>("category");
   const [category, setCategory] = useState("");
   const [onlyFeatured, setOnlyFeatured] = useState(false);
   const [fileName, setFileName] = useState("");
@@ -68,7 +60,6 @@ export function CatalogueBuilder({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           template,
-          order,
           category: category || null,
           onlyFeatured,
           fileName: fileName.trim() || null,
@@ -168,20 +159,6 @@ export function CatalogueBuilder({
                 <option key={name} value={name}>
                   {name} ({counts[name] ?? 0})
                 </option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="order" className="label">Order</label>
-            <select
-              id="order"
-              value={order}
-              onChange={(event) => setOrder(event.target.value as typeof order)}
-              className="field cursor-pointer"
-            >
-              {ORDERS.map((item) => (
-                <option key={item.value} value={item.value}>{item.label}</option>
               ))}
             </select>
           </div>

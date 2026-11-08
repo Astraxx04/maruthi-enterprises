@@ -10,7 +10,6 @@ export const maxDuration = 300;
 
 const optionsSchema = z.object({
   template: z.string().trim().regex(/^[a-z0-9-]+$/i, "Invalid template"),
-  order: z.enum(["category", "name", "data"]).default("category"),
   category: z.string().trim().max(80).nullable().optional(),
   onlyFeatured: z.boolean().optional(),
   fileName: z.string().trim().max(80).nullable().optional(),
@@ -52,7 +51,6 @@ export async function POST(request: Request) {
   try {
     const result = await buildCatalogue({
       template: parsed.data.template,
-      order: parsed.data.order,
       category: parsed.data.category || null,
       onlyFeatured: Boolean(parsed.data.onlyFeatured),
       fileName: parsed.data.fileName || null,

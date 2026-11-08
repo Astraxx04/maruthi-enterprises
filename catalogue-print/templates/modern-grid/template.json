@@ -21,9 +21,9 @@
   },
   "card": {
     "titleHeight": 0,
-    "showBrand": true,
+    "showBrand": false,
     "showSizes": true,
-    "showDescription": true,
+    "showDescription": false,
     "imagePadding": 16,
     "titleLengths": {
       "long": 30,
@@ -52,7 +52,8 @@
   },
   "cover": {
     "enabled": true,
-    "showBlessing": true
+    "showBlessing": true,
+    "image": "images/hanuman.jpeg"
   },
   "footer": {
     "show": true,

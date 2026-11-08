@@ -1,0 +1,30 @@
+{
+  "name": "Swiss",
+  "description": "Minimal and precise: a hairline grid with no boxes, each product numbered, the name set large and the pack sizes in a clean monospace line.",
+  "sortOrder": 50,
+  "assetsFrom": "gold-classic",
+  "page": {
+    "width": 595.5,
+    "height": 842.5,
+    "margin": { "top": 84, "right": 40, "bottom": 54, "left": 40 }
+  },
+  "grid": { "columns": 2, "rows": 3, "columnGap": 0, "rowGap": 0 },
+  "card": {
+    "titleHeight": 0,
+    "showBrand": false,
+    "showSizes": true,
+    "showDescription": false,
+    "imagePadding": 10,
+    "titleLengths": { "long": 28, "xlong": 42 }
+  },
+  "fonts": {
+    "googleFamilies": ["Inter+Tight:wght@400;500;600;700;800", "JetBrains+Mono:wght@400;500"],
+    "title": "'Inter Tight', 'Helvetica Neue', Arial, sans-serif",
+    "body": "'Inter Tight', 'Helvetica Neue', Arial, sans-serif",
+    "cover": "'Inter Tight', 'Helvetica Neue', Arial, sans-serif"
+  },
+  "colors": { "gold": "#e5322d", "goldSoft": "#f4f4f2", "ink": "#111111", "muted": "#7a7a7a" },
+  "flourishes": { "topLeft": false, "bottomRight": false, "width": 0 },
+  "cover": { "enabled": true, "showBlessing": false },
+  "footer": { "show": true, "format": "{{pageNumber}}" }
+}

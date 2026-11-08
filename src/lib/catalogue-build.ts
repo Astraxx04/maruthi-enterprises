@@ -2,7 +2,7 @@ import "server-only";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { promises as fs } from "node:fs";
-import { existsSync } from "node:fs";
+import { accessSync, constants as fsConstants, existsSync } from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { getCategories, getProducts } from "./store";
@@ -39,7 +39,6 @@ export type Template = {
 
 export type BuildOptions = {
   template: string;
-  order: "category" | "name" | "data";
   category: string | null;
   onlyFeatured: boolean;
   fileName: string | null;
@@ -52,11 +51,46 @@ export type BuildResult = {
   pages: number;
   bytes: number;
   pdf: string;
-  html: string;
 };
 
+/** Same places catalogue-print/chrome.mjs looks. */
+const CHROME_CANDIDATES = [
+  process.env.CHROME_PATH,
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "/Applications/Chromium.app/Contents/MacOS/Chromium",
+  "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser",
+  "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+  "/usr/bin/google-chrome",
+  "/usr/bin/google-chrome-stable",
+  "/usr/bin/chromium",
+  "/usr/bin/chromium-browser",
+  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+].filter((candidate): candidate is string => Boolean(candidate));
+
+/**
+ * Why the builder cannot run here, or null when it can.
+ *
+ * Checking that the script exists is not enough: Netlify bundles the
+ * catalogue-print folder into the function, so the files are there, but the
+ * function has no Chrome and its code directory (/var/task) is read-only.
+ */
+export function catalogueBuilderUnavailableReason(): string | null {
+  if (!existsSync(BUILD_SCRIPT) || !existsSync(TEMPLATES_DIR)) {
+    return "The catalogue-print folder is not part of this deployment.";
+  }
+  try {
+    accessSync(CATALOGUE_DIR, fsConstants.W_OK);
+  } catch {
+    return "This server's files are read-only (a serverless host such as Netlify), so the PDF has nowhere to be saved.";
+  }
+  if (!CHROME_CANDIDATES.some((candidate) => existsSync(candidate))) {
+    return "Google Chrome is not installed on this server, so the PDF cannot be printed. Install it or set CHROME_PATH.";
+  }
+  return null;
+}
+
 export function catalogueBuilderAvailable(): boolean {
-  return existsSync(BUILD_SCRIPT) && existsSync(TEMPLATES_DIR);
+  return catalogueBuilderUnavailableReason() === null;
 }
 
 /** Every template folder, read straight from its template.json. */
@@ -103,9 +137,8 @@ export async function listTemplates(): Promise<Template[]> {
 let building = false;
 
 export async function buildCatalogue(options: BuildOptions): Promise<BuildResult> {
-  if (!catalogueBuilderAvailable()) {
-    throw new Error("The catalogue builder is not available in this deployment.");
-  }
+  const unavailable = catalogueBuilderUnavailableReason();
+  if (unavailable) throw new Error(unavailable);
   if (building) {
     throw new Error("A catalogue is already being generated. Please wait for it to finish.");
   }
@@ -130,7 +163,6 @@ export async function buildCatalogue(options: BuildOptions): Promise<BuildResult
       BUILD_SCRIPT,
       `--template=${options.template}`,
       `--source=${snapshot}`,
-      `--order=${options.order}`,
       "--json",
     ];
     if (options.category) args.push(`--only=${options.category}`);
@@ -147,7 +179,11 @@ export async function buildCatalogue(options: BuildOptions): Promise<BuildResult
     if (!marker) throw new Error("The builder did not report a result.");
     return JSON.parse(marker.slice("__RESULT__".length)) as BuildResult;
   } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
+    // execFile's own message is just "Command failed: <command line>"; what
+    // went wrong is in the builder's stderr.
+    const stderr =
+      error && typeof error === "object" && "stderr" in error ? String((error as { stderr: unknown }).stderr) : "";
+    const message = [stderr, error instanceof Error ? error.message : String(error)].join("\n");
     if (/Could not find Chrome/i.test(message)) {
       throw new Error(
         "Chrome was not found on the server, so the PDF could not be printed. Install Google Chrome or set CHROME_PATH.",
@@ -156,7 +192,14 @@ export async function buildCatalogue(options: BuildOptions): Promise<BuildResult
     if (/timed out|ETIMEDOUT/i.test(message)) {
       throw new Error("The catalogue took too long to build. Try a single category or a denser template.");
     }
-    throw new Error(message.split("\n")[0] || "The catalogue could not be generated.");
+    if (/EROFS|read-only file system/i.test(message)) {
+      throw new Error("This server's files are read-only, so the PDF could not be saved. Generate it locally instead.");
+    }
+    const firstLine = message
+      .split("\n")
+      .map((line) => line.trim())
+      .find((line) => line && !line.startsWith("at "));
+    throw new Error(firstLine || "The catalogue could not be generated.");
   } finally {
     building = false;
     if (snapshot) await fs.rm(path.dirname(snapshot), { recursive: true, force: true }).catch(() => undefined);
@@ -166,7 +209,7 @@ export async function buildCatalogue(options: BuildOptions): Promise<BuildResult
 /** Resolves a generated file name to a path inside the output directory. */
 export function resolveOutputFile(name: string): string | null {
   const safe = path.basename(name);
-  if (!/^[A-Za-z0-9._-]+\.(pdf|html)$/.test(safe)) return null;
+  if (!/^[A-Za-z0-9._-]+\.pdf$/.test(safe)) return null;
   const file = path.join(OUTPUT_DIR, safe);
   if (!file.startsWith(OUTPUT_DIR + path.sep) || !existsSync(file)) return null;
   return file;

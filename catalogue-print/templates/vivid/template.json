@@ -1,0 +1,31 @@
+{
+  "name": "Vivid",
+  "description": "Bright and bold: every category opens on a fresh page under a large coloured banner, with photographs on soft rounded panels and pack sizes as solid chips.",
+  "sortOrder": 40,
+  "assetsFrom": "gold-classic",
+  "categoryPageBreak": true,
+  "page": {
+    "width": 595.5,
+    "height": 842.5,
+    "margin": { "top": 118, "right": 34, "bottom": 50, "left": 34 }
+  },
+  "grid": { "columns": 2, "rows": 3, "columnGap": 14, "rowGap": 14 },
+  "card": {
+    "titleHeight": 0,
+    "showBrand": false,
+    "showSizes": true,
+    "showDescription": false,
+    "imagePadding": 12,
+    "titleLengths": { "long": 30, "xlong": 44 }
+  },
+  "fonts": {
+    "googleFamilies": ["Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800", "Inter:wght@400;500;600;700"],
+    "title": "'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif",
+    "body": "'Inter', 'Helvetica Neue', Arial, sans-serif",
+    "cover": "'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif"
+  },
+  "colors": { "gold": "#ff5b37", "goldSoft": "#fff1ec", "ink": "#15161a", "muted": "#6e7179" },
+  "flourishes": { "topLeft": false, "bottomRight": false, "width": 0 },
+  "cover": { "enabled": true, "showBlessing": false },
+  "footer": { "show": true, "format": "{{businessName}}  ·  {{pageNumber}}" }
+}

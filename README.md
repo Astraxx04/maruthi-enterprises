@@ -306,9 +306,9 @@ It crops every product photograph out of the PDF at 288 dpi, writes them to
 ## 7b. Printing the catalogue
 
 `catalogue-print/` turns the same `data/catalogue.json` into a print-ready PDF. Five templates
-ship with it: `gold-classic` (matches the printed original — ivy flourishes, gold bead frames,
-2 × 3), `compact-list` (3 × 4 trade list), and three modern, photograph-first ones —
-`modern-grid`, `spotlight` and `lookbook`:
+ship with it, all two products to a row and three rows a page: `gold-classic` (matches the
+printed original — ivy flourishes, gold bead frames) and four modern ones — `modern-grid`,
+`midnight` (dark), `vivid` (bold category banners) and `swiss` (minimal, numbered):
 
 ```bash
 npm run catalogue:pdf     # the default template, from catalogue-print/config.json
@@ -317,7 +317,7 @@ npm run catalogue:html    # HTML only, to preview in a browser
 
 ```bash
 node catalogue-print/build.mjs --template=modern-grid
-node catalogue-print/build.mjs --template=spotlight --only="Hair Care & Colour"
+node catalogue-print/build.mjs --template=vivid --only="Hair Care & Colour"
 ```
 
 Headless Chrome does the printing, so nothing extra is installed. Each template is a folder of

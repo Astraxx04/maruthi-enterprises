@@ -1,0 +1,11 @@
+<section class="sheet">
+  <header class="banner">
+    <span class="banner-kicker">{{businessName}}</span>
+    {{#if hasPageCategory}}<h1 class="banner-title">{{pageCategory}}</h1>{{/if}}
+    <span class="banner-shape" aria-hidden="true"></span>
+  </header>
+
+  <div class="grid">{{{cards}}}</div>
+
+  {{#if showFooter}}<div class="page-number">{{footer}}</div>{{/if}}
+</section>

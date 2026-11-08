@@ -1,0 +1,161 @@
+/* ───────────────────────────────────────────────────────────────────────────
+   Swiss — international typographic style. No boxes: a hairline grid divides
+   the page, every product is numbered, sizes are set in monospace.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+@page { size: var(--page-width) var(--page-height); margin: 0; }
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.sheet {
+  position: relative;
+  width: var(--page-width);
+  height: var(--page-height);
+  overflow: hidden;
+  background: #fff;
+  page-break-after: always;
+  break-after: page;
+}
+.sheet:last-child { page-break-after: auto; break-after: auto; }
+
+/* ── Running head ────────────────────────────────────────────────────────── */
+.running-head {
+  position: absolute;
+  top: 34pt;
+  left: var(--margin-left);
+  right: var(--margin-right);
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: end;
+  padding-bottom: 10pt;
+  border-bottom: 1.4pt solid var(--ink);
+  font-size: 8pt;
+  font-weight: 600;
+}
+.running-brand { letter-spacing: -0.1pt; }
+.running-category { color: var(--gold); }
+.running-page { font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500; }
+
+/* ── Grid: hairlines between cells, none around the outside ──────────────── */
+.grid {
+  position: absolute;
+  top: var(--margin-top);
+  left: var(--margin-left);
+  right: var(--margin-right);
+  bottom: var(--margin-bottom);
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), minmax(0, 1fr));
+}
+
+/* ── Card ────────────────────────────────────────────────────────────────── */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 12pt 14pt 14pt;
+  border-bottom: 0.6pt solid #d6d6d6;
+}
+.card:nth-child(odd) { border-right: 0.6pt solid #d6d6d6; padding-left: 0; }
+.card:nth-child(even) { padding-right: 0; }
+.card:nth-last-child(-n + 2):nth-child(odd),
+.card:last-child { border-bottom: none; }
+
+.card-number {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 7pt;
+  font-weight: 500;
+  color: var(--gold);
+}
+
+.card-media {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--image-padding);
+}
+.card-media img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.card-text { flex: none; }
+
+.card-title {
+  margin: 0;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 11pt;
+  line-height: 1.12;
+  letter-spacing: -0.3pt;
+  color: var(--ink);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-title--long { font-size: 10pt; }
+.card-title--xlong { font-size: 9pt; }
+
+.sizes {
+  margin-top: 5pt;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 7pt;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.sizes span { white-space: nowrap; }
+.sizes span + span::before { content: "/"; margin: 0 5pt; color: #c4c4c4; }
+
+/* ── Cover ───────────────────────────────────────────────────────────────── */
+.cover {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 48pt 44pt 52pt;
+}
+
+.cover-top { display: flex; align-items: center; gap: 10pt; padding-bottom: 12pt; border-bottom: 1.4pt solid var(--ink); }
+.cover-square { width: 14pt; height: 14pt; background: var(--gold); }
+.cover-label { font-size: 9pt; font-weight: 600; }
+
+.cover-title {
+  margin: auto 0 0;
+  font-family: var(--font-cover);
+  font-weight: 800;
+  font-size: 72pt;
+  line-height: 0.9;
+  letter-spacing: -3pt;
+  color: var(--ink);
+}
+
+.cover-tagline { margin: 16pt 0 0; font-size: 14pt; font-weight: 500; color: var(--gold); }
+
+.cover-details {
+  margin: 40pt 0 0;
+  padding-top: 14pt;
+  border-top: 0.6pt solid #d6d6d6;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14pt 24pt;
+}
+.cover-details dt {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 7pt;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 3pt;
+}
+.cover-details dd { margin: 0; font-size: 9.6pt; line-height: 1.45; }

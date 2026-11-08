@@ -1,0 +1,224 @@
+/* ───────────────────────────────────────────────────────────────────────────
+   Vivid — bright, bold and friendly. Every category starts a page under a
+   coloured banner; cards are soft rounded panels with solid size chips.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+@page { size: var(--page-width) var(--page-height); margin: 0; }
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.sheet {
+  position: relative;
+  width: var(--page-width);
+  height: var(--page-height);
+  overflow: hidden;
+  background: #fff;
+  page-break-after: always;
+  break-after: page;
+}
+.sheet:last-child { page-break-after: auto; break-after: auto; }
+
+/* ── Banner ──────────────────────────────────────────────────────────────── */
+.banner {
+  position: absolute;
+  top: 22pt;
+  left: var(--margin-left);
+  right: var(--margin-right);
+  height: 80pt;
+  padding: 16pt 20pt;
+  border-radius: 16pt;
+  background: var(--gold);
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.banner-kicker {
+  position: relative;
+  z-index: 1;
+  font-size: 7.4pt;
+  font-weight: 700;
+  letter-spacing: 1.4pt;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+.banner-title {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: 24pt;
+  line-height: 1;
+  letter-spacing: -0.6pt;
+  max-width: 400pt;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.banner-shape {
+  position: absolute;
+  right: -40pt;
+  top: -60pt;
+  width: 190pt;
+  height: 190pt;
+  border-radius: 50%;
+  background: #ffb199;
+  opacity: 0.55;
+}
+.banner-shape::after {
+  content: "";
+  position: absolute;
+  left: -70pt;
+  top: 110pt;
+  width: 90pt;
+  height: 90pt;
+  border-radius: 50%;
+  background: #ffd23f;
+}
+
+/* ── Grid ────────────────────────────────────────────────────────────────── */
+.grid {
+  position: absolute;
+  top: var(--margin-top);
+  left: var(--margin-left);
+  right: var(--margin-right);
+  bottom: var(--margin-bottom);
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), minmax(0, 1fr));
+  column-gap: var(--column-gap);
+  row-gap: var(--row-gap);
+}
+
+/* ── Card ────────────────────────────────────────────────────────────────── */
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 7pt;
+  border-radius: 16pt;
+  background: #f5f5f3;
+}
+
+.card-media {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--image-padding);
+  background: #fff;
+  border-radius: 11pt;
+}
+.card-media img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.card-text { flex: none; padding: 8pt 5pt 3pt; }
+
+.card-title {
+  margin: 0;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 10.8pt;
+  line-height: 1.15;
+  letter-spacing: -0.2pt;
+  color: var(--ink);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-title--long { font-size: 9.8pt; }
+.card-title--xlong { font-size: 8.8pt; }
+
+.sizes { display: flex; flex-wrap: wrap; gap: 3pt; margin-top: 5pt; }
+.sizes span {
+  padding: 2pt 6.5pt;
+  border-radius: 6pt;
+  background: var(--ink);
+  color: #fff;
+  font-size: 6.6pt;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.sizes span:first-child { background: var(--gold); }
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+.page-number {
+  position: absolute;
+  bottom: 22pt;
+  left: var(--margin-left);
+  right: var(--margin-right);
+  text-align: center;
+  font-size: 7.4pt;
+  font-weight: 600;
+  letter-spacing: 0.8pt;
+  color: var(--muted);
+}
+
+/* ── Cover ───────────────────────────────────────────────────────────────── */
+.cover-sheet { background: var(--gold-soft); }
+
+.cover-blob { position: absolute; border-radius: 50%; }
+.cover-blob--a { width: 420pt; height: 420pt; right: -150pt; top: -120pt; background: var(--gold); }
+.cover-blob--b { width: 170pt; height: 170pt; right: 170pt; top: 210pt; background: #ffd23f; }
+
+.cover {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60pt 48pt 56pt;
+}
+
+.cover-kicker {
+  font-size: 8.4pt;
+  font-weight: 700;
+  letter-spacing: 1.6pt;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.cover-title {
+  margin: 12pt 0 0;
+  font-family: var(--font-cover);
+  font-weight: 800;
+  font-size: 60pt;
+  line-height: 0.95;
+  letter-spacing: -2pt;
+  color: var(--ink);
+  max-width: 440pt;
+}
+
+.cover-tagline { margin: 14pt 0 0; font-size: 13pt; font-weight: 500; color: var(--ink); opacity: 0.75; }
+
+.cover-card {
+  margin-top: 36pt;
+  padding: 20pt 22pt;
+  border-radius: 16pt;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14pt 24pt;
+}
+.cover-card .wide { grid-column: 1 / -1; }
+.cover-card dt {
+  font-size: 7pt;
+  font-weight: 700;
+  letter-spacing: 1.2pt;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 3pt;
+}
+.cover-card dd { margin: 0; font-size: 9.8pt; line-height: 1.45; color: var(--ink); }

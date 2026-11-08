@@ -1,0 +1,10 @@
+<!-- Midnight card: photograph on a white tile, name and pack sizes beneath. -->
+<article class="card">
+  <div class="card-media">
+    {{#if hasImage}}<img src="{{imageSrc}}" alt="{{name}}">{{/if}}
+  </div>
+  <div class="card-text">
+    <h2 class="card-title {{nameClass}}">{{name}}</h2>
+    {{#if hasSizes}}<div class="sizes">{{{sizesHtml}}}</div>{{/if}}
+  </div>
+</article>

@@ -1,0 +1,205 @@
+/* ───────────────────────────────────────────────────────────────────────────
+   Midnight — deep navy pages. Packshots are shot on white, so each sits on a
+   white rounded tile that glows against the dark page.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+@page { size: var(--page-width) var(--page-height); margin: 0; }
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0a121e;
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.sheet {
+  position: relative;
+  width: var(--page-width);
+  height: var(--page-height);
+  overflow: hidden;
+  background: #0a121e;
+  page-break-after: always;
+  break-after: page;
+}
+.sheet:last-child { page-break-after: auto; break-after: auto; }
+
+.glow {
+  position: absolute;
+  top: -180pt;
+  right: -140pt;
+  width: 420pt;
+  height: 420pt;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(52, 211, 177, 0.18) 0%, rgba(52, 211, 177, 0) 68%);
+}
+
+/* ── Running head ────────────────────────────────────────────────────────── */
+.running-head {
+  position: absolute;
+  top: 30pt;
+  left: var(--margin-left);
+  right: var(--margin-right);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 7.4pt;
+  letter-spacing: 1.1pt;
+  text-transform: uppercase;
+}
+.running-brand { display: flex; align-items: center; gap: 6pt; font-weight: 600; color: var(--ink); }
+.dot { width: 6pt; height: 6pt; border-radius: 50%; background: var(--gold); }
+.running-category {
+  font-weight: 600;
+  color: var(--gold);
+  padding: 3pt 8pt;
+  border: 0.6pt solid rgba(52, 211, 177, 0.45);
+  border-radius: 999pt;
+}
+
+/* ── Grid ────────────────────────────────────────────────────────────────── */
+.grid {
+  position: absolute;
+  top: var(--margin-top);
+  left: var(--margin-left);
+  right: var(--margin-right);
+  bottom: var(--margin-bottom);
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), minmax(0, 1fr));
+  column-gap: var(--column-gap);
+  row-gap: var(--row-gap);
+}
+
+/* ── Card ────────────────────────────────────────────────────────────────── */
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 6pt;
+  background: #121d2c;
+  border: 0.6pt solid #1e2b3d;
+  border-radius: 14pt;
+}
+
+.card-media {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--image-padding);
+  background: #fff;
+  border-radius: 10pt;
+}
+.card-media img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.card-text { flex: none; padding: 8pt 4pt 3pt; }
+
+.card-title {
+  margin: 0;
+  font-family: var(--font-title);
+  font-weight: 600;
+  font-size: 10.4pt;
+  line-height: 1.2;
+  color: var(--ink);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-title--long { font-size: 9.4pt; }
+.card-title--xlong { font-size: 8.4pt; }
+
+.sizes { display: flex; flex-wrap: wrap; gap: 3pt; margin-top: 5pt; }
+.sizes span {
+  padding: 1.8pt 6pt;
+  border-radius: 999pt;
+  background: rgba(52, 211, 177, 0.12);
+  border: 0.5pt solid rgba(52, 211, 177, 0.4);
+  color: #7fe6cf;
+  font-size: 6.6pt;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+.page-number {
+  position: absolute;
+  bottom: 24pt;
+  left: var(--margin-left);
+  right: var(--margin-right);
+  text-align: right;
+  font-size: 7.4pt;
+  letter-spacing: 1pt;
+  color: var(--muted);
+}
+
+/* ── Cover ───────────────────────────────────────────────────────────────── */
+.glow--cover {
+  top: -120pt;
+  right: -160pt;
+  width: 640pt;
+  height: 640pt;
+  background: radial-gradient(circle, rgba(52, 211, 177, 0.32) 0%, rgba(52, 211, 177, 0) 65%);
+}
+
+.cover {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 64pt 52pt 64pt;
+}
+
+.cover-chip {
+  align-self: flex-start;
+  padding: 4pt 10pt;
+  border-radius: 999pt;
+  border: 0.8pt solid rgba(52, 211, 177, 0.55);
+  color: var(--gold);
+  font-size: 8pt;
+  font-weight: 600;
+  letter-spacing: 1.4pt;
+  text-transform: uppercase;
+}
+
+.cover-title {
+  margin: 18pt 0 0;
+  font-family: var(--font-cover);
+  font-weight: 800;
+  font-size: 54pt;
+  line-height: 0.98;
+  letter-spacing: -1.8pt;
+  color: #fff;
+  max-width: 420pt;
+}
+
+.cover-tagline {
+  margin: 14pt 0 0;
+  font-size: 13pt;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.cover-details {
+  margin-top: 44pt;
+  padding-top: 22pt;
+  border-top: 0.8pt solid #22324a;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16pt 28pt;
+}
+.cover-details dt {
+  font-size: 7pt;
+  font-weight: 600;
+  letter-spacing: 1.2pt;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 3pt;
+}
+.cover-details dd { margin: 0; font-size: 9.6pt; line-height: 1.45; color: var(--ink); }
