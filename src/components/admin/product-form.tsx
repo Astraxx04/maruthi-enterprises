@@ -100,7 +100,12 @@ export function ProductForm({
               />
             </div>
 
-            <PackSizeEditor name="pack_size" defaultValue={product?.pack_size ?? null} units={units} />
+            <PackSizeEditor
+              name="pack_size"
+              defaultValue={product?.pack_size ?? null}
+              units={units}
+              error={state.fields?.pack_size}
+            />
           </div>
         </section>
       </div>

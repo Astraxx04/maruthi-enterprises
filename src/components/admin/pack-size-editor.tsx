@@ -17,14 +17,19 @@ const ADD_UNIT = "__add__";
  * The value is submitted as a single hidden field, the same shape the rest of
  * the site reads.
  */
+/** Matches productSchema's cap on the joined value. */
+const MAX_LENGTH = 600;
+
 export function PackSizeEditor({
   name,
   defaultValue,
   units,
+  error,
 }: {
   name: string;
   defaultValue: string | null;
   units: Unit[];
+  error?: string;
 }) {
   const [sizes, setSizes] = useState<string[]>(() => parsePackSizes(defaultValue));
   const [unitId, setUnitId] = useState(units[0]?.id ?? CUSTOM);
@@ -36,6 +41,8 @@ export function PackSizeEditor({
   const newUnitRef = useRef<HTMLInputElement>(null);
 
   const allUnits = [...units, ...extraUnits];
+  const joined = formatPackSizes(sizes);
+  const tooLong = joined.length > MAX_LENGTH;
   const unit = unitId === CUSTOM ? null : allUnits.find((item) => item.id === unitId) ?? null;
 
   const add = () => {
@@ -75,7 +82,7 @@ export function PackSizeEditor({
   return (
     <div>
       <span className="label">Pack sizes</span>
-      <input type="hidden" name={name} value={formatPackSizes(sizes)} />
+      <input type="hidden" name={name} value={joined} />
 
       {/* The list as it stands */}
       {sizes.length > 0 ? (
@@ -178,6 +185,19 @@ export function PackSizeEditor({
           </>
         )}
       </div>
+
+      {(error || tooLong) && (
+        <p role="alert" className="mt-2 text-xs font-medium text-[#b4253c]">
+          {error ??
+            `That is ${joined.length} characters of pack sizes — remove a few to get under ${MAX_LENGTH}.`}
+        </p>
+      )}
+
+      {!error && !tooLong && sizes.length > 12 && (
+        <p className="mt-2 text-xs text-muted">
+          {sizes.length} sizes · {joined.length} of {MAX_LENGTH} characters used
+        </p>
+      )}
 
       <p className="mt-1.5 text-xs leading-relaxed text-muted">
         {unit

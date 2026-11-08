@@ -8,8 +8,16 @@ export const enquiryItemSchema = z.object({
 });
 
 export const enquirySchema = z.object({
-  company_name: z.string().trim().min(2, "Enter the company or pharmacy name").max(120),
-  contact_person: z.string().trim().min(2, "Enter the contact person's name").max(120),
+  company_name: z
+    .string()
+    .trim()
+    .min(2, "Enter the company or pharmacy name")
+    .max(160, "That company name is too long — keep it under 160 characters"),
+  contact_person: z
+    .string()
+    .trim()
+    .min(2, "Enter the contact person's name")
+    .max(160, "That name is too long — keep it under 160 characters"),
   phone: z
     .string()
     .trim()
@@ -17,7 +25,12 @@ export const enquirySchema = z.object({
     .max(20)
     .regex(/^[+\d][\d\s\-()]{6,19}$/, "Enter a valid phone number"),
   email: z.string().trim().toLowerCase().email("Enter a valid email address").max(160),
-  remarks: z.string().trim().max(2000).optional().or(z.literal("")),
+  remarks: z
+    .string()
+    .trim()
+    .max(2000, "Please keep the remarks under 2000 characters")
+    .optional()
+    .or(z.literal("")),
   items: z.array(enquiryItemSchema).min(1, "Add at least one product to the enquiry").max(100),
   // Spam traps — see the API route.
   website: z.string().max(200).optional(),
@@ -28,20 +41,55 @@ export const enquirySchema = z.object({
 export type EnquiryPayload = z.infer<typeof enquirySchema>;
 
 export const productSchema = z.object({
-  name: z.string().trim().min(2).max(160),
-  brand: z.string().trim().max(120).optional().or(z.literal("")),
+  name: z
+    .string()
+    .trim()
+    .min(2, "Enter the product name")
+    .max(160, "That product name is too long — keep it under 160 characters"),
+  brand: z
+    .string()
+    .trim()
+    .max(160, "That brand name is too long — keep it under 160 characters")
+    .optional()
+    .or(z.literal("")),
   category_id: z.string().trim().min(1, "Choose a category"),
-  description: z.string().trim().max(2000).optional().or(z.literal("")),
-  unit: z.string().trim().max(80).optional().or(z.literal("")),
-  pack_size: z.string().trim().max(120).optional().or(z.literal("")),
-  image_url: z.string().trim().max(600).optional().or(z.literal("")),
+  description: z
+    .string()
+    .trim()
+    .max(2000, "The description is too long — keep it under 2000 characters")
+    .optional()
+    .or(z.literal("")),
+  unit: z.string().trim().max(80, "Keep the unit under 80 characters").optional().or(z.literal("")),
+  // The pack sizes are stored as one joined string, so this holds the whole
+  // list — roughly forty sizes' worth.
+  pack_size: z
+    .string()
+    .trim()
+    .max(600, "That is too many pack sizes to store — remove a few")
+    .optional()
+    .or(z.literal("")),
+  image_url: z
+    .string()
+    .trim()
+    .max(600, "That image path is too long — keep it under 600 characters")
+    .optional()
+    .or(z.literal("")),
   featured: z.coerce.boolean().optional(),
   sort_order: z.coerce.number().int().min(0).max(9999).optional(),
 });
 
 export const categorySchema = z.object({
-  name: z.string().trim().min(2).max(80),
-  description: z.string().trim().max(400).optional().or(z.literal("")),
+  name: z
+    .string()
+    .trim()
+    .min(2, "Enter the category name")
+    .max(80, "That category name is too long — keep it under 80 characters"),
+  description: z
+    .string()
+    .trim()
+    .max(400, "The description is too long — keep it under 400 characters")
+    .optional()
+    .or(z.literal("")),
   sort_order: z.coerce.number().int().min(0).max(999).optional(),
 });
 
