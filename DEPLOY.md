@@ -2,16 +2,20 @@
 
 Free on both tiers. Roughly 30 minutes end to end.
 
-| Piece | Where | Cost |
-| --- | --- | --- |
-| Website | Netlify | Free — 100 GB bandwidth, 300 build minutes a month |
-| Catalogue + enquiries | Supabase Postgres | Free — 500 MB |
-| Newly uploaded images | Supabase Storage | Free — 1 GB |
-| Enquiry alerts | Resend and/or Telegram | Free |
+| Piece | Where | Cost | Needed |
+| --- | --- | --- | --- |
+| Website | Netlify | Free — 100 GB bandwidth, 300 build minutes a month | Yes |
+| Catalogue + enquiries | Supabase Postgres | Free — 500 MB | Yes |
+| Newly uploaded images | Supabase Storage | Free — 1 GB | Yes |
+| Enquiry alerts | Resend and/or Telegram | Free | **Later** — see step 6 |
 
 The 160 product photographs already in `public/products/` ship with the repository
 and are served straight from Netlify's CDN — Supabase Storage is only used for
 images you upload from the admin later.
+
+> **Notifications can wait.** Without them, enquiries are still saved to the database
+> and listed at `/admin/enquiries` with the full product list — you just have to go and
+> look rather than being emailed. Step 6 turns alerts on whenever you are ready.
 
 ---
 
@@ -41,16 +45,33 @@ git status --short | grep -i env   # should print nothing
 2. **SQL Editor → New query** → paste all of [`supabase/schema.sql`](supabase/schema.sql) → **Run**.
    That creates the tables, indexes, row-level security, the `updated_at` trigger and
    the public `product-images` bucket.
-3. **Project Settings → API**, copy three values:
+3. Collect three values. Supabase reorganised this in 2025, so they now live in two
+   different places — there is no longer a "Settings → API" page.
 
-   | Supabase calls it | Goes into |
-   | --- | --- |
-   | Project URL | `NEXT_PUBLIC_SUPABASE_URL` |
-   | `anon` `public` key | `NEXT_PUBLIC_SUPABASE_ANON_KEY` |
-   | `service_role` `secret` key | `SUPABASE_SERVICE_ROLE_KEY` |
+   | Value | Where | Goes into |
+   | --- | --- | --- |
+   | Project URL | **Integrations → Data API** | `NEXT_PUBLIC_SUPABASE_URL` |
+   | **Publishable key** (`sb_publishable_…`) | **Settings → API Keys** | `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` |
+   | **Secret key** (`sb_secret_…`) | **Settings → API Keys** | `SUPABASE_SECRET_KEY` |
 
-> The `service_role` key bypasses every security rule. It is only ever read on the
-> server — never put it in a `NEXT_PUBLIC_` variable.
+   Quickest route for the first two: the **Connect** button in the top bar shows the
+   Project URL and publishable key ready to paste. The secret key is only on the
+   API Keys page — if the project has none yet, create one there.
+
+   > **The Project URL is the bare host**, `https://<ref>.supabase.co` — not the REST
+   > endpoint `https://<ref>.supabase.co/rest/v1/`, which is also shown on that page.
+   > The library adds `/rest/v1` itself; pasting it twice fails with
+   > *"Invalid path specified in request URL"*. The scripts trim it for you and warn,
+   > but set it correctly in Netlify.
+
+> The secret key bypasses every security rule. It is only ever read on the server —
+> never put it in a `NEXT_PUBLIC_` variable, and never commit it.
+
+**Older project?** If you see `anon` and `service_role` keys instead (long strings
+starting `eyJ`), those still work — put them in `NEXT_PUBLIC_SUPABASE_ANON_KEY` and
+`SUPABASE_SERVICE_ROLE_KEY` and everything behaves identically. Supabase is retiring
+them at the end of 2026, so move to the new keys when convenient; `npm run check:deploy`
+will remind you.
 
 ---
 
@@ -73,19 +94,7 @@ public key cannot read enquiries.
 
 ---
 
-## 4. Set up notifications
-
-Pick either, or both — see [README §5](README.md#5-enquiry-notification-flow).
-
-- **Telegram** (free, two minutes): message @BotFather → `/newbot` → token.
-  Add the bot to a group, open `https://api.telegram.org/bot<TOKEN>/getUpdates`,
-  send a message, copy `result[0].message.chat.id`.
-- **Email**: [resend.com](https://resend.com) → API key. Until your domain is verified
-  leave `ENQUIRY_FROM_EMAIL` unset and Resend's test sender is used.
-
----
-
-## 5. Deploy on Netlify
+## 4. Deploy on Netlify
 
 1. [app.netlify.com](https://app.netlify.com) → **Add new site → Import an existing project** →
    pick the repository. `netlify.toml` already sets the build command, the publish
@@ -98,11 +107,11 @@ Pick either, or both — see [README §5](README.md#5-enquiry-notification-flow)
    | `ADMIN_SESSION_SECRET` | `openssl rand -base64 32` |
    | `NEXT_PUBLIC_SITE_URL` | `https://<your-site>.netlify.app`, or the custom domain |
    | `NEXT_PUBLIC_SUPABASE_URL` | from step 2 |
-   | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | from step 2 |
-   | `SUPABASE_SERVICE_ROLE_KEY` | from step 2 |
-   | `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` | if using Telegram |
-   | `RESEND_API_KEY`, `ENQUIRY_TO_EMAIL` | if using email |
-   | `NEXT_PUBLIC_BUSINESS_*` | only to override what is in `src/lib/site.ts` |
+   | `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | from step 2 |
+   | `SUPABASE_SECRET_KEY` | from step 2 |
+   | `NEXT_PUBLIC_BUSINESS_*` | optional — only to override what is in `src/lib/site.ts` |
+
+   Notification variables come later, in step 6. Skip them for now.
 
 3. **Deploy site**. First build takes three or four minutes.
 4. Attach a custom domain under **Domain management**, then update
@@ -110,7 +119,7 @@ Pick either, or both — see [README §5](README.md#5-enquiry-notification-flow)
 
 ---
 
-## 6. Check it works
+## 5. Check it works
 
 ```bash
 curl -s -o /dev/null -w '%{http_code}\n' https://<your-site>/products
@@ -120,12 +129,45 @@ curl -s https://<your-site>/sitemap.xml | head -5     # URLs should be your doma
 Then by hand:
 
 1. Open `/products` — 160 products, images loading, filters working.
-2. Add two products, submit an enquiry. The success panel shows a reference, and the
-   email or Telegram message arrives.
-3. Log into `/admin`, confirm **System status** shows *Supabase (Postgres)* and your
-   notification channels as *Configured*.
-4. Edit a product and save. If the save fails, Supabase is not wired up — the site is
-   falling back to the JSON file, which Netlify cannot write to.
+2. Log into `/admin` and confirm **System status** shows *Supabase (Postgres)*. If it
+   says *Local JSON file* instead, the keys have not reached the build — check them in
+   Netlify and redeploy.
+3. **Edit a product and save**, then reload the public page to see the change. This is
+   the one that proves the database is really wired up; a failure here means the site
+   is still on the JSON file, which Netlify cannot write to.
+4. **Add a product** from `/admin/products → Add product`, with an image upload. That
+   exercises Supabase Storage too.
+5. Submit a test enquiry from the site, then check `/admin/enquiries` — it should be
+   there with the products and quantities. (No email or Telegram yet; that is step 6.)
+
+---
+
+## 6. Turn on enquiry alerts (later)
+
+Until this is done, enquiries are saved to Postgres and listed at `/admin/enquiries` —
+complete with company, contact, phone, email, every product and quantity, and the
+remarks. Nothing is lost; nobody is pinged. Add a channel whenever you want that to
+change, then redeploy.
+
+**Telegram** — free, no subscription, about two minutes:
+
+1. Message **@BotFather** on Telegram → `/newbot` → copy the token.
+2. Add the bot to a group, or just message it directly.
+3. Open `https://api.telegram.org/bot<TOKEN>/getUpdates`, send the bot a message,
+   refresh, and copy `result[0].message.chat.id`.
+4. In Netlify, add `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID`, then redeploy.
+
+**Email** — [resend.com](https://resend.com), 3,000 free emails a month:
+
+1. Create an API key → `RESEND_API_KEY`.
+2. Set `ENQUIRY_TO_EMAIL` to where enquiries should land (comma-separate for several).
+3. Leave `ENQUIRY_FROM_EMAIL` unset until you have verified a sending domain in
+   Resend; its test sender is used in the meantime.
+4. Redeploy.
+
+Either works alone, or both together. `/admin` → **System status** shows which ones
+the server can see. More detail, including the generic webhook channel for WhatsApp
+or Slack, is in [README §5](README.md#5-enquiry-notification-flow).
 
 ---
 

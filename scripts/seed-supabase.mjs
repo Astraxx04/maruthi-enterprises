@@ -8,11 +8,18 @@
 import { readFile } from "node:fs/promises";
 import { createClient } from "@supabase/supabase-js";
 
-const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+/** supabase-js adds "/rest/v1" itself — drop it if the pasted URL has it. */
+const trimUrl = (value) =>
+  value &&
+  value.trim().replace(/\/+$/, "").replace(/\/(rest|auth|storage)\/v1$/, "");
+
+const url = trimUrl(process.env.NEXT_PUBLIC_SUPABASE_URL);
+// "Secret key" in the dashboard; older projects call it the service_role key.
+const key = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!url || !key) {
-  console.error("Set NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY first.");
+  console.error("Set NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SECRET_KEY first.");
+  console.error("Both are in the Supabase dashboard: Settings → API Keys, and Integrations → Data API for the URL.");
   process.exit(1);
 }
 

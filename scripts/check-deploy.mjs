@@ -44,14 +44,31 @@ if (!siteUrl) {
 }
 
 console.log("\nDatabase and image storage");
-const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+/** supabase-js adds "/rest/v1" itself — drop it if the pasted URL has it. */
+const trimUrl = (value) =>
+  value &&
+  value.trim().replace(/\/+$/, "").replace(/\/(rest|auth|storage)\/v1$/, "");
+
+const rawUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const url = trimUrl(rawUrl);
+if (rawUrl && url !== rawUrl) {
+  warn(`NEXT_PUBLIC_SUPABASE_URL should be just the project URL — using ${url}`);
+  console.log("    Copy it from Integrations → Data API, not the REST endpoint.");
+}
+const anonKey =
+  process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const serviceKey = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+if (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY) {
+  warn("using the legacy anon/service_role keys — Supabase retires them at the end of 2026");
+  console.log("    Swap to the publishable and secret keys from Settings → API Keys when convenient.");
+}
 const bucket = process.env.SUPABASE_STORAGE_BUCKET || "product-images";
 
 if (!url || !anonKey || !serviceKey) {
   fail("Supabase is not fully configured — the site would fall back to data/catalogue.json,");
   console.log("    which cannot be written to on Netlify. Admin saves and enquiries would fail.");
+  console.log("    Needs NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY and SUPABASE_SECRET_KEY.");
   problems += 1;
 } else {
   const anon = createClient(url, anonKey, { auth: { persistSession: false } });
@@ -110,8 +127,10 @@ const channels = [
 const live = channels.filter(([, on]) => on).map(([name]) => name);
 if (live.length) pass(`configured: ${live.join(", ")}`);
 else {
-  fail("no notification channel is configured — enquiries would be stored but nobody told");
-  problems += 1;
+  // Optional on purpose: enquiries are written to Postgres before anything is
+  // sent, so nothing is lost — somebody just has to go and look.
+  warn("none configured — enquiries will be saved and visible at /admin/enquiries,");
+  console.log("    but no email or Telegram message goes out. Add a channel when you are ready.");
 }
 if (process.env.RESEND_API_KEY && !process.env.ENQUIRY_FROM_EMAIL) {
   warn("ENQUIRY_FROM_EMAIL is unset — Resend's test sender will be used until your domain is verified");

@@ -77,8 +77,8 @@ Full annotated list in [`.env.example`](.env.example). The essentials:
 | `ADMIN_SESSION_SECRET` | Production | Signs the admin cookie — `openssl rand -base64 32` |
 | `NEXT_PUBLIC_SITE_URL` | Production | Canonical URLs, sitemap, Open Graph |
 | `NEXT_PUBLIC_SUPABASE_URL` | Production | Supabase project URL |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Production | Public read-only key (RLS allows SELECT only) |
-| `SUPABASE_SERVICE_ROLE_KEY` | Production | Server-only key for writes and uploads — **never** exposed to the browser |
+| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Production | Browser-safe key; RLS allows SELECT only |
+| `SUPABASE_SECRET_KEY` | Production | Server-only key for writes and uploads — **never** exposed to the browser |
 | `RESEND_API_KEY`, `ENQUIRY_TO_EMAIL` | Recommended | Email notifications |
 | `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` | Optional | Instant chat notification |
 | `ENQUIRY_WEBHOOK_URL` | Optional | Any JSON endpoint — WhatsApp Cloud API, Slack, Zapier, n8n |
@@ -95,7 +95,8 @@ the browser.
 2. Open **SQL Editor → New query**, paste [`supabase/schema.sql`](supabase/schema.sql), run it.
    This creates the tables, indexes, row-level-security policies, the `updated_at` trigger
    and the public `product-images` storage bucket.
-3. Copy **Project URL**, **anon key** and **service_role key** into `.env.local`.
+3. Copy the **Project URL** (Integrations → Data API) and the **publishable** and **secret**
+   keys (Settings → API Keys) into `.env.local`. Legacy `anon`/`service_role` keys also work.
 4. Load the starter catalogue:
 
    ```bash
