@@ -140,15 +140,24 @@ export function ProductForm({
           </label>
 
           <div className="mt-3">
-            <label htmlFor="image_url_text" className="label">…or paste an image URL</label>
+            <label htmlFor="image_url_text" className="label">…or set the image path</label>
+            {/* Deliberately a text field, not type="url": most products point at a
+                file shipped with the site, such as /products/name.jpg, and the
+                browser rejects those as invalid URLs. */}
             <input
               id="image_url_text"
-              type="url"
+              type="text"
+              inputMode="url"
+              spellCheck={false}
               value={imageUrl}
               onChange={(event) => setImageUrl(event.target.value)}
-              placeholder="https://…"
-              className="field"
+              placeholder="/products/name.jpg or https://…"
+              className="field font-mono text-[0.8125rem]"
             />
+            <p className="mt-1.5 text-xs text-muted">
+              A path beginning with <code>/</code> points at a file in the site itself; a full
+              <code> https://</code> address loads from elsewhere.
+            </p>
           </div>
 
           {uploadError && <p className="mt-2 text-xs font-medium text-[#b4253c]">{uploadError}</p>}
