@@ -13,6 +13,8 @@ const seenTokens = new Map<string, number>();
 const TOKEN_TTL_MS = 10 * 60 * 1000;
 /** Forms completed faster than this are almost always bots. Override for tests. */
 const MIN_FILL_MS = Number(process.env.ENQUIRY_MIN_FILL_MS ?? 2500);
+/** 64 KB — an enquiry at the 100-product limit is well under 10 KB. */
+const MAX_BODY_BYTES = 64 * 1024;
 const DUPLICATE_WINDOW_MS = 60 * 1000;
 
 function rememberToken(token: string): boolean {
@@ -36,10 +38,24 @@ export async function POST(request: Request) {
     return bad("Too many requests from this connection. Please try again later.", 429);
   }
 
-  // 2. Parse and validate.
+  // 2. Read the body, with a hard size cap.
+  //
+  // Zod 3 can be made to chew through memory validating an oversized array
+  // before it checks the array's own .max() — GHSA-mrhx-c7xc-m3w5, fixed only
+  // in Zod 4. This endpoint is public, so cap the bytes before anything parses
+  // them. A real enquiry with a hundred products is a few KB.
+  const declared = Number(request.headers.get("content-length") ?? 0);
+  if (Number.isFinite(declared) && declared > MAX_BODY_BYTES) {
+    return bad("That enquiry is too large. Please remove some products and try again.", 413);
+  }
+
   let body: unknown;
   try {
-    body = await request.json();
+    const raw = await request.text();
+    if (raw.length > MAX_BODY_BYTES) {
+      return bad("That enquiry is too large. Please remove some products and try again.", 413);
+    }
+    body = JSON.parse(raw);
   } catch {
     return bad("Invalid request body");
   }

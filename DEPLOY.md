@@ -219,6 +219,39 @@ genuinely public information.
 
 ---
 
+## Keeping Next.js patched
+
+Netlify **blocks deploys** of Next.js versions with known critical vulnerabilities, so a
+stale dependency becomes a deployment outage rather than a warning. This project is on
+the Next.js 15 maintenance line:
+
+```bash
+npm outdated next react react-dom
+npm audit --omit=dev
+```
+
+If a deploy is ever refused for this reason, bump to the newest 15.x and rebuild:
+
+```bash
+npm install next@^15 react@^19 react-dom@^19
+npm run build && npm run check:deploy
+```
+
+Two known advisories are accepted rather than fixed, both deliberately:
+
+- **postcss** (high) — reachable only when compiling untrusted CSS at build time, which
+  this project never does. It is bundled inside Next.js and clears when the project
+  moves to Next 16.
+- **zod** (high) — memory exhaustion on oversized collections. The public enquiry
+  endpoint caps request bodies at 64 KB before anything is parsed, which closes the
+  path; the library fix needs Zod 4, a breaking upgrade.
+
+The low-severity findings all sit inside `resend`'s email renderer and are only
+reachable through attacker-controlled objects, which never reach it here. Upgrading
+Resend is best done when email notifications are switched on.
+
+---
+
 ## Things worth knowing
 
 - **Supabase pauses a free project after 7 days with no database activity.** Any
