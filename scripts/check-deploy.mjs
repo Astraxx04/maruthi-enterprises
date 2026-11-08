@@ -7,6 +7,7 @@
  * catalogue, confirms the public key can read it but not reach enquiries, and
  * checks the image bucket exists. Nothing is written.
  */
+import { readFileSync } from "node:fs";
 import { createClient } from "@supabase/supabase-js";
 
 const pass = (text) => console.log(`  ✓ ${text}`);
@@ -120,6 +121,26 @@ if (!url || !anonKey || !serviceKey) {
     pass(`${products.count} products in ${categories.count} categories`);
     if (!products.count) {
       warn("the catalogue is empty — run: npm run seed");
+    }
+  }
+
+  // The database should contain everything data/catalogue.json has. It may
+  // legitimately hold more — anything added through the admin — but never less.
+  const catalogue = JSON.parse(readFileSync(new URL("../data/catalogue.json", import.meta.url), "utf8"));
+  const live = await admin.from("products").select("slug").limit(5000);
+  if (!live.error) {
+    const have = new Set((live.data ?? []).map((product) => product.slug));
+    const missing = catalogue.products.filter((product) => !have.has(product.slug));
+    if (missing.length) {
+      fail(`the database is missing ${missing.length} product(s) that data/catalogue.json has`);
+      console.log(`    e.g. ${missing.slice(0, 3).map((p) => p.name).join(", ")}`);
+      console.log("    Run: npm run seed   (it only adds what is missing)");
+      problems += 1;
+    } else {
+      const added = have.size - catalogue.products.length;
+      pass(
+        `every product in data/catalogue.json is in the database${added > 0 ? ` (plus ${added} added since)` : ""}`,
+      );
     }
   }
 

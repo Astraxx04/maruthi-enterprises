@@ -100,19 +100,6 @@ export function ProductForm({
               />
             </div>
 
-            <div>
-              <label htmlFor="specifications" className="label">Pack details</label>
-              <textarea
-                id="specifications"
-                name="specifications"
-                rows={5}
-                defaultValue={product?.specifications ?? ""}
-                placeholder={"Available pack sizes: 9 ml, 30 ml, 50 ml"}
-                className="field resize-y font-mono text-[0.8125rem]"
-              />
-              <p className="mt-1.5 text-xs text-muted">One detail per line — line breaks are preserved on the site.</p>
-            </div>
-
             <PackSizeEditor name="pack_size" defaultValue={product?.pack_size ?? null} units={units} />
           </div>
         </section>

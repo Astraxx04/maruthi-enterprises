@@ -1,166 +1,828 @@
 {
   "categories": [
-    { "name": "Pain Relief & Balms", "description": "Balms, sprays, roll-ons and ayurvedic oils for headache, body ache and joint pain." },
-    { "name": "Ayurvedic & Herbal", "description": "Traditional ayurvedic and unani remedies, tonics, churnas and herbal syrups." },
-    { "name": "Skin Care & Creams", "description": "Ointments, creams, gels and lotions for everyday skin concerns." },
-    { "name": "Hair Care & Colour", "description": "Hair oils, shampoos, mehandi and hair colour across leading brands." },
-    { "name": "Oral, Dental & Throat", "description": "Toothpastes, tooth powders, brushes, mouth ulcer gels, lozenges and fresheners." },
-    { "name": "Digestive & Rehydration", "description": "Antacids, laxatives, psyllium husk and oral rehydration salts." },
-    { "name": "First Aid & Surgical", "description": "Plasters, patches, antiseptics, cotton buds and inhalers." },
-    { "name": "Health Supplements", "description": "Weight gainers, glucose powders, energy pops and nicotine gums." },
-    { "name": "Baby Care", "description": "Feeding bottles, nipples, wipes and gripe water." },
-    { "name": "Soaps & Bath", "description": "Ayurvedic and herbal bathing soaps in single and jar packs." },
-    { "name": "Eye & Lens Care", "description": "Contact lens solutions and lubricating eye drops." },
-    { "name": "Oils & Edibles", "description": "Olive oils, almond oils and edible oil packs." },
-    { "name": "Personal Care", "description": "Deodorants, hair removal creams and daily personal care." },
-    { "name": "Household & Others", "description": "Batteries, insect sprays and general store items." }
+    {
+      "name": "Pain Relief & Balms",
+      "description": "Balms, sprays, roll-ons and ayurvedic oils for headache, body ache and joint pain."
+    },
+    {
+      "name": "Ayurvedic & Herbal",
+      "description": "Traditional ayurvedic and unani remedies, tonics, churnas and herbal syrups."
+    },
+    {
+      "name": "Skin Care & Creams",
+      "description": "Ointments, creams, gels and lotions for everyday skin concerns."
+    },
+    {
+      "name": "Hair Care & Colour",
+      "description": "Hair oils, shampoos, mehandi and hair colour across leading brands."
+    },
+    {
+      "name": "Oral, Dental & Throat",
+      "description": "Toothpastes, tooth powders, brushes, mouth ulcer gels, lozenges and fresheners."
+    },
+    {
+      "name": "Digestive & Rehydration",
+      "description": "Antacids, laxatives, psyllium husk and oral rehydration salts."
+    },
+    {
+      "name": "First Aid & Surgical",
+      "description": "Plasters, patches, antiseptics, cotton buds and inhalers."
+    },
+    {
+      "name": "Health Supplements",
+      "description": "Weight gainers, glucose powders, energy pops and nicotine gums."
+    },
+    {
+      "name": "Baby Care",
+      "description": "Feeding bottles and nipples, soothers, teethers, breast pumps, wipes, gripe water and baby grooming."
+    },
+    {
+      "name": "Soaps & Bath",
+      "description": "Ayurvedic and herbal bathing soaps in single and jar packs."
+    },
+    {
+      "name": "Eye & Lens Care",
+      "description": "Contact lens solutions and lubricating eye drops."
+    },
+    {
+      "name": "Oils & Edibles",
+      "description": "Olive oils, almond oils and edible oil packs."
+    },
+    {
+      "name": "Personal Care",
+      "description": "Deodorants, hair removal creams and daily personal care."
+    },
+    {
+      "name": "Household & Others",
+      "description": "Batteries, insect sprays and general store items."
+    }
   ],
   "products": {
-    "p02-r0c0": { "name": "Amruthanjan Pain Balm Strong (Green)", "brand": "Amruthanjan", "category": "Pain Relief & Balms", "description": "Double-power ayurvedic pain balm for headache, body ache and cold relief, in the super saver green pack." },
-    "p02-r0c1": { "name": "Amruthanjan Pain Balm Extra Power (Yellow)", "brand": "Amruthanjan", "category": "Pain Relief & Balms", "description": "India's No.1 pain balm in the classic extra-power yellow pack, trusted for over 125 years." },
-    "p02-r1c0": { "name": "Amruthanjan Maha Strong Pain Balm (Red)", "brand": "Amruthanjan", "category": "Pain Relief & Balms", "description": "Maha strong formulation that stays softer and smoother on the skin while relieving pain." },
-    "p02-r1c1": { "name": "Amruthanjan Decorn Corn Caps", "brand": "Amruthanjan", "category": "Skin Care & Creams", "description": "Medicated corn caps offering quick action, a soothing effect and long-lasting relief from corns." },
-    "p02-r2c0": { "name": "Amruthanjan Head Roll On", "brand": "Amruthanjan", "category": "Pain Relief & Balms", "description": "Non-greasy roll-on for fast relief from headaches, available in bottle and sachet packs." },
-    "p02-r2c1": { "name": "Amruthanjan Back Pain Roll On", "brand": "Amruthanjan", "category": "Pain Relief & Balms", "description": "Advanced back pain roll-on that starts working within 30 seconds." },
-
-    "p03-r0c0": { "name": "Iodex Multipurpose Pain Balm", "brand": "Iodex", "category": "Pain Relief & Balms", "description": "Fast relief multipurpose balm for muscular pain, sprains and stiffness." },
-    "p03-r0c1": { "name": "Tiger Balm Red Ointment", "brand": "Tiger Balm", "category": "Pain Relief & Balms", "description": "The classic red ointment for headache, muscular pain and insect bites." },
-    "p03-r1c0": { "name": "Tiger Balm White Ointment", "brand": "Tiger Balm", "category": "Pain Relief & Balms", "description": "White ointment for headache, blocked nose and muscular stiffness." },
-    "p03-r1c1": { "name": "Zandu Balm Green", "brand": "Zandu", "category": "Pain Relief & Balms", "description": "Fast-action, fast-absorption balm for headache, body ache and cold." },
-    "p03-r2c0": { "name": "Zandu Balm Red Ultra Power", "brand": "Zandu", "category": "Pain Relief & Balms", "description": "Ultra power balm for strong headache, body ache and cold." },
-    "p03-r2c1": { "name": "Monison's Pain Balm", "brand": "Monison's", "category": "Pain Relief & Balms", "description": "Pain balm for headache and cold, supplied in jars up to 200 g for counter sale." },
-
-    "p04-r0c0": { "name": "Mentho Plus Balm (Sachet)", "brand": "Emami", "category": "Pain Relief & Balms", "description": "Single-use sachets of Emami Mentho Plus balm for headache relief, in ₹2, ₹5 and ₹10 price packs." },
-    "p04-r0c1": { "name": "Mentho Plus Balm (Bottle)", "brand": "Emami", "category": "Pain Relief & Balms", "description": "Emami Mentho Plus balm in a reusable bottle pack." },
-    "p04-r1c0": { "name": "Green Leaf Aloe Vera Skin Gel", "brand": "Green Leaf", "category": "Skin Care & Creams", "description": "Export-quality pure aloe vera gel for acne, rash, minor skin irritation and sunburn." },
-    "p04-r1c1": { "name": "Tulips Paper Stick Cotton Buds", "brand": "Tulips", "category": "First Aid & Surgical", "description": "Paper-stick cotton swabs with 200 tips per pack, hygienically sealed." },
-    "p04-r2c0": { "name": "Gas-O-Fast Jeera Sachets", "brand": "Gas-O-Fast", "category": "Digestive & Rehydration", "description": "Jeera-flavoured antacid sachets supplied in a counter-top jar." },
-    "p04-r2c1": { "name": "Super Vasmol 33 Kesh Kala", "brand": "Vasmol", "category": "Hair Care & Colour", "description": "Oil-based black hair colour enriched with amla oil for a natural look." },
-
-    "p05-r0c0": { "name": "Vicco Turmeric Skin Cream", "brand": "Vicco", "category": "Skin Care & Creams", "description": "Ayurvedic turmeric skin cream with sandalwood oil for daily skin care." },
-    "p05-r0c1": { "name": "Vicco Vajradanti Toothpaste", "brand": "Vicco", "category": "Oral, Dental & Throat", "description": "Ayurvedic toothpaste with 18 herbs and barks for healthy gums and teeth." },
-    "p05-r1c0": { "name": "Vicco Vajradanti Tooth Powder", "brand": "Vicco", "category": "Oral, Dental & Throat", "description": "Ayurvedic tooth powder for daily gum care, in jars up to 200 g." },
-    "p05-r1c1": { "name": "Vicco Turmeric WSO Skin Cream", "brand": "Vicco", "category": "Skin Care & Creams", "description": "Water-soluble turmeric cream that fights pimples and blemishes for glowing skin." },
-    "p05-r2c0": { "name": "Raktha Chandan Ayurvedic Soap", "brand": "Nagarjuna", "category": "Soaps & Bath", "description": "Red sandalwood ayurvedic soap that helps wash away pimples, blemishes and pigmentation." },
-    "p05-r2c1": { "name": "Gram Flour Soap", "brand": "Sadguru Ayurveda", "category": "Soaps & Bath", "description": "Besan-based ayurvedic soap that protects skin and improves complexion." },
-
-    "p06-r0c0": { "name": "Gram Flour Soap Jar Pack", "brand": "Sadguru Ayurveda", "category": "Soaps & Bath", "description": "Multi-pack jar of gram flour ayurvedic soap for counter display." },
-    "p06-r0c1": { "name": "Kayam Churna", "brand": "Kayam", "category": "Digestive & Rehydration", "description": "Ayurvedic churna useful in chronic constipation, headache and hyperacidity." },
-    "p06-r1c0": { "name": "Kayam Tablet", "brand": "Kayam", "category": "Digestive & Rehydration", "description": "Ayurvedic tablets for chronic constipation, acidity, gas and headache." },
-    "p06-r1c1": { "name": "Pet Safa Powder & Tablet", "brand": "Pet Safa", "category": "Digestive & Rehydration", "description": "Natural laxative granules and tablets for effective relief from constipation.", "sizes": ["Powder", "Tablet"] },
-    "p06-r2c0": { "name": "Amrut Malam", "brand": "Amrut Pharmaceuticals", "category": "Pain Relief & Balms", "description": "Ayurvedic balm for headache, cold and body pain." },
-    "p06-r2c1": { "name": "Link Ointment", "brand": "Link", "category": "Skin Care & Creams", "description": "External-use ointment that heals cracked feet and rough skin." },
-
-    "p07-r0c0": { "name": "Eno Fruit Salt Lemon", "brand": "Eno", "category": "Digestive & Rehydration", "description": "Lemon-flavoured antacid that gets to work in six seconds." },
-    "p07-r0c1": { "name": "Eno Fruit Salt Orange", "brand": "Eno", "category": "Digestive & Rehydration", "description": "Orange-flavoured antacid sachets for fast acidity relief." },
-    "p07-r1c0": { "name": "Eno Fruit Salt Regular", "brand": "Eno", "category": "Digestive & Rehydration", "description": "The original unflavoured Eno fruit salt for acidity and indigestion." },
-    "p07-r1c1": { "name": "Eno Fruit Salt Cola", "brand": "Eno", "category": "Digestive & Rehydration", "description": "Cola-flavoured antacid sachets for fast acidity relief." },
-    "p07-r2c0": { "name": "Roghan Badam Shirin Almond Oil", "brand": "Hamdard", "category": "Oils & Edibles", "description": "100% pure sweet almond oil for massage, hair and daily use." },
-    "p07-r2c1": { "name": "Aswini Hair Oil", "brand": "Aswini", "category": "Hair Care & Colour", "description": "Ayurvedic hair oil that controls hair fall and prevents dandruff." },
-
-    "p08-r0c0": { "name": "Hansaplast Belladonna Pain Relief Patch", "brand": "Hansaplast", "category": "First Aid & Surgical", "description": "Perforated patch using the healing power of belladonna for muscle stiffness, joint swelling and nerve pain." },
-    "p08-r0c1": { "name": "Hansaplast Heat Plaster + Capsicum", "brand": "Hansaplast", "category": "First Aid & Surgical", "description": "Intensive, long-lasting heat plaster with capsicum for neck, back and muscular pain, effective up to 24 hours." },
-    "p08-r1c0": { "name": "Hansaplast Spot Round Jar", "brand": "Hansaplast", "category": "First Aid & Surgical", "description": "Round spot bandages in a counter jar for small cuts and wounds." },
-    "p08-r1c1": { "name": "Hansaplast Regular Strips Jar", "brand": "Hansaplast", "category": "First Aid & Surgical", "description": "Regular adhesive strips in a 100-strip counter jar." },
-    "p08-r2c0": { "name": "Hansaplast Square Patch Jar", "brand": "Hansaplast", "category": "First Aid & Surgical", "description": "Square patches, 50 per jar, for everyday cuts and grazes." },
-    "p08-r2c1": { "name": "Hansaplast Washproof Jar", "brand": "Hansaplast", "category": "First Aid & Surgical", "description": "Washproof adhesive plasters in a counter jar." },
-
-    "p09-r0c0": { "name": "Hansaplast Jumbo Strips", "brand": "Hansaplast", "category": "First Aid & Surgical", "description": "Jumbo strips with a larger wound pad, 10 strips per pack." },
-    "p09-r0c1": { "name": "Hansaplast 1000s Bulk Box", "brand": "Hansaplast", "category": "First Aid & Surgical", "description": "Bulk institutional box of 1000 regular Hansaplast strips." },
-    "p09-r1c0": { "name": "Figaro Olive Oil (Tin)", "brand": "Figaro", "category": "Oils & Edibles", "description": "Spanish olive oil in a sealed tin for kitchen and massage use." },
-    "p09-r1c1": { "name": "Figaro Olive Oil (Bottle)", "brand": "Figaro", "category": "Oils & Edibles", "description": "Spanish olive oil in a 100 ml bottle." },
-    "p09-r2c0": { "name": "B-Tex White Ointment", "brand": "B-Tex", "category": "Skin Care & Creams", "description": "Irritation-free ointment for eczema, ringworm, itches, cold cracks and pimples." },
-    "p09-r2c1": { "name": "Saibol Skin Ointment", "brand": "Saibol", "category": "Skin Care & Creams", "description": "Skin ointment for cuts, itches, boils, eczema, scabies and pimples." },
-
-    "p10-r0c0": { "name": "ORS Ready to Drink (Alkem)", "brand": "Alkem", "category": "Digestive & Rehydration", "description": "Ready-to-drink oral rehydration salts that restore body fluids and electrolytes lost to dehydration." },
-    "p10-r0c1": { "name": "Prolyte ORS Ready to Drink", "brand": "Cipla", "category": "Digestive & Rehydration", "description": "WHO-recommended formula ready-to-drink ORS in apple and orange flavours." },
-    "p10-r1c0": { "name": "Prolyte ORS Powder Sachets", "brand": "Cipla", "category": "Digestive & Rehydration", "description": "WHO-formula oral rehydration salts powder in single-dose sachets." },
-    "p10-r1c1": { "name": "Sat-Isabgol Psyllium Husk", "brand": "Sidhpur Sat-Isabgol", "category": "Digestive & Rehydration", "description": "Best-quality pure psyllium husk for digestive regularity." },
-    "p10-r2c0": { "name": "Bioline Crack Heal Cream", "brand": "Bioline", "category": "Skin Care & Creams", "description": "Heals and soothes cracked feet, with a fast-absorbing non-sticky base." },
-    "p10-r2c1": { "name": "Krack Heel Repair Cream", "brand": "Krack", "category": "Skin Care & Creams", "description": "Ayurvedic heel repair cream for dry, cracked feet." },
-
-    "p11-r0c0": { "name": "Kesh King Ayurvedic Hair Oil", "brand": "Kesh King", "category": "Hair Care & Colour", "description": "Ayurvedic oil with 21 herbs, clinically tested for hair fall and hair growth." },
-    "p11-r0c1": { "name": "Kesh King Anti-Hairfall Shampoo", "brand": "Kesh King", "category": "Hair Care & Colour", "description": "Anti-hairfall shampoo with aloe and 21 ayurvedic herbs." },
-    "p11-r1c0": { "name": "Indica Hair Colour Powder", "brand": "Indica", "category": "Hair Care & Colour", "description": "10-minute natural black hair colour powder, in box and sachet packs." },
-    "p11-r1c1": { "name": "Indica Easy Shampoo Hair Colour", "brand": "Indica", "category": "Hair Care & Colour", "description": "Ammonia-free shampoo hair colour sachets with 10-minute action." },
-    "p11-r2c0": { "name": "VIP Hair Colour Shampoo (Pack of 7)", "brand": "VIP", "category": "Hair Care & Colour", "description": "5-in-1 natural hair colour shampoo sachets with 100% grey coverage, pack of 7." },
-    "p11-r2c1": { "name": "VIP Hair Colour Shampoo Carton", "brand": "VIP", "category": "Hair Care & Colour", "description": "Boxed VIP natural hair colour shampoo for counter sale." },
-
-    "p12-r0c0": { "name": "Black Rose Kali Mehandi", "brand": "Black Rose", "category": "Hair Care & Colour", "description": "Powder hair dye in black for natural-looking grey coverage." },
-    "p12-r0c1": { "name": "V Care Shampoo Hair Colour", "brand": "V Care", "category": "Hair Care & Colour", "description": "Hair dye shampoo enriched with keratin and silk protein, in sachet and base packs." },
-    "p12-r1c0": { "name": "Amrith Noni Power Plus", "brand": "Amrith Noni", "category": "Ayurvedic & Herbal", "description": "Noni-based ayurvedic health tonic for daily immunity and vitality." },
-    "p12-r1c1": { "name": "Amrith Noni D+", "brand": "Amrith Noni", "category": "Ayurvedic & Herbal", "description": "Noni juice blend in a 1000 ml bottle for everyday wellness." },
-    "p12-r2c0": { "name": "Amrith Noni Ortho Plus", "brand": "Amrith Noni", "category": "Ayurvedic & Herbal", "description": "Ayurvedic noni tonic formulated to help with joint pain." },
-    "p12-r2c1": { "name": "Amrith Noni Pain Oil", "brand": "Amrith Noni", "category": "Pain Relief & Balms", "description": "Ayurvedic pain relief oil, supplied in bottle and roll-on packs." },
-
-    "p13-r0c0": { "name": "Moov Pain Relief Cream", "brand": "Moov", "category": "Pain Relief & Balms", "description": "Specialist pain relief cream for back ache, muscle pain and sprains." },
-    "p13-r0c1": { "name": "Moov Pain Relief Spray", "brand": "Moov", "category": "Pain Relief & Balms", "description": "Instant-action pain relief spray for hard-to-reach areas." },
-    "p13-r1c0": { "name": "Axe Brand Cap Kapak Universal Oil", "brand": "Axe Brand", "category": "Pain Relief & Balms", "description": "Medicated universal oil for headache, cold, insect bites and giddiness." },
-    "p13-r1c1": { "name": "Nicotex 2 mg Nicotine Gum", "brand": "Nicotex", "category": "Health Supplements", "description": "Sugar-free mint plus nicotine gum, 2 mg, for smoking cessation." },
-    "p13-r2c0": { "name": "Nicotex Tin 2 mg + 4 mg", "brand": "Nicotex", "category": "Health Supplements", "description": "Nicotine gum tin packs combining 2 mg and 4 mg strengths." },
-    "p13-r2c1": { "name": "Nicotex 4 mg Nicotine Gum", "brand": "Nicotex", "category": "Health Supplements", "description": "Sugar-free mint plus nicotine gum, 4 mg, for heavier smokers." },
-
-    "p14-r0c0": { "name": "Sensodyne Toothpaste Range", "brand": "Sensodyne", "category": "Oral, Dental & Throat", "description": "Full Sensodyne range for sensitive teeth — Rapid Relief, Repair & Protect, Sensitivity & Gum and Fresh Mint." },
-    "p14-r0c1": { "name": "Dettol Antiseptic Liquid", "brand": "Dettol", "category": "First Aid & Surgical", "description": "Trusted antiseptic liquid that kills 99.9% of germs, for first aid and personal hygiene." },
-    "p14-r1c0": { "name": "White Tone Face Cream", "brand": "White Tone", "category": "Skin Care & Creams", "description": "Soft and smooth face cream in ₹48, ₹75 and ₹150 price packs." },
-    "p14-r1c1": { "name": "White Tone Face Powder", "brand": "White Tone", "category": "Skin Care & Creams", "description": "Face powder with soft-shade formula for an even finish." },
-    "p14-r2c0": { "name": "Sapat Lotion", "brand": "Sapat", "category": "Skin Care & Creams", "description": "Salicylic acid lotion for ringworm, itch and eczema." },
-    "p14-r2c1": { "name": "Boroline Antiseptic Ayurvedic Cream", "brand": "Boroline", "category": "Skin Care & Creams", "description": "Antiseptic ayurvedic cream in tube and tin packs for cuts, cracks and dry skin." },
-
-    "p15-r0c0": { "name": "Heelmate Heel Repair Cream", "brand": "Wings Heelmate", "category": "Skin Care & Creams", "description": "Cracked heel repair cream with visible effects in three days." },
-    "p15-r0c1": { "name": "Orasore Mouth Ulcer Gel", "brand": "Wings Orasore", "category": "Oral, Dental & Throat", "description": "Two-minute instant pain relief gel for mouth ulcers." },
-    "p15-r1c0": { "name": "Smyle Mouth Ulcer Gel", "brand": "Smyle", "category": "Oral, Dental & Throat", "description": "Herbal mouth ulcer gel with a roll-on tip for direct application." },
-    "p15-r1c1": { "name": "Ajay Toothbrush", "brand": "Ajay", "category": "Oral, Dental & Throat", "description": "Toothbrushes in soft, medium, hard and sensitive bristle options.", "sizes": ["Soft", "Medium", "Hard", "Sensitive"] },
-    "p15-r2c0": { "name": "Duracell Batteries (AA, AAA)", "brand": "Duracell", "category": "Household & Others", "description": "Duracell alkaline batteries in AA and AAA, supplied on retail hang cards." },
-    "p15-r2c1": { "name": "K.P. Namboodiri's Ayurvedic Toothpaste", "brand": "K.P. Namboodiri's", "category": "Oral, Dental & Throat", "description": "Ayurvedic toothpaste that fights bacteria naturally." },
-
-    "p16-r0c0": { "name": "Samahan Ayurvedic Sachets", "brand": "Samahan", "category": "Ayurvedic & Herbal", "description": "Ayurvedic herbal drink sachets for cold, cough and seasonal relief." },
-    "p16-r0c1": { "name": "Endura Mass Weight Gainer", "brand": "Endura Mass", "category": "Health Supplements", "description": "Weight gainer available in vanilla, banana and chocolate flavours." },
-    "p16-r1c0": { "name": "Spraymintt Mouth Freshener", "brand": "Spraymintt", "category": "Oral, Dental & Throat", "description": "Pocket mouth freshener sprays across a full range of flavours." },
-    "p16-r1c1": { "name": "Relispray Instant Pain Relief Spray", "brand": "Relispray", "category": "Pain Relief & Balms", "description": "Instant-action pain relief spray for sports injuries, sprains and muscular pain." },
-    "p16-r2c0": { "name": "Dr. Ortho Ayurvedic Oil", "brand": "Dr. Ortho", "category": "Pain Relief & Balms", "description": "Ayurvedic oil helpful in painful joint and muscle conditions." },
-    "p16-r2c1": { "name": "Pankajakasthuri Orthoherb Oil", "brand": "Pankajakasthuri", "category": "Pain Relief & Balms", "description": "Ayurvedic joint pain relief oil." },
-
-    "p17-r0c0": { "name": "Pankajakasthuri Orthoherb Tablets", "brand": "Pankajakasthuri", "category": "Pain Relief & Balms", "description": "Ayurvedic tablets for back pain, knee pain, wrist pain and ankle pain." },
-    "p17-r0c1": { "name": "Pankajakasthuri Breathe Eazy Syrup", "brand": "Pankajakasthuri", "category": "Ayurvedic & Herbal", "description": "Ayurvedic syrup that supports easy breathing and respiratory health." },
-    "p17-r1c0": { "name": "Pankajakasthuri Orthonervin Oil", "brand": "Pankajakasthuri", "category": "Pain Relief & Balms", "description": "Oil with 23 natural ingredients for joint and muscle pain." },
-    "p17-r1c1": { "name": "Pankajakasthuri Breathe Eazy Granules", "brand": "Pankajakasthuri", "category": "Ayurvedic & Herbal", "description": "Ayurvedic granules for respiratory wellness, supplied in a jar pack." },
-    "p17-r2c0": { "name": "Gokof Cough Syrup Sachets", "brand": "Gokof", "category": "Ayurvedic & Herbal", "description": "Single-dose ayurvedic cough syrup sachets in a counter jar." },
-    "p17-r2c1": { "name": "Nivaran 90 Cough Syrup Sachets", "brand": "Nivaran 90", "category": "Ayurvedic & Herbal", "description": "Ayurvedic cough syrup sachets supplied in retail strips." },
-
-    "p18-r0c0": { "name": "Chandrika Ayurvedic Soap", "brand": "Chandrika", "category": "Soaps & Bath", "description": "Hand-made ayurvedic soap for problem-free, clear skin." },
-    "p18-r0c1": { "name": "Cofsils Lozenges Jar", "brand": "Cofsils", "category": "Oral, Dental & Throat", "description": "Sore throat lozenges supplied in a counter jar." },
-    "p18-r1c0": { "name": "Cofsils Cough Drops Jar", "brand": "Cofsils", "category": "Oral, Dental & Throat", "description": "Quick-relief cough drops in bulk counter jars." },
-    "p18-r1c1": { "name": "Veet Hair Removal Cream", "brand": "Veet", "category": "Personal Care", "description": "5-in-1 skin benefits hair removal cream for sensitive skin, body and legs." },
-    "p18-r2c0": { "name": "Nasalin Inhaler", "brand": "Nasalin", "category": "First Aid & Surgical", "description": "Pocket nasal inhaler with keychain for blocked nose relief." },
-    "p18-r2c1": { "name": "Lacto Calamine Skin Balance Lotion", "brand": "Lacto Calamine", "category": "Skin Care & Creams", "description": "Daily nourishing lotion in Hydration and Oil Control variants." },
-
-    "p19-r0c0": { "name": "Little's BigHug Silicone Nipple", "brand": "Little's", "category": "Baby Care", "description": "Soft silicone feeding nipples for babies, in single and box packs." },
-    "p19-r0c1": { "name": "Lacto Calamine Daily Sunshield SPF 50", "brand": "Lacto Calamine", "category": "Skin Care & Creams", "description": "Matte-look sunscreen with kaolin clay, SPF 50 PA+++." },
-    "p19-r1c0": { "name": "Zinda Tilismath", "brand": "Zinda Tilismath", "category": "Ayurvedic & Herbal", "description": "Classic unani medicine, 100% vegetarian, for cold, cough and stomach complaints." },
-    "p19-r1c1": { "name": "Little's Baby Wipes", "brand": "Little's", "category": "Baby Care", "description": "Soft cleansing baby wipes, 80 wipes per pack." },
-    "p19-r2c0": { "name": "Hamdard Safi Blood Purifier", "brand": "Hamdard", "category": "Ayurvedic & Herbal", "description": "Natural herbal blood purifier with an internal detox formula for glowing skin." },
-    "p19-r2c1": { "name": "Tunzia Pure Olive Oil (Red Tin)", "brand": "Tunzia", "category": "Oils & Edibles", "description": "Organic premium quality pure olive oil in a 1000 ml tin." },
-
-    "p20-r0c0": { "name": "NO-P Crawling Insect Killer Spray", "brand": "NO-P", "category": "Household & Others", "description": "Aerosol insect killer for cockroaches and other crawling insects." },
-    "p20-r0c1": { "name": "BSY Noni Black Hair Magic Dye", "brand": "BSY Noni", "category": "Hair Care & Colour", "description": "Noni plant essence hair dye shampoo in ₹50 and ₹90 sachet packs." },
-    "p20-r1c0": { "name": "Bioline Lip Care Balm", "brand": "Bioline", "category": "Skin Care & Creams", "description": "Lip balm for soft lips, available in fruit flavours." },
-    "p20-r1c1": { "name": "Bioline White Petroleum Jelly", "brand": "Bioline", "category": "Skin Care & Creams", "description": "White petroleum jelly IP for dry lips, rough hands, cracked heels and chapped skin." },
-    "p20-r2c0": { "name": "Ayusas Adulsa Cough Syrup", "brand": "Sagar Ayusas", "category": "Ayurvedic & Herbal", "description": "Ayurvedic adulsa cough syrup for wet and dry cough." },
-    "p20-r2c1": { "name": "Little's Poly Mini Feeding Bottle", "brand": "Little's", "category": "Baby Care", "description": "Three-in-one polypropylene feeding bottle, BPA free." },
-
-    "p21-r0c0": { "name": "Sesa Ayurvedic Hair Oil", "brand": "Sesa", "category": "Hair Care & Colour", "description": "Ayurvedic hair oil that reduces hair fall and supports hair growth, with a comb applicator." },
-    "p21-r0c1": { "name": "Sesa Anti-Hair Fall Shampoo", "brand": "Sesa", "category": "Hair Care & Colour", "description": "Anti-hair fall shampoo with onion and ayurvedic herbs." },
-    "p21-r1c0": { "name": "Biotrue Rewetting Eye Drops", "brand": "Bausch + Lomb", "category": "Eye & Lens Care", "description": "Rewetting drops for instant and natural hydration of dry, tired eyes." },
-    "p21-r1c1": { "name": "ReNu MultiPlus Lens Solution", "brand": "Bausch + Lomb", "category": "Eye & Lens Care", "description": "Multi-purpose contact lens solution that cleans, disinfects and rinses." },
-    "p21-r2c0": { "name": "Woodward's Gripe Water", "brand": "Woodward's", "category": "Baby Care", "description": "Non-alcoholic gentle antacid, safe for infants during the teething period." },
-    "p21-r2c1": { "name": "Indulekha Bringha Hair Oil", "brand": "Indulekha", "category": "Hair Care & Colour", "description": "Ayurvedic proprietary bringha oil with a selfie comb applicator." },
-
-    "p22-r0c0": { "name": "Fogg Body Spray", "brand": "Fogg", "category": "Personal Care", "description": "No-gas body spray deodorants across the full fragrance range." },
-    "p22-r0c1": { "name": "Fogg Mobile Pack Deodorant", "brand": "Fogg", "category": "Personal Care", "description": "Compact pocket-size Fogg deodorant packs for travel and counter sale." },
-    "p22-r1c0": { "name": "Kailas Jeevan Ayurvedic Cream", "brand": "Kailas Jeevan", "category": "Skin Care & Creams", "description": "Multipurpose ayurvedic cream in tube and jar packs." },
-    "p22-r1c1": { "name": "Glucomin Energy Pops", "brand": "Glucomin", "category": "Health Supplements", "description": "Glucose energy pops in assorted fruit flavours." },
-    "p22-r2c0": { "name": "Gluco-D & Gluco-C Pro", "brand": "Gluco", "category": "Health Supplements", "description": "Instant energy glucose powder with vitamin D and vitamin C variants." },
-    "p22-r2c1": { "name": "Hairshield Anti Lice Cream Wash", "brand": "Hairshield", "category": "Hair Care & Colour", "description": "One-wash formula that removes lice, eggs, nymphs and nits." }
+    "p02-r0c0": {
+      "name": "Amruthanjan Pain Balm Strong (Green)",
+      "brand": "Amruthanjan",
+      "category": "Pain Relief & Balms",
+      "description": "Double-power ayurvedic pain balm for headache, body ache and cold relief, in the super saver green pack."
+    },
+    "p02-r0c1": {
+      "name": "Amruthanjan Pain Balm Extra Power (Yellow)",
+      "brand": "Amruthanjan",
+      "category": "Pain Relief & Balms",
+      "description": "India's No.1 pain balm in the classic extra-power yellow pack, trusted for over 125 years."
+    },
+    "p02-r1c0": {
+      "name": "Amruthanjan Maha Strong Pain Balm (Red)",
+      "brand": "Amruthanjan",
+      "category": "Pain Relief & Balms",
+      "description": "Maha strong formulation that stays softer and smoother on the skin while relieving pain."
+    },
+    "p02-r1c1": {
+      "name": "Amruthanjan Decorn Corn Caps",
+      "brand": "Amruthanjan",
+      "category": "Skin Care & Creams",
+      "description": "Medicated corn caps offering quick action, a soothing effect and long-lasting relief from corns."
+    },
+    "p02-r2c0": {
+      "name": "Amruthanjan Head Roll On",
+      "brand": "Amruthanjan",
+      "category": "Pain Relief & Balms",
+      "description": "Non-greasy roll-on for fast relief from headaches, available in bottle and sachet packs."
+    },
+    "p02-r2c1": {
+      "name": "Amruthanjan Back Pain Roll On",
+      "brand": "Amruthanjan",
+      "category": "Pain Relief & Balms",
+      "description": "Advanced back pain roll-on that starts working within 30 seconds."
+    },
+    "p03-r0c0": {
+      "name": "Iodex Multipurpose Pain Balm",
+      "brand": "Iodex",
+      "category": "Pain Relief & Balms",
+      "description": "Fast relief multipurpose balm for muscular pain, sprains and stiffness."
+    },
+    "p03-r0c1": {
+      "name": "Tiger Balm Red Ointment",
+      "brand": "Tiger Balm",
+      "category": "Pain Relief & Balms",
+      "description": "The classic red ointment for headache, muscular pain and insect bites."
+    },
+    "p03-r1c0": {
+      "name": "Tiger Balm White Ointment",
+      "brand": "Tiger Balm",
+      "category": "Pain Relief & Balms",
+      "description": "White ointment for headache, blocked nose and muscular stiffness."
+    },
+    "p03-r1c1": {
+      "name": "Zandu Balm Green",
+      "brand": "Zandu",
+      "category": "Pain Relief & Balms",
+      "description": "Fast-action, fast-absorption balm for headache, body ache and cold."
+    },
+    "p03-r2c0": {
+      "name": "Zandu Balm Red Ultra Power",
+      "brand": "Zandu",
+      "category": "Pain Relief & Balms",
+      "description": "Ultra power balm for strong headache, body ache and cold."
+    },
+    "p03-r2c1": {
+      "name": "Monison's Pain Balm",
+      "brand": "Monison's",
+      "category": "Pain Relief & Balms",
+      "description": "Pain balm for headache and cold, supplied in jars up to 200 g for counter sale."
+    },
+    "p04-r0c0": {
+      "name": "Mentho Plus Balm (Sachet)",
+      "brand": "Emami",
+      "category": "Pain Relief & Balms",
+      "description": "Single-use sachets of Emami Mentho Plus balm for headache relief, in ₹2, ₹5 and ₹10 price packs."
+    },
+    "p04-r0c1": {
+      "name": "Mentho Plus Balm (Bottle)",
+      "brand": "Emami",
+      "category": "Pain Relief & Balms",
+      "description": "Emami Mentho Plus balm in a reusable bottle pack."
+    },
+    "p04-r1c0": {
+      "name": "Green Leaf Aloe Vera Skin Gel",
+      "brand": "Green Leaf",
+      "category": "Skin Care & Creams",
+      "description": "Export-quality pure aloe vera gel for acne, rash, minor skin irritation and sunburn."
+    },
+    "p04-r1c1": {
+      "name": "Tulips Paper Stick Cotton Buds",
+      "brand": "Tulips",
+      "category": "First Aid & Surgical",
+      "description": "Paper-stick cotton swabs with 200 tips per pack, hygienically sealed."
+    },
+    "p04-r2c0": {
+      "name": "Gas-O-Fast Jeera Sachets",
+      "brand": "Gas-O-Fast",
+      "category": "Digestive & Rehydration",
+      "description": "Jeera-flavoured antacid sachets supplied in a counter-top jar."
+    },
+    "p04-r2c1": {
+      "name": "Super Vasmol 33 Kesh Kala",
+      "brand": "Vasmol",
+      "category": "Hair Care & Colour",
+      "description": "Oil-based black hair colour enriched with amla oil for a natural look."
+    },
+    "p05-r0c0": {
+      "name": "Vicco Turmeric Skin Cream",
+      "brand": "Vicco",
+      "category": "Skin Care & Creams",
+      "description": "Ayurvedic turmeric skin cream with sandalwood oil for daily skin care."
+    },
+    "p05-r0c1": {
+      "name": "Vicco Vajradanti Toothpaste",
+      "brand": "Vicco",
+      "category": "Oral, Dental & Throat",
+      "description": "Ayurvedic toothpaste with 18 herbs and barks for healthy gums and teeth."
+    },
+    "p05-r1c0": {
+      "name": "Vicco Vajradanti Tooth Powder",
+      "brand": "Vicco",
+      "category": "Oral, Dental & Throat",
+      "description": "Ayurvedic tooth powder for daily gum care, in jars up to 200 g."
+    },
+    "p05-r1c1": {
+      "name": "Vicco Turmeric WSO Skin Cream",
+      "brand": "Vicco",
+      "category": "Skin Care & Creams",
+      "description": "Water-soluble turmeric cream that fights pimples and blemishes for glowing skin."
+    },
+    "p05-r2c0": {
+      "name": "Raktha Chandan Ayurvedic Soap",
+      "brand": "Nagarjuna",
+      "category": "Soaps & Bath",
+      "description": "Red sandalwood ayurvedic soap that helps wash away pimples, blemishes and pigmentation."
+    },
+    "p05-r2c1": {
+      "name": "Gram Flour Soap",
+      "brand": "Sadguru Ayurveda",
+      "category": "Soaps & Bath",
+      "description": "Besan-based ayurvedic soap that protects skin and improves complexion."
+    },
+    "p06-r0c0": {
+      "name": "Gram Flour Soap Jar Pack",
+      "brand": "Sadguru Ayurveda",
+      "category": "Soaps & Bath",
+      "description": "Multi-pack jar of gram flour ayurvedic soap for counter display."
+    },
+    "p06-r0c1": {
+      "name": "Kayam Churna",
+      "brand": "Kayam",
+      "category": "Digestive & Rehydration",
+      "description": "Ayurvedic churna useful in chronic constipation, headache and hyperacidity."
+    },
+    "p06-r1c0": {
+      "name": "Kayam Tablet",
+      "brand": "Kayam",
+      "category": "Digestive & Rehydration",
+      "description": "Ayurvedic tablets for chronic constipation, acidity, gas and headache."
+    },
+    "p06-r1c1": {
+      "name": "Pet Safa Powder & Tablet",
+      "brand": "Pet Safa",
+      "category": "Digestive & Rehydration",
+      "description": "Natural laxative granules and tablets for effective relief from constipation.",
+      "sizes": [
+        "Powder",
+        "Tablet"
+      ]
+    },
+    "p06-r2c0": {
+      "name": "Amrut Malam",
+      "brand": "Amrut Pharmaceuticals",
+      "category": "Pain Relief & Balms",
+      "description": "Ayurvedic balm for headache, cold and body pain."
+    },
+    "p06-r2c1": {
+      "name": "Link Ointment",
+      "brand": "Link",
+      "category": "Skin Care & Creams",
+      "description": "External-use ointment that heals cracked feet and rough skin."
+    },
+    "p07-r0c0": {
+      "name": "Eno Fruit Salt Lemon",
+      "brand": "Eno",
+      "category": "Digestive & Rehydration",
+      "description": "Lemon-flavoured antacid that gets to work in six seconds."
+    },
+    "p07-r0c1": {
+      "name": "Eno Fruit Salt Orange",
+      "brand": "Eno",
+      "category": "Digestive & Rehydration",
+      "description": "Orange-flavoured antacid sachets for fast acidity relief."
+    },
+    "p07-r1c0": {
+      "name": "Eno Fruit Salt Regular",
+      "brand": "Eno",
+      "category": "Digestive & Rehydration",
+      "description": "The original unflavoured Eno fruit salt for acidity and indigestion."
+    },
+    "p07-r1c1": {
+      "name": "Eno Fruit Salt Cola",
+      "brand": "Eno",
+      "category": "Digestive & Rehydration",
+      "description": "Cola-flavoured antacid sachets for fast acidity relief."
+    },
+    "p07-r2c0": {
+      "name": "Roghan Badam Shirin Almond Oil",
+      "brand": "Hamdard",
+      "category": "Oils & Edibles",
+      "description": "100% pure sweet almond oil for massage, hair and daily use."
+    },
+    "p07-r2c1": {
+      "name": "Aswini Hair Oil",
+      "brand": "Aswini",
+      "category": "Hair Care & Colour",
+      "description": "Ayurvedic hair oil that controls hair fall and prevents dandruff."
+    },
+    "p08-r0c0": {
+      "name": "Hansaplast Belladonna Pain Relief Patch",
+      "brand": "Hansaplast",
+      "category": "First Aid & Surgical",
+      "description": "Perforated patch using the healing power of belladonna for muscle stiffness, joint swelling and nerve pain."
+    },
+    "p08-r0c1": {
+      "name": "Hansaplast Heat Plaster + Capsicum",
+      "brand": "Hansaplast",
+      "category": "First Aid & Surgical",
+      "description": "Intensive, long-lasting heat plaster with capsicum for neck, back and muscular pain, effective up to 24 hours."
+    },
+    "p08-r1c0": {
+      "name": "Hansaplast Spot Round Jar",
+      "brand": "Hansaplast",
+      "category": "First Aid & Surgical",
+      "description": "Round spot bandages in a counter jar for small cuts and wounds."
+    },
+    "p08-r1c1": {
+      "name": "Hansaplast Regular Strips Jar",
+      "brand": "Hansaplast",
+      "category": "First Aid & Surgical",
+      "description": "Regular adhesive strips in a 100-strip counter jar."
+    },
+    "p08-r2c0": {
+      "name": "Hansaplast Square Patch Jar",
+      "brand": "Hansaplast",
+      "category": "First Aid & Surgical",
+      "description": "Square patches, 50 per jar, for everyday cuts and grazes."
+    },
+    "p08-r2c1": {
+      "name": "Hansaplast Washproof Jar",
+      "brand": "Hansaplast",
+      "category": "First Aid & Surgical",
+      "description": "Washproof adhesive plasters in a counter jar."
+    },
+    "p09-r0c0": {
+      "name": "Hansaplast Jumbo Strips",
+      "brand": "Hansaplast",
+      "category": "First Aid & Surgical",
+      "description": "Jumbo strips with a larger wound pad, 10 strips per pack."
+    },
+    "p09-r0c1": {
+      "name": "Hansaplast 1000s Bulk Box",
+      "brand": "Hansaplast",
+      "category": "First Aid & Surgical",
+      "description": "Bulk institutional box of 1000 regular Hansaplast strips."
+    },
+    "p09-r1c0": {
+      "name": "Figaro Olive Oil (Tin)",
+      "brand": "Figaro",
+      "category": "Oils & Edibles",
+      "description": "Spanish olive oil in a sealed tin for kitchen and massage use."
+    },
+    "p09-r1c1": {
+      "name": "Figaro Olive Oil (Bottle)",
+      "brand": "Figaro",
+      "category": "Oils & Edibles",
+      "description": "Spanish olive oil in a 100 ml bottle."
+    },
+    "p09-r2c0": {
+      "name": "B-Tex White Ointment",
+      "brand": "B-Tex",
+      "category": "Skin Care & Creams",
+      "description": "Irritation-free ointment for eczema, ringworm, itches, cold cracks and pimples."
+    },
+    "p09-r2c1": {
+      "name": "Saibol Skin Ointment",
+      "brand": "Saibol",
+      "category": "Skin Care & Creams",
+      "description": "Skin ointment for cuts, itches, boils, eczema, scabies and pimples."
+    },
+    "p10-r0c0": {
+      "name": "ORS Ready to Drink (Alkem)",
+      "brand": "Alkem",
+      "category": "Digestive & Rehydration",
+      "description": "Ready-to-drink oral rehydration salts that restore body fluids and electrolytes lost to dehydration."
+    },
+    "p10-r0c1": {
+      "name": "Prolyte ORS Ready to Drink",
+      "brand": "Cipla",
+      "category": "Digestive & Rehydration",
+      "description": "WHO-recommended formula ready-to-drink ORS in apple and orange flavours."
+    },
+    "p10-r1c0": {
+      "name": "Prolyte ORS Powder Sachets",
+      "brand": "Cipla",
+      "category": "Digestive & Rehydration",
+      "description": "WHO-formula oral rehydration salts powder in single-dose sachets."
+    },
+    "p10-r1c1": {
+      "name": "Sat-Isabgol Psyllium Husk",
+      "brand": "Sidhpur Sat-Isabgol",
+      "category": "Digestive & Rehydration",
+      "description": "Best-quality pure psyllium husk for digestive regularity."
+    },
+    "p10-r2c0": {
+      "name": "Bioline Crack Heal Cream",
+      "brand": "Bioline",
+      "category": "Skin Care & Creams",
+      "description": "Heals and soothes cracked feet, with a fast-absorbing non-sticky base."
+    },
+    "p10-r2c1": {
+      "name": "Krack Heel Repair Cream",
+      "brand": "Krack",
+      "category": "Skin Care & Creams",
+      "description": "Ayurvedic heel repair cream for dry, cracked feet."
+    },
+    "p11-r0c0": {
+      "name": "Kesh King Ayurvedic Hair Oil",
+      "brand": "Kesh King",
+      "category": "Hair Care & Colour",
+      "description": "Ayurvedic oil with 21 herbs, clinically tested for hair fall and hair growth."
+    },
+    "p11-r0c1": {
+      "name": "Kesh King Anti-Hairfall Shampoo",
+      "brand": "Kesh King",
+      "category": "Hair Care & Colour",
+      "description": "Anti-hairfall shampoo with aloe and 21 ayurvedic herbs."
+    },
+    "p11-r1c0": {
+      "name": "Indica Hair Colour Powder",
+      "brand": "Indica",
+      "category": "Hair Care & Colour",
+      "description": "10-minute natural black hair colour powder, in box and sachet packs."
+    },
+    "p11-r1c1": {
+      "name": "Indica Easy Shampoo Hair Colour",
+      "brand": "Indica",
+      "category": "Hair Care & Colour",
+      "description": "Ammonia-free shampoo hair colour sachets with 10-minute action."
+    },
+    "p11-r2c0": {
+      "name": "VIP Hair Colour Shampoo (Pack of 7)",
+      "brand": "VIP",
+      "category": "Hair Care & Colour",
+      "description": "5-in-1 natural hair colour shampoo sachets with 100% grey coverage, pack of 7."
+    },
+    "p11-r2c1": {
+      "name": "VIP Hair Colour Shampoo Carton",
+      "brand": "VIP",
+      "category": "Hair Care & Colour",
+      "description": "Boxed VIP natural hair colour shampoo for counter sale."
+    },
+    "p12-r0c0": {
+      "name": "Black Rose Kali Mehandi",
+      "brand": "Black Rose",
+      "category": "Hair Care & Colour",
+      "description": "Powder hair dye in black for natural-looking grey coverage."
+    },
+    "p12-r0c1": {
+      "name": "V Care Shampoo Hair Colour",
+      "brand": "V Care",
+      "category": "Hair Care & Colour",
+      "description": "Hair dye shampoo enriched with keratin and silk protein, in sachet and base packs."
+    },
+    "p12-r1c0": {
+      "name": "Amrith Noni Power Plus",
+      "brand": "Amrith Noni",
+      "category": "Ayurvedic & Herbal",
+      "description": "Noni-based ayurvedic health tonic for daily immunity and vitality."
+    },
+    "p12-r1c1": {
+      "name": "Amrith Noni D+",
+      "brand": "Amrith Noni",
+      "category": "Ayurvedic & Herbal",
+      "description": "Noni juice blend in a 1000 ml bottle for everyday wellness."
+    },
+    "p12-r2c0": {
+      "name": "Amrith Noni Ortho Plus",
+      "brand": "Amrith Noni",
+      "category": "Ayurvedic & Herbal",
+      "description": "Ayurvedic noni tonic formulated to help with joint pain."
+    },
+    "p12-r2c1": {
+      "name": "Amrith Noni Pain Oil",
+      "brand": "Amrith Noni",
+      "category": "Pain Relief & Balms",
+      "description": "Ayurvedic pain relief oil, supplied in bottle and roll-on packs."
+    },
+    "p13-r0c0": {
+      "name": "Moov Pain Relief Cream",
+      "brand": "Moov",
+      "category": "Pain Relief & Balms",
+      "description": "Specialist pain relief cream for back ache, muscle pain and sprains."
+    },
+    "p13-r0c1": {
+      "name": "Moov Pain Relief Spray",
+      "brand": "Moov",
+      "category": "Pain Relief & Balms",
+      "description": "Instant-action pain relief spray for hard-to-reach areas."
+    },
+    "p13-r1c0": {
+      "name": "Axe Brand Cap Kapak Universal Oil",
+      "brand": "Axe Brand",
+      "category": "Pain Relief & Balms",
+      "description": "Medicated universal oil for headache, cold, insect bites and giddiness."
+    },
+    "p13-r1c1": {
+      "name": "Nicotex 2 mg Nicotine Gum",
+      "brand": "Nicotex",
+      "category": "Health Supplements",
+      "description": "Sugar-free mint plus nicotine gum, 2 mg, for smoking cessation."
+    },
+    "p13-r2c0": {
+      "name": "Nicotex Tin 2 mg + 4 mg",
+      "brand": "Nicotex",
+      "category": "Health Supplements",
+      "description": "Nicotine gum tin packs combining 2 mg and 4 mg strengths."
+    },
+    "p13-r2c1": {
+      "name": "Nicotex 4 mg Nicotine Gum",
+      "brand": "Nicotex",
+      "category": "Health Supplements",
+      "description": "Sugar-free mint plus nicotine gum, 4 mg, for heavier smokers."
+    },
+    "p14-r0c0": {
+      "name": "Sensodyne Toothpaste Range",
+      "brand": "Sensodyne",
+      "category": "Oral, Dental & Throat",
+      "description": "Full Sensodyne range for sensitive teeth — Rapid Relief, Repair & Protect, Sensitivity & Gum and Fresh Mint."
+    },
+    "p14-r0c1": {
+      "name": "Dettol Antiseptic Liquid",
+      "brand": "Dettol",
+      "category": "First Aid & Surgical",
+      "description": "Trusted antiseptic liquid that kills 99.9% of germs, for first aid and personal hygiene."
+    },
+    "p14-r1c0": {
+      "name": "White Tone Face Cream",
+      "brand": "White Tone",
+      "category": "Skin Care & Creams",
+      "description": "Soft and smooth face cream in ₹48, ₹75 and ₹150 price packs."
+    },
+    "p14-r1c1": {
+      "name": "White Tone Face Powder",
+      "brand": "White Tone",
+      "category": "Skin Care & Creams",
+      "description": "Face powder with soft-shade formula for an even finish."
+    },
+    "p14-r2c0": {
+      "name": "Sapat Lotion",
+      "brand": "Sapat",
+      "category": "Skin Care & Creams",
+      "description": "Salicylic acid lotion for ringworm, itch and eczema."
+    },
+    "p14-r2c1": {
+      "name": "Boroline Antiseptic Ayurvedic Cream",
+      "brand": "Boroline",
+      "category": "Skin Care & Creams",
+      "description": "Antiseptic ayurvedic cream in tube and tin packs for cuts, cracks and dry skin."
+    },
+    "p15-r0c0": {
+      "name": "Heelmate Heel Repair Cream",
+      "brand": "Wings Heelmate",
+      "category": "Skin Care & Creams",
+      "description": "Cracked heel repair cream with visible effects in three days."
+    },
+    "p15-r0c1": {
+      "name": "Orasore Mouth Ulcer Gel",
+      "brand": "Wings Orasore",
+      "category": "Oral, Dental & Throat",
+      "description": "Two-minute instant pain relief gel for mouth ulcers."
+    },
+    "p15-r1c0": {
+      "name": "Smyle Mouth Ulcer Gel",
+      "brand": "Smyle",
+      "category": "Oral, Dental & Throat",
+      "description": "Herbal mouth ulcer gel with a roll-on tip for direct application."
+    },
+    "p15-r1c1": {
+      "name": "Ajay Toothbrush",
+      "brand": "Ajay",
+      "category": "Oral, Dental & Throat",
+      "description": "Toothbrushes in soft, medium, hard and sensitive bristle options.",
+      "sizes": [
+        "Soft",
+        "Medium",
+        "Hard",
+        "Sensitive"
+      ]
+    },
+    "p15-r2c0": {
+      "name": "Duracell Batteries (AA, AAA)",
+      "brand": "Duracell",
+      "category": "Household & Others",
+      "description": "Duracell alkaline batteries in AA and AAA, supplied on retail hang cards."
+    },
+    "p15-r2c1": {
+      "name": "K.P. Namboodiri's Ayurvedic Toothpaste",
+      "brand": "K.P. Namboodiri's",
+      "category": "Oral, Dental & Throat",
+      "description": "Ayurvedic toothpaste that fights bacteria naturally."
+    },
+    "p16-r0c0": {
+      "name": "Samahan Ayurvedic Sachets",
+      "brand": "Samahan",
+      "category": "Ayurvedic & Herbal",
+      "description": "Ayurvedic herbal drink sachets for cold, cough and seasonal relief."
+    },
+    "p16-r0c1": {
+      "name": "Endura Mass Weight Gainer",
+      "brand": "Endura Mass",
+      "category": "Health Supplements",
+      "description": "Weight gainer available in vanilla, banana and chocolate flavours."
+    },
+    "p16-r1c0": {
+      "name": "Spraymintt Mouth Freshener",
+      "brand": "Spraymintt",
+      "category": "Oral, Dental & Throat",
+      "description": "Pocket mouth freshener sprays across a full range of flavours."
+    },
+    "p16-r1c1": {
+      "name": "Relispray Instant Pain Relief Spray",
+      "brand": "Relispray",
+      "category": "Pain Relief & Balms",
+      "description": "Instant-action pain relief spray for sports injuries, sprains and muscular pain."
+    },
+    "p16-r2c0": {
+      "name": "Dr. Ortho Ayurvedic Oil",
+      "brand": "Dr. Ortho",
+      "category": "Pain Relief & Balms",
+      "description": "Ayurvedic oil helpful in painful joint and muscle conditions."
+    },
+    "p16-r2c1": {
+      "name": "Pankajakasthuri Orthoherb Oil",
+      "brand": "Pankajakasthuri",
+      "category": "Pain Relief & Balms",
+      "description": "Ayurvedic joint pain relief oil."
+    },
+    "p17-r0c0": {
+      "name": "Pankajakasthuri Orthoherb Tablets",
+      "brand": "Pankajakasthuri",
+      "category": "Pain Relief & Balms",
+      "description": "Ayurvedic tablets for back pain, knee pain, wrist pain and ankle pain."
+    },
+    "p17-r0c1": {
+      "name": "Pankajakasthuri Breathe Eazy Syrup",
+      "brand": "Pankajakasthuri",
+      "category": "Ayurvedic & Herbal",
+      "description": "Ayurvedic syrup that supports easy breathing and respiratory health."
+    },
+    "p17-r1c0": {
+      "name": "Pankajakasthuri Orthonervin Oil",
+      "brand": "Pankajakasthuri",
+      "category": "Pain Relief & Balms",
+      "description": "Oil with 23 natural ingredients for joint and muscle pain."
+    },
+    "p17-r1c1": {
+      "name": "Pankajakasthuri Breathe Eazy Granules",
+      "brand": "Pankajakasthuri",
+      "category": "Ayurvedic & Herbal",
+      "description": "Ayurvedic granules for respiratory wellness, supplied in a jar pack."
+    },
+    "p17-r2c0": {
+      "name": "Gokof Cough Syrup Sachets",
+      "brand": "Gokof",
+      "category": "Ayurvedic & Herbal",
+      "description": "Single-dose ayurvedic cough syrup sachets in a counter jar."
+    },
+    "p17-r2c1": {
+      "name": "Nivaran 90 Cough Syrup Sachets",
+      "brand": "Nivaran 90",
+      "category": "Ayurvedic & Herbal",
+      "description": "Ayurvedic cough syrup sachets supplied in retail strips."
+    },
+    "p18-r0c0": {
+      "name": "Chandrika Ayurvedic Soap",
+      "brand": "Chandrika",
+      "category": "Soaps & Bath",
+      "description": "Hand-made ayurvedic soap for problem-free, clear skin."
+    },
+    "p18-r0c1": {
+      "name": "Cofsils Lozenges Jar",
+      "brand": "Cofsils",
+      "category": "Oral, Dental & Throat",
+      "description": "Sore throat lozenges supplied in a counter jar."
+    },
+    "p18-r1c0": {
+      "name": "Cofsils Cough Drops Jar",
+      "brand": "Cofsils",
+      "category": "Oral, Dental & Throat",
+      "description": "Quick-relief cough drops in bulk counter jars."
+    },
+    "p18-r1c1": {
+      "name": "Veet Hair Removal Cream",
+      "brand": "Veet",
+      "category": "Personal Care",
+      "description": "5-in-1 skin benefits hair removal cream for sensitive skin, body and legs."
+    },
+    "p18-r2c0": {
+      "name": "Nasalin Inhaler",
+      "brand": "Nasalin",
+      "category": "First Aid & Surgical",
+      "description": "Pocket nasal inhaler with keychain for blocked nose relief."
+    },
+    "p18-r2c1": {
+      "name": "Lacto Calamine Skin Balance Lotion",
+      "brand": "Lacto Calamine",
+      "category": "Skin Care & Creams",
+      "description": "Daily nourishing lotion in Hydration and Oil Control variants."
+    },
+    "p19-r0c0": {
+      "name": "Little's BigHug Silicone Nipple",
+      "brand": "Little's",
+      "category": "Baby Care",
+      "description": "Soft silicone feeding nipples for babies, in single and box packs."
+    },
+    "p19-r0c1": {
+      "name": "Lacto Calamine Daily Sunshield SPF 50",
+      "brand": "Lacto Calamine",
+      "category": "Skin Care & Creams",
+      "description": "Matte-look sunscreen with kaolin clay, SPF 50 PA+++."
+    },
+    "p19-r1c0": {
+      "name": "Zinda Tilismath",
+      "brand": "Zinda Tilismath",
+      "category": "Ayurvedic & Herbal",
+      "description": "Classic unani medicine, 100% vegetarian, for cold, cough and stomach complaints."
+    },
+    "p19-r1c1": {
+      "name": "Little's Baby Wipes",
+      "brand": "Little's",
+      "category": "Baby Care",
+      "description": "Soft cleansing baby wipes, 80 wipes per pack."
+    },
+    "p19-r2c0": {
+      "name": "Hamdard Safi Blood Purifier",
+      "brand": "Hamdard",
+      "category": "Ayurvedic & Herbal",
+      "description": "Natural herbal blood purifier with an internal detox formula for glowing skin."
+    },
+    "p19-r2c1": {
+      "name": "Tunzia Pure Olive Oil (Red Tin)",
+      "brand": "Tunzia",
+      "category": "Oils & Edibles",
+      "description": "Organic premium quality pure olive oil in a 1000 ml tin."
+    },
+    "p20-r0c0": {
+      "name": "NO-P Crawling Insect Killer Spray",
+      "brand": "NO-P",
+      "category": "Household & Others",
+      "description": "Aerosol insect killer for cockroaches and other crawling insects."
+    },
+    "p20-r0c1": {
+      "name": "BSY Noni Black Hair Magic Dye",
+      "brand": "BSY Noni",
+      "category": "Hair Care & Colour",
+      "description": "Noni plant essence hair dye shampoo in ₹50 and ₹90 sachet packs."
+    },
+    "p20-r1c0": {
+      "name": "Bioline Lip Care Balm",
+      "brand": "Bioline",
+      "category": "Skin Care & Creams",
+      "description": "Lip balm for soft lips, available in fruit flavours."
+    },
+    "p20-r1c1": {
+      "name": "Bioline White Petroleum Jelly",
+      "brand": "Bioline",
+      "category": "Skin Care & Creams",
+      "description": "White petroleum jelly IP for dry lips, rough hands, cracked heels and chapped skin."
+    },
+    "p20-r2c0": {
+      "name": "Ayusas Adulsa Cough Syrup",
+      "brand": "Sagar Ayusas",
+      "category": "Ayurvedic & Herbal",
+      "description": "Ayurvedic adulsa cough syrup for wet and dry cough."
+    },
+    "p20-r2c1": {
+      "name": "Little's Poly Mini Feeding Bottle",
+      "brand": "Little's",
+      "category": "Baby Care",
+      "description": "Three-in-one polypropylene feeding bottle, BPA free."
+    },
+    "p21-r0c0": {
+      "name": "Sesa Ayurvedic Hair Oil",
+      "brand": "Sesa",
+      "category": "Hair Care & Colour",
+      "description": "Ayurvedic hair oil that reduces hair fall and supports hair growth, with a comb applicator."
+    },
+    "p21-r0c1": {
+      "name": "Sesa Anti-Hair Fall Shampoo",
+      "brand": "Sesa",
+      "category": "Hair Care & Colour",
+      "description": "Anti-hair fall shampoo with onion and ayurvedic herbs."
+    },
+    "p21-r1c0": {
+      "name": "Biotrue Rewetting Eye Drops",
+      "brand": "Bausch + Lomb",
+      "category": "Eye & Lens Care",
+      "description": "Rewetting drops for instant and natural hydration of dry, tired eyes."
+    },
+    "p21-r1c1": {
+      "name": "ReNu MultiPlus Lens Solution",
+      "brand": "Bausch + Lomb",
+      "category": "Eye & Lens Care",
+      "description": "Multi-purpose contact lens solution that cleans, disinfects and rinses."
+    },
+    "p21-r2c0": {
+      "name": "Woodward's Gripe Water",
+      "brand": "Woodward's",
+      "category": "Baby Care",
+      "description": "Non-alcoholic gentle antacid, safe for infants during the teething period."
+    },
+    "p21-r2c1": {
+      "name": "Indulekha Bringha Hair Oil",
+      "brand": "Indulekha",
+      "category": "Hair Care & Colour",
+      "description": "Ayurvedic proprietary bringha oil with a selfie comb applicator."
+    },
+    "p22-r0c0": {
+      "name": "Fogg Body Spray",
+      "brand": "Fogg",
+      "category": "Personal Care",
+      "description": "No-gas body spray deodorants across the full fragrance range."
+    },
+    "p22-r0c1": {
+      "name": "Fogg Mobile Pack Deodorant",
+      "brand": "Fogg",
+      "category": "Personal Care",
+      "description": "Compact pocket-size Fogg deodorant packs for travel and counter sale."
+    },
+    "p22-r1c0": {
+      "name": "Kailas Jeevan Ayurvedic Cream",
+      "brand": "Kailas Jeevan",
+      "category": "Skin Care & Creams",
+      "description": "Multipurpose ayurvedic cream in tube and jar packs."
+    },
+    "p22-r1c1": {
+      "name": "Glucomin Energy Pops",
+      "brand": "Glucomin",
+      "category": "Health Supplements",
+      "description": "Glucose energy pops in assorted fruit flavours."
+    },
+    "p22-r2c0": {
+      "name": "Gluco-D & Gluco-C Pro",
+      "brand": "Gluco",
+      "category": "Health Supplements",
+      "description": "Instant energy glucose powder with vitamin D and vitamin C variants."
+    },
+    "p22-r2c1": {
+      "name": "Hairshield Anti Lice Cream Wash",
+      "brand": "Hairshield",
+      "category": "Hair Care & Colour",
+      "description": "One-wash formula that removes lice, eggs, nymphs and nits."
+    }
   }
 }

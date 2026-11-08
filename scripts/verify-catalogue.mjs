@@ -16,9 +16,14 @@ const read = (file) => JSON.parse(readFileSync(path.join(root, file), "utf8"));
 
 const data = read("data/catalogue.json");
 const map = read("scripts/catalogue-map.json");
-const manifest = existsSync(path.join(root, "images/manifest.json"))
-  ? read("images/manifest.json")
-  : {};
+/** Every folder of supplied photographs that carries a manifest. */
+const MANIFEST_DIRS = ["images", "new-upload", "new-upload-2/cropped"];
+const manifest = {};
+for (const dir of MANIFEST_DIRS) {
+  const file = path.join(root, dir, "manifest.json");
+  if (!existsSync(file)) continue;
+  Object.assign(manifest, JSON.parse(readFileSync(file, "utf8")));
+}
 
 const problems = [];
 const names = new Set(data.products.map((product) => product.name));

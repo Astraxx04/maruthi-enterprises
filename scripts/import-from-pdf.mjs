@@ -238,7 +238,6 @@ for (let pageIndex = 1; pageIndex < doc.countPages() - 1; pageIndex++) {
       brand: meta.brand ?? null,
       category_id: category.id,
       description: meta.description ?? null,
-      specifications: sizes.length ? `Available pack sizes: ${sizes.join(", ")}` : null,
       unit: null,
       pack_size: sizes.length ? sizes.join(" · ") : null,
       image_url: imageUrl,

@@ -30,7 +30,6 @@ export const productSchema = z.object({
   brand: z.string().trim().max(120).optional().or(z.literal("")),
   category_id: z.string().trim().min(1, "Choose a category"),
   description: z.string().trim().max(2000).optional().or(z.literal("")),
-  specifications: z.string().trim().max(4000).optional().or(z.literal("")),
   unit: z.string().trim().max(80).optional().or(z.literal("")),
   pack_size: z.string().trim().max(120).optional().or(z.literal("")),
   image_url: z.string().trim().max(600).optional().or(z.literal("")),

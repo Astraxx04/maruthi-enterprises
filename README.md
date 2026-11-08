@@ -7,9 +7,9 @@ no payments, no stock levels** — any quantity can be requested for any product
 receives every enquiry by email and/or Telegram, and manages the catalogue through a
 password-protected admin area.
 
-The catalogue ships with **160 products across 14 categories** — 126 imported straight from
-the printed PDF catalogue (names, pack sizes and photographs) plus 34 added from supplied
-product photographs.
+The catalogue ships with **185 products across 14 categories** — 126 imported straight from
+the printed PDF catalogue (names, pack sizes and photographs) plus 59 added from supplied
+product photographs in `images/`, `new-upload/` and `new-upload-2/`.
 
 ---
 
@@ -239,19 +239,15 @@ filter chips and the homepage grid. A category can only be deleted once no produ
 the full product list with quantities, totals and remarks. Set a status (new → contacted →
 quoted → closed), click **Reply with quotation** to open a pre-filled email, or **Call**.
 
-### Pack sizes and pack details
+### Pack sizes
 **Pack sizes** are built with a small editor rather than typed as text: pick a unit (ml, g,
 's, /- …), type one or more numbers — `9, 30, 50` adds three at once — and press **Add**.
 Each size becomes a chip you can remove. "Free text (no unit)" stores a size exactly as typed
 for things like *Strip of 10*; **+ Add a unit…** creates a new unit, which is then offered on
 every other product. Units already used anywhere in the catalogue are picked up automatically.
 
-**Pack details** is free text shown on the detail page, with line breaks preserved:
-
-```
-Available pack sizes: 9 ml, 30 ml, 50 ml
-Case pack: 20 boxes
-```
+They show on the product card, the detail page and the printed catalogue. There is no
+separate "pack details" field — it only ever repeated the pack sizes, so it was removed.
 
 ### Business details
 Name, address, GST number, phone and email come from the printed catalogue and live in
@@ -340,7 +336,7 @@ added shows up on the website and in the next PDF.
 
 | Check | Result |
 | --- | --- |
-| `npm run build` / `tsc --noEmit` | Clean, 172 routes generated (160 product pages) |
+| `npm run build` / `tsc --noEmit` | Clean, 197 routes generated (185 product pages) |
 | Public pages (`/`, `/products`, detail, `/about`, `/contact`, `/enquiry`, sitemap, robots) | 200; unknown product → 404 |
 | Catalogue search, category filter, A→Z / Z→A sort | Verified in headless Chrome |
 | Add to enquiry, merge duplicate product, header badge, quantity edit, remove line | Verified in headless Chrome |
@@ -379,8 +375,8 @@ src/
 │   └── site.ts            # business details / placeholders
 ├── middleware.ts          # protects /admin and /api/admin
 catalogue-print/           # printable catalogue: build script + editable templates
-images/                    # supplied product photographs + manifest.json
-public/products/           # 160 product photographs
+images/, new-upload*/      # supplied product photographs, each folder with a manifest.json
+public/products/           # 185 product photographs
 data/catalogue.json        # catalogue data (also the development data store)
 supabase/schema.sql        # tables, indexes, RLS, storage bucket
 scripts/catalogue-map.json # PDF card → name, brand, category, description

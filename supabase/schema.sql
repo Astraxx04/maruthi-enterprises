@@ -23,7 +23,6 @@ create table if not exists public.products (
   brand          text,
   category_id    uuid not null references public.categories (id) on delete restrict,
   description    text,
-  specifications text,
   unit           text,
   pack_size      text,
   image_url      text,

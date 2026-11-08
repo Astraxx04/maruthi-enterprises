@@ -13,7 +13,6 @@ export type Product = {
   brand: string | null;
   category_id: string;
   description: string | null;
-  specifications: string | null;
   unit: string | null;
   pack_size: string | null;
   image_url: string | null;

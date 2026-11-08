@@ -51,16 +51,42 @@ for (const seedCategory of seed.categories) {
   if (match) categoryIdBySeedId.set(seedCategory.id, match.id);
 }
 
+// Once the site is live the database is the source of truth, so by default only
+// products the database has never seen are inserted. --overwrite restores the
+// original behaviour of pushing every product from the file.
+const overwrite = process.argv.includes("--overwrite");
+
+const { data: existing, error: existingError } = await db.from("products").select("slug");
+if (existingError) {
+  console.error("Could not read existing products:", existingError.message);
+  process.exit(1);
+}
+const alreadyThere = new Set((existing ?? []).map((product) => product.slug));
+
+const incoming = overwrite
+  ? seed.products
+  : seed.products.filter((product) => !alreadyThere.has(product.slug));
+
+const skipped = seed.products.length - incoming.length;
+if (skipped > 0) {
+  console.log(`• ${skipped} product(s) already in the database, left untouched`);
+  console.log("  (use --overwrite to push the file's version over them)");
+}
+
+if (incoming.length === 0) {
+  console.log("Nothing new to add.");
+  process.exit(0);
+}
+
 const { data: products, error: productError } = await db
   .from("products")
   .upsert(
-    seed.products.map((product) => ({
+    incoming.map((product) => ({
       name: product.name,
       slug: product.slug,
       brand: product.brand,
       category_id: categoryIdBySeedId.get(product.category_id),
       description: product.description,
-      specifications: product.specifications,
       unit: product.unit,
       pack_size: product.pack_size,
       image_url: product.image_url,
@@ -75,5 +101,5 @@ if (productError) {
   console.error("Products failed:", productError.message);
   process.exit(1);
 }
-console.log(`✓ ${products.length} products`);
+console.log(`✓ ${products.length} product(s) ${overwrite ? "written" : "added"}`);
 console.log("Seed complete.");

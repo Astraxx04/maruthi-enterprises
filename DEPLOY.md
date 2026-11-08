@@ -9,7 +9,7 @@ Free on both tiers. Roughly 30 minutes end to end.
 | Newly uploaded images | Supabase Storage | Free — 1 GB | Yes |
 | Enquiry alerts | Resend and/or Telegram | Free | **Later** — see step 6 |
 
-The 160 product photographs already in `public/products/` ship with the repository
+The 185 product photographs already in `public/products/` ship with the repository
 and are served straight from Netlify's CDN — Supabase Storage is only used for
 images you upload from the admin later.
 
@@ -85,8 +85,12 @@ npm run seed              # pushes data/catalogue.json into Postgres
 npm run check:deploy      # the above, plus env vars, the database and RLS
 ```
 
-`check:deploy` should report **160 products in 14 categories** and confirm that the
+`check:deploy` should report **185 products in 14 categories** and confirm that the
 public key cannot read enquiries.
+
+> `npm run seed` only **adds** products the database has not seen, so it is safe to
+> re-run after going live — admin edits are never overwritten. Pass `--overwrite` to
+> deliberately push the file's version over what is there.
 
 > **Seed before the first Netlify deploy.** The build pre-renders a page per product
 > by reading the database, so deploying against an empty one produces a catalogue
@@ -135,7 +139,7 @@ curl -s https://<your-site>/sitemap.xml | head -5     # URLs should be your doma
 
 Then by hand:
 
-1. Open `/products` — 160 products, images loading, filters working.
+1. Open `/products` — 185 products, images loading, filters working.
 2. Log into `/admin` and confirm **System status** shows *Supabase (Postgres)*. If it
    says *Local JSON file* instead, the keys have not reached the build — check them in
    Netlify and redeploy.

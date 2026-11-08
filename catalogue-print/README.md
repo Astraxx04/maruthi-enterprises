@@ -238,8 +238,13 @@ and the importer uses it automatically (or pass `--manifest=path`):
 ```
 
 `product` replaces that product's photograph, `category` files the image as a new
-product there, `skip` ignores the file. `images/manifest.json` in this repository is
-a worked example covering 37 photographs.
+product there, `skip` ignores the file. `images/manifest.json` in this repository is a
+worked example covering 37 photographs; `new-upload/` and `new-upload-2/cropped/` have
+their own.
+
+When a supplied photograph is a brochure page showing several products — often with
+prices printed on it — crop each product out first and point the importer at the folder
+of crops. `new-upload-2/cropped/README.md` is an example.
 
 JPEG XL (`.jxl`) and HEIC files are converted with macOS `sips` before processing;
 on other platforms convert them to PNG first.

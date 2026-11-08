@@ -382,7 +382,6 @@ for (const file of files) {
     brand: brand,
     category_id: category.id,
     description,
-    specifications: sizes ? `Available pack sizes: ${sizes}` : null,
     unit: null,
     pack_size: sizes ? sizes.split(/\s*,\s*/).join(" · ") : null,
     image_url: `/products/${slug}.${extension}`,

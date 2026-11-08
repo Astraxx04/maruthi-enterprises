@@ -107,15 +107,6 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <Detail label="Order quantity" value="Any quantity on request" />
           </dl>
 
-          {product.specifications && (
-            <section className="mt-7">
-              <h2 className="text-sm font-semibold text-ink">Pack details</h2>
-              <pre className="mt-2 whitespace-pre-wrap rounded-xl border border-line bg-surface p-4 font-sans text-sm leading-relaxed text-ink-soft">
-{product.specifications}
-              </pre>
-            </section>
-          )}
-
           <div className="mt-8 rounded-xl2 border border-line bg-white p-5 shadow-card">
             <AddToEnquiry product={product} />
             <p className="mt-3 text-xs leading-relaxed text-muted">
