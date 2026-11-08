@@ -29,3 +29,6 @@ public/products
 /new-upload-2/cropped/*
 !/new-upload-2/cropped/manifest.json
 !/new-upload-2/cropped/README.md
+
+# Local-development upload fallback; created on demand, never used in production.
+public/uploads
