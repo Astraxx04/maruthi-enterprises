@@ -1,11 +1,36 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Sora } from "next/font/google";
+import localFont from "next/font/local";
 import { Providers } from "@/components/providers";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
-const sora = Sora({ subsets: ["latin"], display: "swap", variable: "--font-display", weight: ["600", "700"] });
+/**
+ * The fonts are kept in the repository rather than fetched from Google at
+ * build time. next/font/google downloads them during the build, which fails
+ * on any builder that cannot reach fonts.googleapis.com — the error is an
+ * unhelpful "Cannot read properties of null". Self-hosting also means one less
+ * third party serving our visitors.
+ *
+ * Both files are the latin subset of the variable font, under the SIL Open
+ * Font License. To refresh them, see src/app/fonts/README.md.
+ */
+const inter = localFont({
+  src: "./fonts/inter-latin.woff2",
+  weight: "100 900",
+  style: "normal",
+  display: "swap",
+  variable: "--font-inter",
+  fallback: ["ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
+});
+
+const sora = localFont({
+  src: "./fonts/sora-latin.woff2",
+  weight: "100 800",
+  style: "normal",
+  display: "swap",
+  variable: "--font-display",
+  fallback: ["ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
