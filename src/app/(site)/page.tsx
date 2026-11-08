@@ -8,13 +8,12 @@ export const revalidate = 300;
 export default async function HomePage() {
   const [products, categories] = await Promise.all([getProducts(), getCategories()]);
 
-  // One product count and one representative image per category.
-  const byCategory = new Map<string, { count: number; image: string | null }>();
+  // One representative photograph per category for the category cards.
+  const imageByCategory = new Map<string, string>();
   for (const product of products) {
-    const entry = byCategory.get(product.category_id) ?? { count: 0, image: null };
-    entry.count += 1;
-    if (!entry.image && product.image_url) entry.image = product.image_url;
-    byCategory.set(product.category_id, entry);
+    if (product.image_url && !imageByCategory.has(product.category_id)) {
+      imageByCategory.set(product.category_id, product.image_url);
+    }
   }
 
   const phoneHref = `tel:${site.phone.replace(/[^+\d]/g, "")}`;
@@ -77,7 +76,7 @@ export default async function HomePage() {
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((category, index) => {
-            const info = byCategory.get(category.id);
+            const image = imageByCategory.get(category.id) ?? null;
             return (
               <Link
                 key={category.id}
@@ -86,7 +85,7 @@ export default async function HomePage() {
               >
                 <div className="w-24 shrink-0 overflow-hidden rounded-xl sm:w-28">
                   <ProductImage
-                    src={info?.image ?? null}
+                    src={image}
                     alt=""
                     sizes="112px"
                     priority={index < 3}
@@ -96,9 +95,9 @@ export default async function HomePage() {
                   <h3 className="truncate text-base font-semibold text-ink transition-colors group-hover:text-brand-700">
                     {category.name}
                   </h3>
-                  <p className="mt-1 text-sm text-muted">
-                    {info?.count ?? 0} {info?.count === 1 ? "product" : "products"}
-                  </p>
+                  {category.description && (
+                    <p className="mt-1 line-clamp-2 text-sm text-muted">{category.description}</p>
+                  )}
                 </div>
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line text-muted transition-all group-hover:border-brand-400 group-hover:bg-brand-400 group-hover:text-[#04201b]">
                   <Arrow className="h-4 w-4" />

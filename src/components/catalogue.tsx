@@ -125,11 +125,11 @@ export function Catalogue({
         <div className="mt-3 flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] lg:flex-wrap lg:overflow-visible [&::-webkit-scrollbar]:hidden">
           <button type="button" className="chip" data-active={category === "all"} onClick={() => setCategory("all")}>
             All products
-            <span className="text-[0.6875rem] opacity-70">{products.length}</span>
           </button>
           {categories.map((item) => {
-            const count = products.filter((product) => product.category?.slug === item.slug).length;
-            if (count === 0) return null;
+            // A category with nothing in it would lead to an empty page.
+            const isEmpty = !products.some((product) => product.category?.slug === item.slug);
+            if (isEmpty) return null;
             return (
               <button
                 key={item.id}
@@ -139,7 +139,6 @@ export function Catalogue({
                 onClick={() => setCategory(item.slug)}
               >
                 {item.name}
-                <span className="text-[0.6875rem] opacity-70">{count}</span>
               </button>
             );
           })}
@@ -148,9 +147,20 @@ export function Catalogue({
 
       {/* Result summary */}
       <div className="flex flex-wrap items-baseline justify-between gap-2 py-5">
+        {/* Says what is on screen without counting it — the catalogue is a
+            trade list, and a running total invites the wrong comparison. */}
         <p className="text-sm text-muted">
-          Showing <span className="font-semibold text-ink">{visible.length}</span> of {products.length} products
-          {activeCategory ? <> in <span className="font-semibold text-ink">{activeCategory.name}</span></> : null}
+          {query.trim() ? (
+            <>
+              Results for <span className="font-semibold text-ink">“{query.trim()}”</span>
+            </>
+          ) : activeCategory ? (
+            <>
+              Showing <span className="font-semibold text-ink">{activeCategory.name}</span>
+            </>
+          ) : (
+            "Showing the full catalogue"
+          )}
         </p>
         {hasFilters && (
           <button type="button" onClick={reset} className="text-sm font-medium text-brand-700 hover:underline">

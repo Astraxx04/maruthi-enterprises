@@ -36,7 +36,6 @@ export default async function AboutPage() {
       </header>
 
       <dl className="grid gap-4 border-y border-line py-8 sm:grid-cols-3">
-        <Stat value={`${products.length}+`} label="Products in the catalogue" />
         <Stat value={String(categories.length)} label="Supply categories" />
         <Stat value={`${new Set(products.map((p) => p.brand).filter(Boolean)).size}+`} label="Brands distributed" />
       </dl>
