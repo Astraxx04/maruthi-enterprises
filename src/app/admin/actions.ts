@@ -85,6 +85,60 @@ export async function saveProductAction(
   redirect("/admin/products?saved=1");
 }
 
+/**
+ * Copies a product so a near-identical one can be set up without retyping
+ * everything. The copy lands on its own edit page, ready to change.
+ */
+export async function duplicateProductAction(formData: FormData): Promise<void> {
+  await requireAdmin();
+
+  const id = text(formData, "id");
+  if (!id) return;
+
+  const products = await getProducts();
+  const original = products.find((product) => product.id === id);
+  if (!original) redirect("/admin/products");
+
+  const name = duplicateName(original.name, products.map((product) => product.name));
+
+  const copy = await createProduct({
+    name,
+    slug: uniqueSlug(name, products.map((product) => product.slug)),
+    brand: original.brand,
+    category_id: original.category_id,
+    description: original.description,
+    unit: original.unit,
+    pack_size: original.pack_size,
+    // Both products point at the same stored photograph; deleting one never
+    // removes the file, so sharing it is safe.
+    image_url: original.image_url,
+    // A copy starts off the homepage — it is a draft until it has been edited.
+    featured: false,
+    sort_order: original.sort_order,
+  });
+
+  revalidateCatalogue();
+  redirect(`/admin/products/${copy.id}?duplicated=1`);
+}
+
+/**
+ * "Zandu Balm" → "Zandu Balm (duplicate)" → "Zandu Balm (duplicate 2)" …
+ * so duplicating a duplicate does not stack the word up.
+ */
+function duplicateName(original: string, taken: string[]): string {
+  const base = original.replace(/\s*\(duplicate(?: \d+)?\)$/i, "").trim();
+  // Leave room for the suffix within the 160-character limit the form enforces.
+  const trimmed = base.length > 140 ? `${base.slice(0, 140).trimEnd()}…` : base;
+
+  let candidate = `${trimmed} (duplicate)`;
+  let counter = 2;
+  while (taken.includes(candidate)) {
+    candidate = `${trimmed} (duplicate ${counter})`;
+    counter += 1;
+  }
+  return candidate;
+}
+
 export async function deleteProductAction(formData: FormData): Promise<void> {
   await requireAdmin();
   const id = text(formData, "id");
