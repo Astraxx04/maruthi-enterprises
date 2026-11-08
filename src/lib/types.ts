@@ -47,5 +47,7 @@ export type Enquiry = {
 
 export type CartLine = {
   productId: string;
+  /** One of the product's pack sizes; null when the product has no size choice. */
+  size: string | null;
   quantity: number;
 };

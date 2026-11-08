@@ -4,6 +4,7 @@ import { clientKey, rateLimit } from "@/lib/rate-limit";
 import { createEnquiry, getProductsByIds, recentEnquiryExists } from "@/lib/store";
 import { notifyEnquiry } from "@/lib/notify";
 import type { EnquiryItem } from "@/lib/types";
+import { parsePackSizes } from "@/lib/pack-sizes";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -103,19 +104,32 @@ export async function POST(request: Request) {
   }
 
   const byId = new Map(products.map((product) => [product.id, product]));
-  const items: EnquiryItem[] = payload.items
-    .filter((item) => byId.has(item.product_id))
-    .map((item) => {
-      const product = byId.get(item.product_id)!;
-      return {
-        product_id: product.id,
-        name: product.name,
-        brand: product.brand,
-        pack_size: product.pack_size,
-        unit: product.unit,
-        quantity: item.quantity,
-      };
-    });
+  const known = payload.items.filter((item) => byId.has(item.product_id));
+
+  // A chosen size must still be one the product is sold in.
+  const staleSize = known.find(
+    (item) => item.size && !parsePackSizes(byId.get(item.product_id)!.pack_size).includes(item.size),
+  );
+  if (staleSize) {
+    const product = byId.get(staleSize.product_id)!;
+    return bad(
+      `${product.name} is no longer available in ${staleSize.size}. Please update that line in your enquiry.`,
+      400,
+    );
+  }
+
+  const items: EnquiryItem[] = known.map((item) => {
+    const product = byId.get(item.product_id)!;
+    return {
+      product_id: product.id,
+      name: product.name,
+      brand: product.brand,
+      // The chosen size when there is one; otherwise every size it comes in.
+      pack_size: item.size ?? product.pack_size,
+      unit: product.unit,
+      quantity: item.quantity,
+    };
+  });
 
   if (items.length === 0) return bad("Please add at least one product to the enquiry.", 400);
 

@@ -71,7 +71,7 @@ export function Catalogue({
   return (
     <div>
       {/* Controls */}
-      <div className="sticky top-16 z-30 -mx-5 border-b border-line bg-white/92 px-5 py-4 backdrop-blur-md lg:-mx-8 lg:px-8">
+      <div className="sticky top-16 z-30 -mx-5 border-b border-line bg-canvas/85 px-5 py-4 backdrop-blur-md lg:-mx-8 lg:px-8">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
           <div className="relative flex-1">
             <svg
@@ -151,7 +151,7 @@ export function Catalogue({
 
       {visible.length === 0 ? (
         <div className="animate-fade rounded-xl2 border border-dashed border-line bg-surface px-6 py-20 text-center">
-          <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-white text-muted shadow-card">
+          <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-card text-muted shadow-card">
             <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">
               <circle cx="11" cy="11" r="7" />
               <path d="m20 20-3.5-3.5" />

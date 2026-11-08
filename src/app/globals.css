@@ -8,6 +8,10 @@
   --color-line-soft: #eef0f4;
   --color-surface: #f7f8fa;
   --color-surface-2: #f1f3f6;
+  --color-canvas: #ffffff;
+  --color-card: #ffffff;
+  --color-danger: #b4253c;
+  --color-danger-soft: #fdecef;
 
   --color-brand-50: #eefbf7;
   --color-brand-100: #d2f4e9;
@@ -30,7 +34,52 @@
   --shadow-bar: 0 -2px 20px -8px rgb(13 21 32 / 0.18);
 }
 
+/*
+ * Customer-facing dark theme. Scoped to the (site) layout so the admin stays
+ * light: Tailwind v4 utilities read these variables at runtime, so
+ * redefining them under the dark selector re-themes every token-based class.
+ * Light is the default; html[data-theme="dark"] is set by the toggle (and by
+ * an inline script in the root layout before first paint, from localStorage).
+ */
+html[data-theme="dark"] .site-theme {
+  color-scheme: dark;
+  --color-ink: #e9eef4;
+  --color-ink-soft: #b4bfcb;
+  --color-muted: #8794a3;
+  --color-line: #1e2934;
+  --color-line-soft: #17202a;
+  --color-surface: #0c1219;
+  --color-surface-2: #18222d;
+  --color-canvas: #080d13;
+  --color-card: #10171f;
+  --color-danger: #ff8597;
+  --color-danger-soft: #3b1720;
+
+  --color-brand-50: #0b2420;
+  --color-brand-100: #0f2f2a;
+  --color-brand-200: #164037;
+  --color-brand-300: #1f6152;
+  --color-brand-400: #34d3b1;
+  --color-brand-500: #2cc0a0;
+  --color-brand-600: #14a089;
+  --color-brand-700: #5fe0c4;
+  --color-brand-800: #8debd6;
+  --color-brand-900: #b8f3e6;
+
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.3), 0 10px 28px -14px rgb(0 0 0 / 0.6);
+  --shadow-lift: 0 2px 6px rgb(0 0 0 / 0.35), 0 22px 44px -18px rgb(0 0 0 / 0.75);
+  --shadow-bar: 0 -2px 24px -8px rgb(0 0 0 / 0.7);
+
+  background: var(--color-canvas);
+  color: var(--color-ink);
+}
+
 @layer base {
+  html[data-theme="dark"]:has(.site-theme),
+  html[data-theme="dark"] body:has(.site-theme) {
+    background: #080d13;
+  }
+
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
@@ -110,7 +159,7 @@
   .btn-primary:hover:not(:disabled) { background: var(--color-brand-700); }
 
   .btn-secondary {
-    background: #fff;
+    background: var(--color-card);
     color: var(--color-ink);
     border: 1px solid var(--color-line);
   }
@@ -129,7 +178,7 @@
     width: 100%;
     border-radius: 0.625rem;
     border: 1px solid var(--color-line);
-    background: #fff;
+    background: var(--color-card);
     padding: 0.7rem 0.875rem;
     font-size: 0.9375rem;
     color: var(--color-ink);
@@ -141,8 +190,8 @@
     border-color: var(--color-brand-400);
     box-shadow: 0 0 0 3px rgb(60 183 159 / 0.18);
   }
-  .field-error { border-color: #e0536a; }
-  .field-error:focus { box-shadow: 0 0 0 3px rgb(224 83 106 / 0.16); border-color: #e0536a; }
+  .field-error { border-color: var(--color-danger); }
+  .field-error:focus { box-shadow: 0 0 0 3px rgb(224 83 106 / 0.16); border-color: var(--color-danger); }
 
   .label {
     display: block;
@@ -153,7 +202,7 @@
   }
 
   .card {
-    background: #fff;
+    background: var(--color-card);
     border: 1px solid var(--color-line);
     border-radius: var(--radius-xl2);
   }
@@ -172,7 +221,7 @@
     gap: 0.375rem;
     border-radius: 999px;
     border: 1px solid var(--color-line);
-    background: #fff;
+    background: var(--color-card);
     padding: 0.4375rem 0.875rem;
     font-size: 0.8125rem;
     font-weight: 500;
@@ -187,6 +236,22 @@
     border-color: var(--color-brand-600);
     color: #fff;
   }
+
+  /* Dark theme: bright accent buttons with dark text read as more modern
+     and keep contrast that white-on-teal loses on a near-black page. */
+  html[data-theme="dark"] .site-theme .btn-primary {
+    background: var(--color-brand-400);
+    color: #04201b;
+    box-shadow: 0 0 0 1px rgb(52 211 177 / 0.25), 0 8px 24px -10px rgb(52 211 177 / 0.55);
+  }
+  html[data-theme="dark"] .site-theme .btn-primary:hover:not(:disabled) { background: #5ce3c6; }
+  html[data-theme="dark"] .site-theme .chip[data-active="true"] {
+    background: var(--color-brand-400);
+    border-color: var(--color-brand-400);
+    color: #04201b;
+  }
+  html[data-theme="dark"] .site-theme .field::placeholder { color: #5d6977; }
+  html[data-theme="dark"] .site-theme .field:focus { box-shadow: 0 0 0 3px rgb(52 211 177 / 0.2); }
 }
 
 @layer utilities {

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Logo } from "./logo";
 import { useCart } from "./cart-context";
+import { ThemeToggle } from "./theme-toggle";
 
 const links = [
   { href: "/", label: "Home" },
@@ -32,7 +33,7 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b bg-white/90 backdrop-blur-md transition-colors ${
+      className={`sticky top-0 z-50 border-b bg-canvas/80 backdrop-blur-md transition-colors ${
         scrolled ? "border-line shadow-[0_1px_12px_-6px_rgba(13,21,32,0.25)]" : "border-transparent"
       }`}
     >
@@ -59,6 +60,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <Link href="/enquiry" className="btn btn-primary btn-sm relative">
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M9 3h6l1 4H8l1-4Z" />
@@ -67,7 +69,7 @@ export function SiteHeader() {
             <span className="hidden sm:inline">View Enquiry</span>
             <span className="sm:hidden">Enquiry</span>
             {ready && totalLines > 0 && (
-              <span className="absolute -right-1.5 -top-1.5 grid h-5 min-w-5 place-items-center rounded-full bg-ink px-1 text-[0.6875rem] font-bold text-white ring-2 ring-white">
+              <span className="absolute -right-1.5 -top-1.5 grid h-5 min-w-5 place-items-center rounded-full bg-ink px-1 text-[0.6875rem] font-bold text-canvas ring-2 ring-canvas">
                 {totalLines}
               </span>
             )}
@@ -89,7 +91,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav id="mobile-nav" aria-label="Mobile" className="animate-fade border-t border-line bg-white md:hidden">
+        <nav id="mobile-nav" aria-label="Mobile" className="animate-fade border-t border-line bg-canvas md:hidden">
           <div className="container-page flex flex-col py-2">
             {links.map((link) => (
               <Link

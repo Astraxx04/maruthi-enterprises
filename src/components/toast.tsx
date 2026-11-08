@@ -32,7 +32,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
           <div
             key={toast.id}
             className={`animate-slide-up pointer-events-auto flex max-w-sm items-center gap-2.5 rounded-xl px-4 py-3 text-sm font-medium shadow-lift ${
-              toast.tone === "success" ? "bg-ink text-white" : "bg-[#b4253c] text-white"
+              toast.tone === "success" ? "bg-ink text-white" : "bg-danger text-white"
             }`}
           >
             <span aria-hidden="true" className="text-base leading-none">

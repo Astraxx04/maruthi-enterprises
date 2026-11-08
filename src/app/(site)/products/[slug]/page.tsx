@@ -107,7 +107,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <Detail label="Order quantity" value="Any quantity on request" />
           </dl>
 
-          <div className="mt-8 rounded-xl2 border border-line bg-white p-5 shadow-card">
+          <div className="mt-8 rounded-xl2 border border-line bg-card p-5 shadow-card">
             <AddToEnquiry product={product} />
             <p className="mt-3 text-xs leading-relaxed text-muted">
               Prices are quoted on request. Adding a product does not place an order — you confirm everything on the
@@ -133,7 +133,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
 function Detail({ label, value }: { label: string; value: string | null }) {
   return (
-    <div className="bg-white px-4 py-3.5">
+    <div className="bg-card px-4 py-3.5">
       <dt className="text-xs font-medium uppercase tracking-wide text-muted">{label}</dt>
       <dd className="mt-1 text-sm font-semibold text-ink">{value || "—"}</dd>
     </div>

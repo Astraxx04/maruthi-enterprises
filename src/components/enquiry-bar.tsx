@@ -16,7 +16,7 @@ export function EnquiryBar() {
 
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 px-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
-      <div className="pointer-events-auto mx-auto flex w-full max-w-md items-center justify-between gap-3 rounded-2xl border border-line bg-white/95 p-2.5 pl-4 shadow-bar backdrop-blur-md animate-slide-up sm:max-w-lg">
+      <div className="pointer-events-auto mx-auto flex w-full max-w-md items-center justify-between gap-3 rounded-2xl border border-line bg-card/95 p-2.5 pl-4 shadow-bar backdrop-blur-md animate-slide-up sm:max-w-lg">
         <div className="min-w-0">
           <p className="text-sm font-semibold text-ink">
             {totalLines} product{totalLines === 1 ? "" : "s"} selected

@@ -7,12 +7,18 @@ import { useCart } from "./cart-context";
 import { useToast } from "./toast";
 import { QuantityInput } from "./quantity-input";
 import { ProductImage } from "./product-image";
+import { SizePicker } from "./size-picker";
+import { parsePackSizes } from "@/lib/pack-sizes";
 
 export function ProductCard({ product, priority = false }: { product: ProductWithCategory; priority?: boolean }) {
   const { add, quantityOf } = useCart();
   const { notify } = useToast();
   const [quantity, setQuantity] = useState(1);
+  const [picking, setPicking] = useState(false);
   const inEnquiry = quantityOf(product.id);
+  // More than one pack size: quantities are chosen per size in a popup.
+  const sizes = parsePackSizes(product.pack_size);
+  const hasSizes = sizes.length > 1;
 
   const handleAdd = () => {
     add(product.id, quantity);
@@ -21,8 +27,8 @@ export function ProductCard({ product, priority = false }: { product: ProductWit
   };
 
   return (
-    <article className="group flex flex-col overflow-hidden rounded-xl2 border border-line bg-white shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-lift">
-      <Link href={`/products/${product.slug}`} className="relative block" tabIndex={-1} aria-hidden="true">
+    <article className="group flex flex-col overflow-hidden rounded-xl2 border border-line bg-card shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-lift">
+      <Link href={`/products/${product.slug}`} className="relative m-2 mb-0 block overflow-hidden rounded-xl" tabIndex={-1} aria-hidden="true">
         <ProductImage
           src={product.image_url}
           alt={product.name}
@@ -30,7 +36,7 @@ export function ProductCard({ product, priority = false }: { product: ProductWit
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
         />
         {product.featured && (
-          <span className="absolute left-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-[0.6875rem] font-semibold uppercase tracking-wide text-brand-700 shadow-sm backdrop-blur">
+          <span className="absolute left-3 top-3 rounded-full bg-card/95 px-2.5 py-1 text-[0.6875rem] font-semibold uppercase tracking-wide text-brand-700 shadow-sm backdrop-blur">
             Featured
           </span>
         )}
@@ -65,17 +71,31 @@ export function ProductCard({ product, priority = false }: { product: ProductWit
         )}
 
         <div className="mt-auto pt-4">
-          <div className="flex items-center gap-2">
-            <QuantityInput
-              value={quantity}
-              onChange={setQuantity}
-              label={`Quantity for ${product.name}`}
-              size="sm"
-            />
-            <button type="button" onClick={handleAdd} className="btn btn-primary btn-sm flex-1">
-              Add to Enquiry
+          {hasSizes ? (
+            <button
+              type="button"
+              onClick={() => setPicking(true)}
+              aria-haspopup="dialog"
+              className="btn btn-primary btn-sm w-full"
+            >
+              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+              {inEnquiry > 0 ? "Edit sizes" : "Add to Enquiry"}
             </button>
-          </div>
+          ) : (
+            <div className="flex items-center gap-2">
+              <QuantityInput
+                value={quantity}
+                onChange={setQuantity}
+                label={`Quantity for ${product.name}`}
+                size="sm"
+              />
+              <button type="button" onClick={handleAdd} className="btn btn-primary btn-sm flex-1">
+                Add to Enquiry
+              </button>
+            </div>
+          )}
 
           {inEnquiry > 0 && (
             <p className="mt-2 flex items-center gap-1.5 text-xs font-medium text-brand-700">
@@ -87,6 +107,10 @@ export function ProductCard({ product, priority = false }: { product: ProductWit
           )}
         </div>
       </div>
+
+      {hasSizes && (
+        <SizePicker product={product} sizes={sizes} open={picking} onClose={() => setPicking(false)} />
+      )}
     </article>
   );
 }

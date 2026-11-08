@@ -27,7 +27,7 @@ const EMPTY_FORM: FormState = {
 type Submitted = { reference: string; lines: number; units: number; email: string };
 
 export function EnquiryClient({ products }: { products: ProductWithCategory[] }) {
-  const { lines, ready, setQuantity, remove, clear, totalUnits } = useCart();
+  const { lines, ready, setQuantity, remove, removeProduct, clear, totalUnits } = useCart();
   const { notify } = useToast();
 
   const [form, setForm] = useState<FormState>(EMPTY_FORM);
@@ -63,9 +63,9 @@ export function EnquiryClient({ products }: { products: ProductWithCategory[] })
   useEffect(() => {
     if (!ready || products.length === 0) return;
     for (const line of lines) {
-      if (!byId.has(line.productId)) remove(line.productId);
+      if (!byId.has(line.productId)) removeProduct(line.productId);
     }
-  }, [ready, lines, byId, products.length, remove]);
+  }, [ready, lines, byId, products.length, removeProduct]);
 
   const update = (key: keyof FormState, value: string) => {
     setForm((current) => ({ ...current, [key]: value }));
@@ -89,7 +89,11 @@ export function EnquiryClient({ products }: { products: ProductWithCategory[] })
           website: honeypot,
           started_at: startedAt.current,
           client_token: clientToken.current,
-          items: selected.map(({ line }) => ({ product_id: line.productId, quantity: line.quantity })),
+          items: selected.map(({ line }) => ({
+            product_id: line.productId,
+            ...(line.size ? { size: line.size } : {}),
+            quantity: line.quantity,
+          })),
         }),
       });
 
@@ -154,7 +158,7 @@ export function EnquiryClient({ products }: { products: ProductWithCategory[] })
               clear();
               notify("Enquiry cleared");
             }}
-            className="text-sm font-medium text-muted transition-colors hover:text-[#b4253c]"
+            className="text-sm font-medium text-muted transition-colors hover:text-danger"
           >
             Clear all
           </button>
@@ -163,8 +167,8 @@ export function EnquiryClient({ products }: { products: ProductWithCategory[] })
         <ul className="mt-4 space-y-3">
           {selected.map(({ line, product }) => (
             <li
-              key={product.id}
-              className="flex gap-4 rounded-xl2 border border-line bg-white p-3 shadow-card sm:p-4"
+              key={`${product.id}::${line.size ?? ""}`}
+              className="flex gap-4 rounded-xl2 border border-line bg-card p-3 shadow-card sm:p-4"
             >
               <Link href={`/products/${product.slug}`} className="w-20 shrink-0 overflow-hidden rounded-lg sm:w-24">
                 <ProductImage src={product.image_url} alt={product.name} sizes="96px" />
@@ -182,19 +186,27 @@ export function EnquiryClient({ products }: { products: ProductWithCategory[] })
                         {product.name}
                       </Link>
                     </h3>
-                    {product.pack_size && (
-                      <p className="mt-0.5 truncate text-xs text-muted">Sizes: {product.pack_size}</p>
+                    {line.size ? (
+                      <p className="mt-1">
+                        <span className="inline-flex rounded-md bg-brand-50 px-2 py-0.5 text-xs font-semibold text-brand-700">
+                          Size: {line.size}
+                        </span>
+                      </p>
+                    ) : (
+                      product.pack_size && (
+                        <p className="mt-0.5 truncate text-xs text-muted">Sizes: {product.pack_size}</p>
+                      )
                     )}
                   </div>
 
                   <button
                     type="button"
                     onClick={() => {
-                      remove(product.id);
-                      notify(`${product.name} removed`);
+                      remove(product.id, line.size);
+                      notify(`${product.name}${line.size ? ` (${line.size})` : ""} removed`);
                     }}
-                    aria-label={`Remove ${product.name} from enquiry`}
-                    className="-mr-1 -mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted transition-colors hover:bg-surface-2 hover:text-[#b4253c]"
+                    aria-label={`Remove ${product.name}${line.size ? `, ${line.size},` : ""} from enquiry`}
+                    className="-mr-1 -mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted transition-colors hover:bg-surface-2 hover:text-danger"
                   >
                     <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
                       <path d="M6 6l12 12M18 6 6 18" />
@@ -205,8 +217,8 @@ export function EnquiryClient({ products }: { products: ProductWithCategory[] })
                 <div className="mt-3 flex items-center justify-between gap-3">
                   <QuantityInput
                     value={line.quantity}
-                    onChange={(value) => setQuantity(product.id, value)}
-                    label={`Quantity for ${product.name}`}
+                    onChange={(value) => setQuantity(product.id, value, line.size)}
+                    label={`Quantity for ${product.name}${line.size ? `, ${line.size}` : ""}`}
                     size="sm"
                   />
                   <span className="text-xs text-muted">units</span>
@@ -226,7 +238,7 @@ export function EnquiryClient({ products }: { products: ProductWithCategory[] })
 
       {/* Form */}
       <section aria-labelledby="form-heading" className="lg:sticky lg:top-24">
-        <form onSubmit={handleSubmit} noValidate className="rounded-xl2 border border-line bg-white p-5 shadow-card sm:p-6">
+        <form onSubmit={handleSubmit} noValidate className="rounded-xl2 border border-line bg-card p-5 shadow-card sm:p-6">
           <h2 id="form-heading" className="text-lg font-semibold text-ink">Your details</h2>
           <p className="mt-1 text-sm text-muted">
             We only use these details to send your quotation. No account needed.
@@ -320,7 +332,7 @@ export function EnquiryClient({ products }: { products: ProductWithCategory[] })
           </div>
 
           {formError && (
-            <p role="alert" className="mt-4 rounded-lg bg-[#fdecef] px-3.5 py-2.5 text-sm font-medium text-[#b4253c]">
+            <p role="alert" className="mt-4 rounded-lg bg-danger-soft px-3.5 py-2.5 text-sm font-medium text-danger">
               {formError}
             </p>
           )}
@@ -371,7 +383,7 @@ function Field({
   return (
     <div>
       <label htmlFor={id} className="label">
-        {label} {required && <span className="text-[#b4253c]">*</span>}
+        {label} {required && <span className="text-danger">*</span>}
       </label>
       <input
         id={id}
@@ -388,7 +400,7 @@ function Field({
         className={`field ${error ? "field-error" : ""}`}
       />
       {error && (
-        <p id={`${id}-error`} className="mt-1.5 text-xs font-medium text-[#b4253c]">
+        <p id={`${id}-error`} className="mt-1.5 text-xs font-medium text-danger">
           {error}
         </p>
       )}
@@ -399,7 +411,7 @@ function Field({
 function EmptyPanel() {
   return (
     <div className="animate-fade rounded-xl2 border border-dashed border-line bg-surface px-6 py-20 text-center">
-      <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-white text-muted shadow-card">
+      <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-card text-muted shadow-card">
         <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M9 3h6l1 4H8l1-4Z" />
           <path d="M5 7h14l-1.2 12.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 7Z" />
@@ -430,7 +442,7 @@ function SuccessPanel({ result }: { result: Submitted }) {
         units). We will respond to <strong>{result.email}</strong> with a quotation, usually within 48 hours.
       </p>
       {result.reference && (
-        <p className="mt-4 inline-block rounded-lg border border-brand-200 bg-white px-3.5 py-2 font-mono text-xs text-ink-soft">
+        <p className="mt-4 inline-block rounded-lg border border-brand-200 bg-card px-3.5 py-2 font-mono text-xs text-ink-soft">
           Reference: {result.reference.slice(0, 8).toUpperCase()}
         </p>
       )}

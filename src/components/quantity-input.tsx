@@ -15,7 +15,7 @@ export function QuantityInput({ value, onChange, min = 1, max = 1_000_000, label
   const input = size === "sm" ? "h-9 w-14 text-sm" : "h-10 w-16";
 
   return (
-    <div className="inline-flex items-stretch overflow-hidden rounded-lg border border-line bg-white">
+    <div className="inline-flex items-stretch overflow-hidden rounded-lg border border-line bg-card">
       <button
         type="button"
         aria-label={`Decrease ${label}`}

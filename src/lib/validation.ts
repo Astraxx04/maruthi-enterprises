@@ -2,6 +2,8 @@ import { z } from "zod";
 
 export const enquiryItemSchema = z.object({
   product_id: z.string().min(1).max(100),
+  /** One of the product's pack sizes, checked against the catalogue server-side. */
+  size: z.string().trim().min(1).max(60).optional(),
   quantity: z.coerce.number().int().min(1, "Quantity must be at least 1").max(1_000_000),
 });
 
