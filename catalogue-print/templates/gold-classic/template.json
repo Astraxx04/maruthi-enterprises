@@ -1,0 +1,60 @@
+{
+  "name": "Gold Classic",
+  "description": "Matches the printed Maruthi Enterprises catalogue: ivy corner flourishes, gold bead card frames, two columns by three rows per page.",
+  "sortOrder": 10,
+  "page": {
+    "width": 595.5,
+    "height": 842.5,
+    "margin": {
+      "top": 41.8,
+      "right": 45.2,
+      "bottom": 41.2,
+      "left": 64.8
+    }
+  },
+  "grid": {
+    "columns": 2,
+    "rows": 3,
+    "columnGap": 27.5,
+    "rowGap": 35.5
+  },
+  "card": {
+    "titleHeight": 39,
+    "showBrand": false,
+    "showSizes": true,
+    "showDescription": false,
+    "imagePadding": 10,
+    "titleLengths": {
+      "long": 22,
+      "xlong": 34
+    }
+  },
+  "fonts": {
+    "googleFamilies": [
+      "Quicksand:wght@500;600;700",
+      "Aleo:wght@400;700"
+    ],
+    "title": "'Quicksand', 'Comic Sans MS', 'Trebuchet MS', sans-serif",
+    "body": "'Aleo', Georgia, 'Times New Roman', serif",
+    "cover": "'Quicksand', 'Bookman Old Style', Georgia, serif"
+  },
+  "colors": {
+    "gold": "#E0A800",
+    "goldSoft": "#EFC94C",
+    "ink": "#1b1b1b",
+    "muted": "#5a5a5a"
+  },
+  "flourishes": {
+    "topLeft": true,
+    "bottomRight": true,
+    "width": 130
+  },
+  "cover": {
+    "enabled": true,
+    "showBlessing": true
+  },
+  "footer": {
+    "show": true,
+    "format": "Page {{pageNumber}}"
+  }
+}

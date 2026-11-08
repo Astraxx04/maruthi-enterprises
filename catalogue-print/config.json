@@ -1,0 +1,23 @@
+{
+  "template": "gold-classic",
+  "source": "../data/catalogue.json",
+  "imageRoot": "../public",
+  "output": {
+    "dir": "out",
+    "fileName": "Maruthi-Enterprises-Catalogue",
+    "suffixTemplate": true
+  },
+  "order": "category",
+  "categoryPageBreak": false,
+  "onlyCategories": [],
+  "skipCategories": [],
+  "onlyFeatured": false,
+  "cover": {
+    "businessName": "Maruthi Enterprises",
+    "tagline": "Quality Products. Reliable Supply.",
+    "address": "Deena Seva School, No. 1, 1 Main Road, Kamala Nagar, Bengaluru 560079",
+    "gstin": "GST No: 29DNRPP1242Q1Z2",
+    "email": "prabhalchandujm28@gmail.com",
+    "phone": "7090535334"
+  }
+}

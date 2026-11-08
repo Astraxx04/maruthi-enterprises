@@ -1,0 +1,13 @@
+<!-- Modern Grid card: photograph on a tinted panel, type beneath. -->
+<article class="card">
+  <div class="card-body">
+    {{#if hasImage}}<img src="{{imageSrc}}" alt="{{name}}">{{/if}}
+    {{#if hasSizes}}<div class="sizes">{{{sizesHtml}}}</div>{{/if}}
+  </div>
+
+  <div class="card-text">
+    {{#if hasBrand}}<p class="card-brand">{{brand}}</p>{{/if}}
+    <h2 class="card-title {{nameClass}}">{{name}}</h2>
+    {{#if hasDescription}}<p class="card-note">{{description}}</p>{{/if}}
+  </div>
+</article>

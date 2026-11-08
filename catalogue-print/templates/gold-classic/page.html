@@ -1,0 +1,10 @@
+<!-- One catalogue page.
+     Tokens: cards (rendered card HTML), pageNumber, totalPages, businessName -->
+<section class="sheet">
+  {{#if flourishTopLeft}}<img class="flourish flourish--top-left" src="{{assets}}/flourish.png" alt="">{{/if}}
+  {{#if flourishBottomRight}}<img class="flourish flourish--bottom-right" src="{{assets}}/flourish.png" alt="">{{/if}}
+
+  <div class="grid">{{{cards}}}</div>
+
+  {{#if showFooter}}<div class="page-number">{{footer}}</div>{{/if}}
+</section>

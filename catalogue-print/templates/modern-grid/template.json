@@ -1,0 +1,61 @@
+{
+  "name": "Modern Grid",
+  "description": "Editorial and product-first: no frames, generous white space, the photograph on a soft tinted panel with the name, brand and pack sizes set beneath it.",
+  "sortOrder": 20,
+  "assetsFrom": "gold-classic",
+  "page": {
+    "width": 595.5,
+    "height": 842.5,
+    "margin": {
+      "top": 64,
+      "right": 44,
+      "bottom": 54,
+      "left": 44
+    }
+  },
+  "grid": {
+    "columns": 2,
+    "rows": 3,
+    "columnGap": 22,
+    "rowGap": 26
+  },
+  "card": {
+    "titleHeight": 0,
+    "showBrand": true,
+    "showSizes": true,
+    "showDescription": true,
+    "imagePadding": 16,
+    "titleLengths": {
+      "long": 30,
+      "xlong": 44
+    }
+  },
+  "fonts": {
+    "googleFamilies": [
+      "Plus+Jakarta+Sans:wght@400;500;600;700",
+      "Inter:wght@400;500;600"
+    ],
+    "title": "'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif",
+    "body": "'Inter', 'Helvetica Neue', Arial, sans-serif",
+    "cover": "'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif"
+  },
+  "colors": {
+    "gold": "#0f7c6b",
+    "goldSoft": "#e8f3f0",
+    "ink": "#121a21",
+    "muted": "#6b7786"
+  },
+  "flourishes": {
+    "topLeft": false,
+    "bottomRight": false,
+    "width": 0
+  },
+  "cover": {
+    "enabled": true,
+    "showBlessing": true
+  },
+  "footer": {
+    "show": true,
+    "format": "{{pageNumber}} / {{totalPages}}"
+  }
+}

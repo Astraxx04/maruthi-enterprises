@@ -1,0 +1,18 @@
+{
+  "_comment": "Hints for scripts/add-images.mjs when it guesses a category for a new image. Keys are category names exactly as they appear in data/catalogue.json; values are words that commonly appear in such product names. Edit freely.",
+
+  "Pain Relief & Balms": ["balm", "pain", "ache", "spray", "ointment", "roll on", "rollon", "ortho", "joint", "muscle", "relief", "liniment"],
+  "Ayurvedic & Herbal": ["ayurvedic", "herbal", "churna", "kadha", "noni", "tonic", "syrup", "cough", "unani", "juice", "arishta", "asava"],
+  "Skin Care & Creams": ["cream", "lotion", "gel", "jelly", "moisturis", "moisturiz", "skin", "face", "lip", "sunscreen", "calamine", "crack", "heel", "petroleum"],
+  "Hair Care & Colour": ["hair", "shampoo", "mehandi", "mehendi", "dye", "colour", "color", "henna", "oil", "conditioner", "lice", "dandruff"],
+  "Oral, Dental & Throat": ["toothpaste", "tooth", "dental", "paste", "brush", "mouth", "ulcer", "throat", "lozenge", "cough drop", "freshener", "gargle"],
+  "Digestive & Rehydration": ["antacid", "acidity", "digest", "laxative", "constipation", "isabgol", "husk", "ors", "rehydration", "electrolyte", "jeera", "hing", "churan"],
+  "First Aid & Surgical": ["bandage", "plaster", "band aid", "patch", "gauze", "cotton", "antiseptic", "dettol", "savlon", "glove", "mask", "syringe", "thermometer", "inhaler", "swab", "bud"],
+  "Health Supplements": ["protein", "supplement", "vitamin", "glucose", "gainer", "energy", "nicotine", "gum", "calcium", "multivitamin", "powder drink"],
+  "Baby Care": ["baby", "infant", "nipple", "feeding bottle", "wipes", "diaper", "gripe", "rash"],
+  "Soaps & Bath": ["soap", "bath", "handwash", "body wash", "shower"],
+  "Eye & Lens Care": ["eye", "lens", "contact", "drops", "solution", "spectacle"],
+  "Oils & Edibles": ["olive", "edible", "cooking", "ghee", "almond oil", "badam", "castor", "coconut oil", "mustard"],
+  "Personal Care": ["deodorant", "deo", "perfume", "body spray", "talc", "hair removal", "razor", "sanitary", "wax"],
+  "Household & Others": ["battery", "insect", "repellent", "mosquito", "cleaner", "phenyl", "candle", "matchbox", "agarbatti"]
+}

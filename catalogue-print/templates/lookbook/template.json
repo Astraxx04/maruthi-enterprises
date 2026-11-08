@@ -1,0 +1,61 @@
+{
+  "name": "Lookbook",
+  "description": "One product a page, photographed large. Built for a short premium leave-behind — pick a single category, or tick featured products only.",
+  "sortOrder": 40,
+  "assetsFrom": "gold-classic",
+  "page": {
+    "width": 595.5,
+    "height": 842.5,
+    "margin": {
+      "top": 58,
+      "right": 46,
+      "bottom": 48,
+      "left": 46
+    }
+  },
+  "grid": {
+    "columns": 1,
+    "rows": 1,
+    "columnGap": 0,
+    "rowGap": 0
+  },
+  "card": {
+    "titleHeight": 0,
+    "showBrand": true,
+    "showSizes": true,
+    "showDescription": true,
+    "imagePadding": 34,
+    "titleLengths": {
+      "long": 30,
+      "xlong": 44
+    }
+  },
+  "fonts": {
+    "googleFamilies": [
+      "Plus+Jakarta+Sans:wght@500;600;700;800",
+      "Inter:wght@400;500"
+    ],
+    "title": "'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif",
+    "body": "'Inter', 'Helvetica Neue', Arial, sans-serif",
+    "cover": "'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif"
+  },
+  "colors": {
+    "gold": "#0f7c6b",
+    "goldSoft": "#f2f5f4",
+    "ink": "#0e1419",
+    "muted": "#6a7682"
+  },
+  "flourishes": {
+    "topLeft": false,
+    "bottomRight": false,
+    "width": 0
+  },
+  "cover": {
+    "enabled": true,
+    "showBlessing": true
+  },
+  "footer": {
+    "show": true,
+    "format": "{{businessName}} · {{pageCategory}}"
+  }
+}

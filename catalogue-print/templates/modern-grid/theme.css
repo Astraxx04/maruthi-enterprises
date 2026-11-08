@@ -1,0 +1,243 @@
+/* ───────────────────────────────────────────────────────────────────────────
+   Modern Grid — product-first and editorial. No frames; the photograph sits on
+   a soft tinted panel and the type sits quietly beneath it.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+@page { size: var(--page-width) var(--page-height); margin: 0; }
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.sheet {
+  position: relative;
+  width: var(--page-width);
+  height: var(--page-height);
+  overflow: hidden;
+  page-break-after: always;
+  break-after: page;
+}
+.sheet:last-child { page-break-after: auto; break-after: auto; }
+
+/* ── Running head ────────────────────────────────────────────────────────── */
+.running-head {
+  position: absolute;
+  top: 30pt;
+  left: var(--margin-left);
+  right: var(--margin-right);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 8pt;
+  border-bottom: 0.6pt solid #e7e9ec;
+  font-size: 7.6pt;
+  letter-spacing: 0.9pt;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.running-brand { font-weight: 600; color: var(--ink); }
+.running-category { color: var(--gold); font-weight: 600; }
+
+/* ── Grid ────────────────────────────────────────────────────────────────── */
+.grid {
+  position: absolute;
+  top: var(--margin-top);
+  left: var(--margin-left);
+  right: var(--margin-right);
+  bottom: var(--margin-bottom);
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-auto-rows: minmax(0, 1fr);
+  column-gap: var(--column-gap);
+  row-gap: var(--row-gap);
+}
+
+/* ── Card ────────────────────────────────────────────────────────────────── */
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.card-body {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--image-padding);
+  /* The photographs are shot on white, so the panel is white too and the card
+     is defined by a hairline instead. A tinted panel would show every
+     packshot as a pale rectangle. */
+  background: #fff;
+  border: 0.6pt solid #e7e9ec;
+  border-radius: 10pt;
+}
+
+.card-body img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ── Pack sizes as pills along the bottom of the panel ───────────────────── */
+.sizes {
+  position: absolute;
+  left: 8pt;
+  right: 8pt;
+  bottom: 7pt;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3pt;
+  justify-content: center;
+}
+.sizes span {
+  background: #f4f6f7;
+  border: 0.5pt solid #e2e5e9;
+  border-radius: 999pt;
+  padding: 1.6pt 5pt;
+  font-size: 6.4pt;
+  font-weight: 500;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* ── Type ────────────────────────────────────────────────────────────────── */
+.card-text {
+  flex: none;
+  padding: 7pt 2pt 0;
+}
+
+.card-brand {
+  margin: 0 0 2pt;
+  font-size: 6.4pt;
+  font-weight: 600;
+  letter-spacing: 1pt;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.card-title {
+  margin: 0;
+  font-family: var(--font-title);
+  font-weight: 600;
+  font-size: 10pt;
+  line-height: 1.22;
+  letter-spacing: -0.15pt;
+  color: var(--ink);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-title--long { font-size: 9pt; }
+.card-title--xlong { font-size: 8.2pt; }
+
+.card-note {
+  margin: 3pt 0 0;
+  font-size: 7pt;
+  line-height: 1.35;
+  color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+.page-number {
+  position: absolute;
+  bottom: 26pt;
+  left: var(--margin-left);
+  right: var(--margin-right);
+  text-align: right;
+  font-size: 7.6pt;
+  letter-spacing: 1pt;
+  color: var(--muted);
+}
+
+/* ── Cover ───────────────────────────────────────────────────────────────── */
+.cover-sheet { background: var(--gold-soft); }
+
+.cover {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 72pt 56pt 56pt;
+}
+
+.cover-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 42pt;
+  height: 42pt;
+  border-radius: 12pt;
+  background: var(--gold);
+  color: #fff;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 15pt;
+  letter-spacing: 0.5pt;
+}
+
+.cover-title {
+  margin: 26pt 0 0;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 40pt;
+  line-height: 1.04;
+  letter-spacing: -1.2pt;
+  color: var(--ink);
+  max-width: 320pt;
+}
+
+.cover-tagline {
+  margin: 12pt 0 0;
+  font-size: 12pt;
+  line-height: 1.45;
+  color: var(--muted);
+  max-width: 300pt;
+}
+
+.cover-rule {
+  margin: 40pt 0 26pt;
+  height: 0.8pt;
+  background: rgba(18, 26, 33, 0.14);
+}
+
+.cover-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20pt 28pt;
+}
+.cover-grid dt {
+  font-size: 7pt;
+  font-weight: 600;
+  letter-spacing: 1pt;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 3pt;
+}
+.cover-grid dd {
+  margin: 0;
+  font-size: 9.6pt;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.cover-blessing {
+  margin-top: auto;
+  padding-top: 30pt;
+  opacity: 0.85;
+}
+.cover-blessing img { width: 100%; max-width: 380pt; display: block; margin: 0 auto; }

@@ -1,0 +1,61 @@
+{
+  "name": "Spotlight",
+  "description": "Two products to a page, each given a full band: a large photograph on one side, the name, description and pack sizes on the other, with the sides alternating down the page.",
+  "sortOrder": 30,
+  "assetsFrom": "gold-classic",
+  "page": {
+    "width": 595.5,
+    "height": 842.5,
+    "margin": {
+      "top": 62,
+      "right": 40,
+      "bottom": 52,
+      "left": 40
+    }
+  },
+  "grid": {
+    "columns": 1,
+    "rows": 2,
+    "columnGap": 0,
+    "rowGap": 26
+  },
+  "card": {
+    "titleHeight": 0,
+    "showBrand": true,
+    "showSizes": true,
+    "showDescription": true,
+    "imagePadding": 22,
+    "titleLengths": {
+      "long": 34,
+      "xlong": 50
+    }
+  },
+  "fonts": {
+    "googleFamilies": [
+      "Plus+Jakarta+Sans:wght@500;600;700;800",
+      "Inter:wght@400;500"
+    ],
+    "title": "'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif",
+    "body": "'Inter', 'Helvetica Neue', Arial, sans-serif",
+    "cover": "'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif"
+  },
+  "colors": {
+    "gold": "#0f7c6b",
+    "goldSoft": "#eef6f4",
+    "ink": "#101820",
+    "muted": "#67737f"
+  },
+  "flourishes": {
+    "topLeft": false,
+    "bottomRight": false,
+    "width": 0
+  },
+  "cover": {
+    "enabled": true,
+    "showBlessing": true
+  },
+  "footer": {
+    "show": true,
+    "format": "{{businessName}} · {{pageNumber}}/{{totalPages}}"
+  }
+}

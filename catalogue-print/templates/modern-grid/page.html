@@ -1,0 +1,10 @@
+<section class="sheet">
+  <header class="running-head">
+    <span class="running-brand">{{businessName}}</span>
+    {{#if hasPageCategory}}<span class="running-category">{{pageCategories}}</span>{{/if}}
+  </header>
+
+  <div class="grid">{{{cards}}}</div>
+
+  {{#if showFooter}}<div class="page-number">{{footer}}</div>{{/if}}
+</section>

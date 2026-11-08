@@ -1,0 +1,20 @@
+<section class="sheet cover-sheet">
+  <div class="cover">
+    <div class="cover-top">
+      <span class="cover-mark">ME</span>
+      <h1 class="cover-title">{{businessName}}</h1>
+      {{#if tagline}}<p class="cover-tagline">{{tagline}}</p>{{/if}}
+    </div>
+
+    <div class="cover-rule"></div>
+
+    <div class="cover-grid">
+      {{#if address}}<div><dt>Address</dt><dd>{{address}}</dd></div>{{/if}}
+      {{#if phone}}<div><dt>Phone</dt><dd>{{phone}}</dd></div>{{/if}}
+      {{#if email}}<div><dt>Email</dt><dd>{{email}}</dd></div>{{/if}}
+      {{#if gstin}}<div><dt>GST</dt><dd>{{gstin}}</dd></div>{{/if}}
+    </div>
+
+    {{#if showBlessing}}<div class="cover-blessing"><img src="{{assets}}/cover-blessing.png" alt=""></div>{{/if}}
+  </div>
+</section>
