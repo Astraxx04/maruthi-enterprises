@@ -13,3 +13,19 @@ catalogue-print/out
 # files the import scripts write to — kept locally, not shipped with the repo.
 # Upload any new ones with: npm run images:to-storage
 public/products
+
+# Source photographs for the import scripts. The site never reads these — the
+# photographs it serves live in Supabase Storage. Each folder keeps its
+# manifest.json, which scripts/verify-catalogue.mjs needs to know what the
+# catalogue should contain.
+/images/*
+!/images/manifest.json
+
+/new-upload/*
+!/new-upload/manifest.json
+
+/new-upload-2/*
+!/new-upload-2/cropped/
+/new-upload-2/cropped/*
+!/new-upload-2/cropped/manifest.json
+!/new-upload-2/cropped/README.md
