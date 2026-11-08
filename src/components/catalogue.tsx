@@ -36,6 +36,16 @@ export function Catalogue({
     window.history.replaceState(null, "", next ? `?${next}` : window.location.pathname);
   }, [category, query]);
 
+  /**
+   * Searching looks across the whole catalogue. A category chosen earlier
+   * would otherwise hide matches, so typing clears it — visibly, so the chips
+   * always agree with the results. Narrow by category afterwards if you like.
+   */
+  const search = (value: string) => {
+    setQuery(value);
+    if (value.trim() && category !== "all") setCategory("all");
+  };
+
   const visible = useMemo(() => {
     const needle = query.trim().toLowerCase();
     const filtered = products.filter((product) => {
@@ -89,7 +99,7 @@ export function Catalogue({
             <input
               type="search"
               value={query}
-              onChange={(event) => setQuery(event.target.value)}
+              onChange={(event) => search(event.target.value)}
               placeholder="Search by product name, brand or category…"
               aria-label="Search products"
               className="field pl-10"

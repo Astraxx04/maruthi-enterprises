@@ -26,6 +26,12 @@ export function ProductGrid({
   const [sort, setSort] = useState<SortKey>("catalogue");
   const [featuredOnly, setFeaturedOnly] = useState(false);
 
+  /** Searching looks across every category — see the catalogue component. */
+  const search = (value: string) => {
+    setQuery(value);
+    if (value.trim() && category !== "all") setCategory("all");
+  };
+
   const visible = useMemo(() => {
     const needle = query.trim().toLowerCase();
 
@@ -81,7 +87,7 @@ export function ProductGrid({
           <input
             type="search"
             value={query}
-            onChange={(event) => setQuery(event.target.value)}
+            onChange={(event) => search(event.target.value)}
             placeholder="Search by name, brand, category or pack size…"
             aria-label="Search products"
             className="field pl-10"
