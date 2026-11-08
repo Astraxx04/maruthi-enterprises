@@ -109,7 +109,7 @@
       "description": "Double-power ayurvedic pain balm for headache, body ache and cold relief, in the super saver green pack.",
       "unit": null,
       "pack_size": "9 ml · 30 ml · 50 ml",
-      "image_url": "/products/amruthanjan-pain-balm-strong-green.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/amruthanjan-pain-balm-strong-green.jpg",
       "featured": false,
       "sort_order": 1
     },
@@ -122,7 +122,7 @@
       "description": "India's No.1 pain balm in the classic extra-power yellow pack, trusted for over 125 years.",
       "unit": null,
       "pack_size": "9 ml · 30 ml · 50 ml",
-      "image_url": "/products/amruthanjan-pain-balm-extra-power-yellow.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/amruthanjan-pain-balm-extra-power-yellow.jpg",
       "featured": true,
       "sort_order": 2
     },
@@ -135,7 +135,7 @@
       "description": "Maha strong formulation that stays softer and smoother on the skin while relieving pain.",
       "unit": null,
       "pack_size": "9 ml · 30 ml · 50 ml",
-      "image_url": "/products/amruthanjan-maha-strong-pain-balm-red.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/amruthanjan-maha-strong-pain-balm-red.jpg",
       "featured": false,
       "sort_order": 3
     },
@@ -148,7 +148,7 @@
       "description": "Medicated corn caps offering quick action, a soothing effect and long-lasting relief from corns.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/amruthanjan-decorn-corn-caps.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/amruthanjan-decorn-corn-caps.jpg",
       "featured": false,
       "sort_order": 1
     },
@@ -161,7 +161,7 @@
       "description": "Non-greasy roll-on for fast relief from headaches, available in bottle and sachet packs.",
       "unit": null,
       "pack_size": "5 ml · 10 ml",
-      "image_url": "/products/amruthanjan-head-roll-on.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/amruthanjan-head-roll-on.jpg",
       "featured": false,
       "sort_order": 4
     },
@@ -174,7 +174,7 @@
       "description": "Advanced back pain roll-on that starts working within 30 seconds.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/amruthanjan-back-pain-roll-on.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/amruthanjan-back-pain-roll-on.jpg",
       "featured": false,
       "sort_order": 5
     },
@@ -187,7 +187,7 @@
       "description": "Fast relief multipurpose balm for muscular pain, sprains and stiffness.",
       "unit": null,
       "pack_size": "9 ml · 16 ml · 40 ml",
-      "image_url": "/products/iodex-multipurpose-pain-balm.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/iodex-multipurpose-pain-balm.jpg",
       "featured": true,
       "sort_order": 6
     },
@@ -200,7 +200,7 @@
       "description": "The classic red ointment for headache, muscular pain and insect bites.",
       "unit": null,
       "pack_size": "8 ml · 21 ml",
-      "image_url": "/products/tiger-balm-red-ointment.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/tiger-balm-red-ointment.jpg",
       "featured": false,
       "sort_order": 7
     },
@@ -213,7 +213,7 @@
       "description": "White ointment for headache, blocked nose and muscular stiffness.",
       "unit": null,
       "pack_size": "8 ml · 21 ml",
-      "image_url": "/products/tiger-balm-white-ointment.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/tiger-balm-white-ointment.jpg",
       "featured": false,
       "sort_order": 8
     },
@@ -226,7 +226,7 @@
       "description": "Fast-action, fast-absorption balm for headache, body ache and cold.",
       "unit": null,
       "pack_size": "8 ml · 25 ml · 50 ml",
-      "image_url": "/products/zandu-balm-green.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/zandu-balm-green.jpg",
       "featured": false,
       "sort_order": 9
     },
@@ -239,7 +239,7 @@
       "description": "Ultra power balm for strong headache, body ache and cold.",
       "unit": null,
       "pack_size": "8 ml · 25 ml · 50 ml",
-      "image_url": "/products/zandu-balm-red-ultra-power.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/zandu-balm-red-ultra-power.jpg",
       "featured": false,
       "sort_order": 10
     },
@@ -252,7 +252,7 @@
       "description": "Pain balm for headache and cold, supplied in jars up to 200 g for counter sale.",
       "unit": null,
       "pack_size": "25 g · 45 g · 100 g · 200 g · 400 g",
-      "image_url": "/products/monison-s-pain-balm.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/monison-s-pain-balm.jpg",
       "featured": false,
       "sort_order": 11
     },
@@ -265,7 +265,7 @@
       "description": "Single-use sachets of Emami Mentho Plus balm for headache relief, in ₹2, ₹5 and ₹10 price packs.",
       "unit": null,
       "pack_size": "2/- · 5/- · 10/-",
-      "image_url": "/products/mentho-plus-balm-sachet.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/mentho-plus-balm-sachet.jpg",
       "featured": false,
       "sort_order": 12
     },
@@ -278,7 +278,7 @@
       "description": "Emami Mentho Plus balm in a reusable bottle pack.",
       "unit": null,
       "pack_size": "9 ml",
-      "image_url": "/products/mentho-plus-balm-bottle.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/mentho-plus-balm-bottle.jpg",
       "featured": false,
       "sort_order": 13
     },
@@ -291,7 +291,7 @@
       "description": "Export-quality pure aloe vera gel for acne, rash, minor skin irritation and sunburn.",
       "unit": null,
       "pack_size": "120 g · 500 g",
-      "image_url": "/products/green-leaf-aloe-vera-skin-gel.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/green-leaf-aloe-vera-skin-gel.jpg",
       "featured": false,
       "sort_order": 2
     },
@@ -304,7 +304,7 @@
       "description": "Paper-stick cotton swabs with 200 tips per pack, hygienically sealed.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/tulips-paper-stick-cotton-buds.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/tulips-paper-stick-cotton-buds.jpg",
       "featured": false,
       "sort_order": 1
     },
@@ -317,7 +317,7 @@
       "description": "Jeera-flavoured antacid sachets supplied in a counter-top jar.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/gas-o-fast-jeera-sachets.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/gas-o-fast-jeera-sachets.jpg",
       "featured": false,
       "sort_order": 1
     },
@@ -330,7 +330,7 @@
       "description": "Oil-based black hair colour enriched with amla oil for a natural look.",
       "unit": null,
       "pack_size": "50 ml · 100 ml",
-      "image_url": "/products/super-vasmol-33-kesh-kala.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/super-vasmol-33-kesh-kala.jpg",
       "featured": false,
       "sort_order": 1
     },
@@ -343,7 +343,7 @@
       "description": "Ayurvedic turmeric skin cream with sandalwood oil for daily skin care.",
       "unit": null,
       "pack_size": "15 g · 30 g · 50 g · 70 g",
-      "image_url": "/products/vicco-turmeric-skin-cream.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/vicco-turmeric-skin-cream.jpg",
       "featured": false,
       "sort_order": 3
     },
@@ -356,7 +356,7 @@
       "description": "Ayurvedic toothpaste with 18 herbs and barks for healthy gums and teeth.",
       "unit": null,
       "pack_size": "50 g · 100 g · 150 g · 200 g",
-      "image_url": "/products/vicco-vajradanti-toothpaste.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/vicco-vajradanti-toothpaste.jpg",
       "featured": true,
       "sort_order": 1
     },
@@ -369,7 +369,7 @@
       "description": "Ayurvedic tooth powder for daily gum care, in jars up to 200 g.",
       "unit": null,
       "pack_size": "25 g · 50 g · 100 g · 200 g",
-      "image_url": "/products/vicco-vajradanti-tooth-powder.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/vicco-vajradanti-tooth-powder.jpg",
       "featured": false,
       "sort_order": 2
     },
@@ -382,7 +382,7 @@
       "description": "Water-soluble turmeric cream that fights pimples and blemishes for glowing skin.",
       "unit": null,
       "pack_size": "15 g · 30 g · 50 g",
-      "image_url": "/products/vicco-turmeric-wso-skin-cream.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/vicco-turmeric-wso-skin-cream.jpg",
       "featured": false,
       "sort_order": 4
     },
@@ -395,7 +395,7 @@
       "description": "Red sandalwood ayurvedic soap that helps wash away pimples, blemishes and pigmentation.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/raktha-chandan-ayurvedic-soap.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/raktha-chandan-ayurvedic-soap.jpg",
       "featured": false,
       "sort_order": 1
     },
@@ -408,7 +408,7 @@
       "description": "Besan-based ayurvedic soap that protects skin and improves complexion.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/gram-flour-soap.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/gram-flour-soap.jpg",
       "featured": false,
       "sort_order": 2
     },
@@ -421,7 +421,7 @@
       "description": "Multi-pack jar of gram flour ayurvedic soap for counter display.",
       "unit": null,
       "pack_size": "4's · 6's",
-      "image_url": "/products/gram-flour-soap-jar-pack.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/gram-flour-soap-jar-pack.jpg",
       "featured": false,
       "sort_order": 3
     },
@@ -434,7 +434,7 @@
       "description": "Ayurvedic churna useful in chronic constipation, headache and hyperacidity.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/kayam-churna.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/kayam-churna.jpg",
       "featured": false,
       "sort_order": 2
     },
@@ -447,7 +447,7 @@
       "description": "Ayurvedic tablets for chronic constipation, acidity, gas and headache.",
       "unit": null,
       "pack_size": "30's",
-      "image_url": "/products/kayam-tablet.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/kayam-tablet.jpg",
       "featured": false,
       "sort_order": 3
     },
@@ -460,7 +460,7 @@
       "description": "Natural laxative granules and tablets for effective relief from constipation.",
       "unit": null,
       "pack_size": "Powder · Tablet",
-      "image_url": "/products/pet-safa-powder-tablet.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/pet-safa-powder-tablet.jpg",
       "featured": false,
       "sort_order": 4
     },
@@ -473,7 +473,7 @@
       "description": "Ayurvedic balm for headache, cold and body pain.",
       "unit": null,
       "pack_size": "10 g · 25 g · 50 g",
-      "image_url": "/products/amrut-malam.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/amrut-malam.jpg",
       "featured": false,
       "sort_order": 14
     },
@@ -486,7 +486,7 @@
       "description": "External-use ointment that heals cracked feet and rough skin.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/link-ointment.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/link-ointment.jpg",
       "featured": false,
       "sort_order": 5
     },
@@ -499,7 +499,7 @@
       "description": "Lemon-flavoured antacid that gets to work in six seconds.",
       "unit": null,
       "pack_size": "60's · 100's",
-      "image_url": "/products/eno-fruit-salt-lemon.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/eno-fruit-salt-lemon.jpg",
       "featured": true,
       "sort_order": 5
     },
@@ -512,7 +512,7 @@
       "description": "Orange-flavoured antacid sachets for fast acidity relief.",
       "unit": null,
       "pack_size": "30's",
-      "image_url": "/products/eno-fruit-salt-orange.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/eno-fruit-salt-orange.jpg",
       "featured": false,
       "sort_order": 6
     },
@@ -525,7 +525,7 @@
       "description": "The original unflavoured Eno fruit salt for acidity and indigestion.",
       "unit": null,
       "pack_size": "30's",
-      "image_url": "/products/eno-fruit-salt-regular.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/eno-fruit-salt-regular.jpg",
       "featured": false,
       "sort_order": 7
     },
@@ -538,7 +538,7 @@
       "description": "Cola-flavoured antacid sachets for fast acidity relief.",
       "unit": null,
       "pack_size": "30's",
-      "image_url": "/products/eno-fruit-salt-cola.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/eno-fruit-salt-cola.jpg",
       "featured": false,
       "sort_order": 8
     },
@@ -551,7 +551,7 @@
       "description": "100% pure sweet almond oil for massage, hair and daily use.",
       "unit": null,
       "pack_size": "25 ml · 50 ml · 100 ml",
-      "image_url": "/products/roghan-badam-shirin-almond-oil.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/roghan-badam-shirin-almond-oil.jpg",
       "featured": false,
       "sort_order": 1
     },
@@ -564,7 +564,7 @@
       "description": "Ayurvedic hair oil that controls hair fall and prevents dandruff.",
       "unit": null,
       "pack_size": "45 ml · 90 ml · 180 ml · 360 ml",
-      "image_url": "/products/aswini-hair-oil.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/aswini-hair-oil.jpg",
       "featured": false,
       "sort_order": 2
     },
@@ -577,7 +577,7 @@
       "description": "Perforated patch using the healing power of belladonna for muscle stiffness, joint swelling and nerve pain.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/hansaplast-belladonna-pain-relief-patch.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/hansaplast-belladonna-pain-relief-patch.jpg",
       "featured": false,
       "sort_order": 2
     },
@@ -590,7 +590,7 @@
       "description": "Intensive, long-lasting heat plaster with capsicum for neck, back and muscular pain, effective up to 24 hours.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/hansaplast-heat-plaster-capsicum.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/hansaplast-heat-plaster-capsicum.jpg",
       "featured": true,
       "sort_order": 3
     },
@@ -603,7 +603,7 @@
       "description": "Round spot bandages in a counter jar for small cuts and wounds.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/hansaplast-spot-round-jar.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/hansaplast-spot-round-jar.jpg",
       "featured": false,
       "sort_order": 4
     },
@@ -616,7 +616,7 @@
       "description": "Regular adhesive strips in a 100-strip counter jar.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/hansaplast-regular-strips-jar.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/hansaplast-regular-strips-jar.jpg",
       "featured": false,
       "sort_order": 5
     },
@@ -629,7 +629,7 @@
       "description": "Square patches, 50 per jar, for everyday cuts and grazes.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/hansaplast-square-patch-jar.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/hansaplast-square-patch-jar.jpg",
       "featured": false,
       "sort_order": 6
     },
@@ -642,7 +642,7 @@
       "description": "Washproof adhesive plasters in a counter jar.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/hansaplast-washproof-jar.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/hansaplast-washproof-jar.jpg",
       "featured": false,
       "sort_order": 7
     },
@@ -655,7 +655,7 @@
       "description": "Jumbo strips with a larger wound pad, 10 strips per pack.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/hansaplast-jumbo-strips.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/hansaplast-jumbo-strips.jpg",
       "featured": false,
       "sort_order": 8
     },
@@ -668,7 +668,7 @@
       "description": "Bulk institutional box of 1000 regular Hansaplast strips.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/hansaplast-1000s-bulk-box.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/hansaplast-1000s-bulk-box.jpg",
       "featured": false,
       "sort_order": 9
     },
@@ -681,7 +681,7 @@
       "description": "Spanish olive oil in a sealed tin for kitchen and massage use.",
       "unit": null,
       "pack_size": "200 ml · 500 ml · 1 ltr",
-      "image_url": "/products/figaro-olive-oil-tin.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/figaro-olive-oil-tin.jpg",
       "featured": false,
       "sort_order": 2
     },
@@ -694,7 +694,7 @@
       "description": "Spanish olive oil in a 100 ml bottle.",
       "unit": null,
       "pack_size": "100 ml",
-      "image_url": "/products/figaro-olive-oil-bottle.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/figaro-olive-oil-bottle.jpg",
       "featured": false,
       "sort_order": 3
     },
@@ -707,7 +707,7 @@
       "description": "Irritation-free ointment for eczema, ringworm, itches, cold cracks and pimples.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/b-tex-white-ointment.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/b-tex-white-ointment.jpg",
       "featured": false,
       "sort_order": 6
     },
@@ -720,7 +720,7 @@
       "description": "Skin ointment for cuts, itches, boils, eczema, scabies and pimples.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/saibol-skin-ointment.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/saibol-skin-ointment.jpg",
       "featured": false,
       "sort_order": 7
     },
@@ -733,7 +733,7 @@
       "description": "Ready-to-drink oral rehydration salts that restore body fluids and electrolytes lost to dehydration.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/ors-ready-to-drink-alkem.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/ors-ready-to-drink-alkem.jpg",
       "featured": false,
       "sort_order": 9
     },
@@ -746,7 +746,7 @@
       "description": "WHO-recommended formula ready-to-drink ORS in apple and orange flavours.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/prolyte-ors-ready-to-drink.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/prolyte-ors-ready-to-drink.jpg",
       "featured": false,
       "sort_order": 10
     },
@@ -759,7 +759,7 @@
       "description": "WHO-formula oral rehydration salts powder in single-dose sachets.",
       "unit": null,
       "pack_size": "4.2 g · 21 g",
-      "image_url": "/products/prolyte-ors-powder-sachets.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/prolyte-ors-powder-sachets.jpg",
       "featured": false,
       "sort_order": 11
     },
@@ -772,7 +772,7 @@
       "description": "Best-quality pure psyllium husk for digestive regularity.",
       "unit": null,
       "pack_size": "50 g · 100 g · 200 g",
-      "image_url": "/products/sat-isabgol-psyllium-husk.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/sat-isabgol-psyllium-husk.jpg",
       "featured": false,
       "sort_order": 12
     },
@@ -785,7 +785,7 @@
       "description": "Heals and soothes cracked feet, with a fast-absorbing non-sticky base.",
       "unit": null,
       "pack_size": "25 g · 50 g",
-      "image_url": "/products/bioline-crack-heal-cream.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/bioline-crack-heal-cream.jpg",
       "featured": false,
       "sort_order": 8
     },
@@ -798,7 +798,7 @@
       "description": "Ayurvedic heel repair cream for dry, cracked feet.",
       "unit": null,
       "pack_size": "15 g · 25 g",
-      "image_url": "/products/krack-heel-repair-cream.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/krack-heel-repair-cream.jpg",
       "featured": false,
       "sort_order": 9
     },
@@ -811,7 +811,7 @@
       "description": "Ayurvedic oil with 21 herbs, clinically tested for hair fall and hair growth.",
       "unit": null,
       "pack_size": "50 ml · 100 ml · 300 ml",
-      "image_url": "/products/kesh-king-ayurvedic-hair-oil.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/kesh-king-ayurvedic-hair-oil.jpg",
       "featured": true,
       "sort_order": 3
     },
@@ -824,7 +824,7 @@
       "description": "Anti-hairfall shampoo with aloe and 21 ayurvedic herbs.",
       "unit": null,
       "pack_size": "100 ml · 200 ml",
-      "image_url": "/products/kesh-king-anti-hairfall-shampoo.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/kesh-king-anti-hairfall-shampoo.jpg",
       "featured": false,
       "sort_order": 4
     },
@@ -837,7 +837,7 @@
       "description": "10-minute natural black hair colour powder, in box and sachet packs.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/indica-hair-colour-powder.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/indica-hair-colour-powder.jpg",
       "featured": false,
       "sort_order": 5
     },
@@ -850,7 +850,7 @@
       "description": "Ammonia-free shampoo hair colour sachets with 10-minute action.",
       "unit": null,
       "pack_size": "15 /- · 30 /-",
-      "image_url": "/products/indica-easy-shampoo-hair-colour.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/indica-easy-shampoo-hair-colour.jpg",
       "featured": false,
       "sort_order": 6
     },
@@ -863,7 +863,7 @@
       "description": "5-in-1 natural hair colour shampoo sachets with 100% grey coverage, pack of 7.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/vip-hair-colour-shampoo-pack-of-7.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/vip-hair-colour-shampoo-pack-of-7.jpg",
       "featured": false,
       "sort_order": 7
     },
@@ -876,7 +876,7 @@
       "description": "Boxed VIP natural hair colour shampoo for counter sale.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/vip-hair-colour-shampoo-carton.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/vip-hair-colour-shampoo-carton.jpg",
       "featured": false,
       "sort_order": 8
     },
@@ -889,7 +889,7 @@
       "description": "Powder hair dye in black for natural-looking grey coverage.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/black-rose-kali-mehandi.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/black-rose-kali-mehandi.jpg",
       "featured": false,
       "sort_order": 9
     },
@@ -902,7 +902,7 @@
       "description": "Hair dye shampoo enriched with keratin and silk protein, in sachet and base packs.",
       "unit": null,
       "pack_size": "25 /- · 65 /- · 99 /-",
-      "image_url": "/products/v-care-shampoo-hair-colour.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/v-care-shampoo-hair-colour.jpg",
       "featured": false,
       "sort_order": 10
     },
@@ -915,7 +915,7 @@
       "description": "Noni-based ayurvedic health tonic for daily immunity and vitality.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/amrith-noni-power-plus.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/amrith-noni-power-plus.jpg",
       "featured": false,
       "sort_order": 1
     },
@@ -928,7 +928,7 @@
       "description": "Noni juice blend in a 1000 ml bottle for everyday wellness.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/amrith-noni-d.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/amrith-noni-d.jpg",
       "featured": false,
       "sort_order": 2
     },
@@ -941,7 +941,7 @@
       "description": "Ayurvedic noni tonic formulated to help with joint pain.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/amrith-noni-ortho-plus.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/amrith-noni-ortho-plus.jpg",
       "featured": false,
       "sort_order": 3
     },
@@ -954,7 +954,7 @@
       "description": "Ayurvedic pain relief oil, supplied in bottle and roll-on packs.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/amrith-noni-pain-oil.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/amrith-noni-pain-oil.jpg",
       "featured": false,
       "sort_order": 15
     },
@@ -967,7 +967,7 @@
       "description": "Specialist pain relief cream for back ache, muscle pain and sprains.",
       "unit": null,
       "pack_size": "10 g · 20 g · 30 g",
-      "image_url": "/products/moov-pain-relief-cream.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/moov-pain-relief-cream.jpg",
       "featured": false,
       "sort_order": 16
     },
@@ -980,7 +980,7 @@
       "description": "Instant-action pain relief spray for hard-to-reach areas.",
       "unit": null,
       "pack_size": "15 g · 35 g · 50 g",
-      "image_url": "/products/moov-pain-relief-spray.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/moov-pain-relief-spray.jpg",
       "featured": false,
       "sort_order": 17
     },
@@ -993,7 +993,7 @@
       "description": "Medicated universal oil for headache, cold, insect bites and giddiness.",
       "unit": null,
       "pack_size": "3 ml · 5 ml · 10 ml · 28 ml",
-      "image_url": "/products/axe-brand-cap-kapak-universal-oil.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/axe-brand-cap-kapak-universal-oil.jpg",
       "featured": false,
       "sort_order": 18
     },
@@ -1006,7 +1006,7 @@
       "description": "Sugar-free mint plus nicotine gum, 2 mg, for smoking cessation.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/nicotex-2-mg-nicotine-gum.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/nicotex-2-mg-nicotine-gum.jpg",
       "featured": false,
       "sort_order": 1
     },
@@ -1019,7 +1019,7 @@
       "description": "Nicotine gum tin packs combining 2 mg and 4 mg strengths.",
       "unit": null,
       "pack_size": "20's · 40's",
-      "image_url": "/products/nicotex-tin-2-mg-4-mg.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/nicotex-tin-2-mg-4-mg.jpg",
       "featured": false,
       "sort_order": 2
     },
@@ -1032,7 +1032,7 @@
       "description": "Sugar-free mint plus nicotine gum, 4 mg, for heavier smokers.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/nicotex-4-mg-nicotine-gum.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/nicotex-4-mg-nicotine-gum.jpg",
       "featured": false,
       "sort_order": 3
     },
@@ -1045,7 +1045,7 @@
       "description": "Full Sensodyne range for sensitive teeth — Rapid Relief, Repair & Protect, Sensitivity & Gum and Fresh Mint.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/sensodyne-toothpaste-range.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/sensodyne-toothpaste-range.jpg",
       "featured": false,
       "sort_order": 3
     },
@@ -1058,7 +1058,7 @@
       "description": "Trusted antiseptic liquid that kills 99.9% of germs, for first aid and personal hygiene.",
       "unit": null,
       "pack_size": "60 ml · 125 ml · 250 ml · 500 ml · 1 ltr",
-      "image_url": "/products/dettol-antiseptic-liquid.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/dettol-antiseptic-liquid.jpg",
       "featured": true,
       "sort_order": 10
     },
@@ -1071,7 +1071,7 @@
       "description": "Soft and smooth face cream in ₹48, ₹75 and ₹150 price packs.",
       "unit": null,
       "pack_size": "48 /- · 75 /- · 150 /-",
-      "image_url": "/products/white-tone-face-cream.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/white-tone-face-cream.jpg",
       "featured": false,
       "sort_order": 10
     },
@@ -1084,7 +1084,7 @@
       "description": "Face powder with soft-shade formula for an even finish.",
       "unit": null,
       "pack_size": "30 g · 50 g · 100 g",
-      "image_url": "/products/white-tone-face-powder.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/white-tone-face-powder.jpg",
       "featured": false,
       "sort_order": 11
     },
@@ -1097,7 +1097,7 @@
       "description": "Salicylic acid lotion for ringworm, itch and eczema.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/sapat-lotion.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/sapat-lotion.jpg",
       "featured": false,
       "sort_order": 12
     },
@@ -1110,7 +1110,7 @@
       "description": "Antiseptic ayurvedic cream in tube and tin packs for cuts, cracks and dry skin.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/boroline-antiseptic-ayurvedic-cream.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/boroline-antiseptic-ayurvedic-cream.jpg",
       "featured": false,
       "sort_order": 13
     },
@@ -1123,7 +1123,7 @@
       "description": "Cracked heel repair cream with visible effects in three days.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/heelmate-heel-repair-cream.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/heelmate-heel-repair-cream.jpg",
       "featured": false,
       "sort_order": 14
     },
@@ -1136,7 +1136,7 @@
       "description": "Two-minute instant pain relief gel for mouth ulcers.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/orasore-mouth-ulcer-gel.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/orasore-mouth-ulcer-gel.jpg",
       "featured": false,
       "sort_order": 4
     },
@@ -1149,7 +1149,7 @@
       "description": "Herbal mouth ulcer gel with a roll-on tip for direct application.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/smyle-mouth-ulcer-gel.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/smyle-mouth-ulcer-gel.jpg",
       "featured": false,
       "sort_order": 5
     },
@@ -1162,7 +1162,7 @@
       "description": "Toothbrushes in soft, medium, hard and sensitive bristle options.",
       "unit": null,
       "pack_size": "Soft · Medium · Hard · Sensitive",
-      "image_url": "/products/ajay-toothbrush.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/ajay-toothbrush.jpg",
       "featured": false,
       "sort_order": 6
     },
@@ -1175,7 +1175,7 @@
       "description": "Duracell alkaline batteries in AA and AAA, supplied on retail hang cards.",
       "unit": null,
       "pack_size": "25 /- · 55 /-",
-      "image_url": "/products/duracell-batteries-aa-aaa.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/duracell-batteries-aa-aaa.jpg",
       "featured": false,
       "sort_order": 1
     },
@@ -1188,7 +1188,7 @@
       "description": "Ayurvedic toothpaste that fights bacteria naturally.",
       "unit": null,
       "pack_size": "50 g · 100 g · 150 g · 200 g",
-      "image_url": "/products/k-p-namboodiri-s-ayurvedic-toothpaste.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/k-p-namboodiri-s-ayurvedic-toothpaste.jpg",
       "featured": false,
       "sort_order": 7
     },
@@ -1201,7 +1201,7 @@
       "description": "Ayurvedic herbal drink sachets for cold, cough and seasonal relief.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/samahan-ayurvedic-sachets.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/samahan-ayurvedic-sachets.jpg",
       "featured": false,
       "sort_order": 4
     },
@@ -1214,7 +1214,7 @@
       "description": "Weight gainer available in vanilla, banana and chocolate flavours.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/endura-mass-weight-gainer.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/endura-mass-weight-gainer.jpg",
       "featured": false,
       "sort_order": 4
     },
@@ -1227,7 +1227,7 @@
       "description": "Pocket mouth freshener sprays across a full range of flavours.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/spraymintt-mouth-freshener.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/spraymintt-mouth-freshener.jpg",
       "featured": false,
       "sort_order": 8
     },
@@ -1240,7 +1240,7 @@
       "description": "Instant-action pain relief spray for sports injuries, sprains and muscular pain.",
       "unit": null,
       "pack_size": "15 g · 36 g · 58 g · 95 g",
-      "image_url": "/products/relispray-instant-pain-relief-spray.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/relispray-instant-pain-relief-spray.jpg",
       "featured": false,
       "sort_order": 19
     },
@@ -1253,7 +1253,7 @@
       "description": "Ayurvedic oil helpful in painful joint and muscle conditions.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/dr-ortho-ayurvedic-oil.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/dr-ortho-ayurvedic-oil.jpg",
       "featured": false,
       "sort_order": 20
     },
@@ -1266,7 +1266,7 @@
       "description": "Ayurvedic joint pain relief oil.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/pankajakasthuri-orthoherb-oil.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/pankajakasthuri-orthoherb-oil.jpg",
       "featured": false,
       "sort_order": 21
     },
@@ -1279,7 +1279,7 @@
       "description": "Ayurvedic tablets for back pain, knee pain, wrist pain and ankle pain.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/pankajakasthuri-orthoherb-tablets.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/pankajakasthuri-orthoherb-tablets.jpg",
       "featured": false,
       "sort_order": 22
     },
@@ -1292,7 +1292,7 @@
       "description": "Ayurvedic syrup that supports easy breathing and respiratory health.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/pankajakasthuri-breathe-eazy-syrup.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/pankajakasthuri-breathe-eazy-syrup.jpg",
       "featured": false,
       "sort_order": 5
     },
@@ -1305,7 +1305,7 @@
       "description": "Oil with 23 natural ingredients for joint and muscle pain.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/pankajakasthuri-orthonervin-oil.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/pankajakasthuri-orthonervin-oil.jpg",
       "featured": false,
       "sort_order": 23
     },
@@ -1318,7 +1318,7 @@
       "description": "Ayurvedic granules for respiratory wellness, supplied in a jar pack.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/pankajakasthuri-breathe-eazy-granules.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/pankajakasthuri-breathe-eazy-granules.jpg",
       "featured": false,
       "sort_order": 6
     },
@@ -1331,7 +1331,7 @@
       "description": "Single-dose ayurvedic cough syrup sachets in a counter jar.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/gokof-cough-syrup-sachets.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/gokof-cough-syrup-sachets.jpg",
       "featured": false,
       "sort_order": 7
     },
@@ -1344,7 +1344,7 @@
       "description": "Ayurvedic cough syrup sachets supplied in retail strips.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/nivaran-90-cough-syrup-sachets.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/nivaran-90-cough-syrup-sachets.jpg",
       "featured": false,
       "sort_order": 8
     },
@@ -1357,7 +1357,7 @@
       "description": "Hand-made ayurvedic soap for problem-free, clear skin.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/chandrika-ayurvedic-soap.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/chandrika-ayurvedic-soap.jpg",
       "featured": false,
       "sort_order": 4
     },
@@ -1370,7 +1370,7 @@
       "description": "Sore throat lozenges supplied in a counter jar.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/cofsils-lozenges-jar.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/cofsils-lozenges-jar.jpg",
       "featured": false,
       "sort_order": 9
     },
@@ -1383,7 +1383,7 @@
       "description": "Quick-relief cough drops in bulk counter jars.",
       "unit": null,
       "pack_size": "210's · 1300's",
-      "image_url": "/products/cofsils-cough-drops-jar.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/cofsils-cough-drops-jar.jpg",
       "featured": false,
       "sort_order": 10
     },
@@ -1396,7 +1396,7 @@
       "description": "5-in-1 skin benefits hair removal cream for sensitive skin, body and legs.",
       "unit": null,
       "pack_size": "30 g · 50 g",
-      "image_url": "/products/veet-hair-removal-cream.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/veet-hair-removal-cream.jpg",
       "featured": false,
       "sort_order": 1
     },
@@ -1409,7 +1409,7 @@
       "description": "Pocket nasal inhaler with keychain for blocked nose relief.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/nasalin-inhaler.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/nasalin-inhaler.jpg",
       "featured": false,
       "sort_order": 11
     },
@@ -1422,7 +1422,7 @@
       "description": "Daily nourishing lotion in Hydration and Oil Control variants.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/lacto-calamine-skin-balance-lotion.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/lacto-calamine-skin-balance-lotion.jpg",
       "featured": false,
       "sort_order": 15
     },
@@ -1435,7 +1435,7 @@
       "description": "Soft silicone feeding nipples for babies, in single and box packs.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/little-s-bighug-silicone-nipple.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/little-s-bighug-silicone-nipple.jpg",
       "featured": false,
       "sort_order": 1
     },
@@ -1448,7 +1448,7 @@
       "description": "Matte-look sunscreen with kaolin clay, SPF 50 PA+++.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/lacto-calamine-daily-sunshield-spf-50.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/lacto-calamine-daily-sunshield-spf-50.jpg",
       "featured": false,
       "sort_order": 16
     },
@@ -1461,7 +1461,7 @@
       "description": "Classic unani medicine, 100% vegetarian, for cold, cough and stomach complaints.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/zinda-tilismath.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/zinda-tilismath.jpg",
       "featured": false,
       "sort_order": 9
     },
@@ -1474,7 +1474,7 @@
       "description": "Soft cleansing baby wipes, 80 wipes per pack.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/little-s-baby-wipes.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/little-s-baby-wipes.jpg",
       "featured": false,
       "sort_order": 2
     },
@@ -1487,7 +1487,7 @@
       "description": "Natural herbal blood purifier with an internal detox formula for glowing skin.",
       "unit": null,
       "pack_size": "100 ml · 200 ml · 500 ml",
-      "image_url": "/products/hamdard-safi-blood-purifier.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/hamdard-safi-blood-purifier.jpg",
       "featured": false,
       "sort_order": 10
     },
@@ -1500,7 +1500,7 @@
       "description": "Organic premium quality pure olive oil in a 1000 ml tin.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/tunzia-pure-olive-oil-red-tin.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/tunzia-pure-olive-oil-red-tin.jpg",
       "featured": false,
       "sort_order": 4
     },
@@ -1513,7 +1513,7 @@
       "description": "Aerosol insect killer for cockroaches and other crawling insects.",
       "unit": null,
       "pack_size": "200 ml · 355 ml · 420 ml",
-      "image_url": "/products/no-p-crawling-insect-killer-spray.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/no-p-crawling-insect-killer-spray.jpg",
       "featured": false,
       "sort_order": 2
     },
@@ -1526,7 +1526,7 @@
       "description": "Noni plant essence hair dye shampoo in ₹50 and ₹90 sachet packs.",
       "unit": null,
       "pack_size": "50 /- · 90 /-",
-      "image_url": "/products/bsy-noni-black-hair-magic-dye.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/bsy-noni-black-hair-magic-dye.jpg",
       "featured": false,
       "sort_order": 11
     },
@@ -1539,7 +1539,7 @@
       "description": "Lip balm for soft lips, available in fruit flavours.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/bioline-lip-care-balm.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/bioline-lip-care-balm.jpg",
       "featured": false,
       "sort_order": 17
     },
@@ -1552,7 +1552,7 @@
       "description": "White petroleum jelly IP for dry lips, rough hands, cracked heels and chapped skin.",
       "unit": null,
       "pack_size": "8g · 20 g · 50 g · 100 g · 200 g · 400 g",
-      "image_url": "/products/bioline-white-petroleum-jelly.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/bioline-white-petroleum-jelly.jpg",
       "featured": false,
       "sort_order": 18
     },
@@ -1565,7 +1565,7 @@
       "description": "Ayurvedic adulsa cough syrup for wet and dry cough.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/ayusas-adulsa-cough-syrup.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/ayusas-adulsa-cough-syrup.jpg",
       "featured": false,
       "sort_order": 11
     },
@@ -1578,7 +1578,7 @@
       "description": "Three-in-one polypropylene feeding bottle, BPA free.",
       "unit": null,
       "pack_size": "140 ml · 240 ml",
-      "image_url": "/products/little-s-poly-mini-feeding-bottle.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/little-s-poly-mini-feeding-bottle.jpg",
       "featured": false,
       "sort_order": 3
     },
@@ -1591,7 +1591,7 @@
       "description": "Ayurvedic hair oil that reduces hair fall and supports hair growth, with a comb applicator.",
       "unit": null,
       "pack_size": "50 ml · 100 ml · 200 ml",
-      "image_url": "/products/sesa-ayurvedic-hair-oil.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/sesa-ayurvedic-hair-oil.jpg",
       "featured": false,
       "sort_order": 12
     },
@@ -1604,7 +1604,7 @@
       "description": "Anti-hair fall shampoo with onion and ayurvedic herbs.",
       "unit": null,
       "pack_size": "100 ml · 200 ml",
-      "image_url": "/products/sesa-anti-hair-fall-shampoo.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/sesa-anti-hair-fall-shampoo.jpg",
       "featured": false,
       "sort_order": 13
     },
@@ -1617,7 +1617,7 @@
       "description": "Rewetting drops for instant and natural hydration of dry, tired eyes.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/biotrue-rewetting-eye-drops.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/biotrue-rewetting-eye-drops.jpg",
       "featured": false,
       "sort_order": 1
     },
@@ -1630,7 +1630,7 @@
       "description": "Multi-purpose contact lens solution that cleans, disinfects and rinses.",
       "unit": null,
       "pack_size": "60 ml · 120 ml · 355 ml · 500 ml",
-      "image_url": "/products/renu-multiplus-lens-solution.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/renu-multiplus-lens-solution.jpg",
       "featured": true,
       "sort_order": 2
     },
@@ -1643,7 +1643,7 @@
       "description": "Non-alcoholic gentle antacid, safe for infants during the teething period.",
       "unit": null,
       "pack_size": "130 ml · 200 ml",
-      "image_url": "/products/woodward-s-gripe-water.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/woodward-s-gripe-water.jpg",
       "featured": false,
       "sort_order": 4
     },
@@ -1656,7 +1656,7 @@
       "description": "Ayurvedic proprietary bringha oil with a selfie comb applicator.",
       "unit": null,
       "pack_size": "50 ml · 100 ml",
-      "image_url": "/products/indulekha-bringha-hair-oil.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/indulekha-bringha-hair-oil.jpg",
       "featured": false,
       "sort_order": 14
     },
@@ -1669,7 +1669,7 @@
       "description": "No-gas body spray deodorants across the full fragrance range.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/fogg-body-spray.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/fogg-body-spray.jpg",
       "featured": false,
       "sort_order": 2
     },
@@ -1682,7 +1682,7 @@
       "description": "Compact pocket-size Fogg deodorant packs for travel and counter sale.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/fogg-mobile-pack-deodorant.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/fogg-mobile-pack-deodorant.jpg",
       "featured": false,
       "sort_order": 3
     },
@@ -1695,7 +1695,7 @@
       "description": "Multipurpose ayurvedic cream in tube and jar packs.",
       "unit": null,
       "pack_size": "15 g · 30 g · 60 g",
-      "image_url": "/products/kailas-jeevan-ayurvedic-cream.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/kailas-jeevan-ayurvedic-cream.jpg",
       "featured": false,
       "sort_order": 19
     },
@@ -1708,7 +1708,7 @@
       "description": "Glucose energy pops in assorted fruit flavours.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/glucomin-energy-pops.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/glucomin-energy-pops.jpg",
       "featured": false,
       "sort_order": 5
     },
@@ -1721,7 +1721,7 @@
       "description": "Instant energy glucose powder with vitamin D and vitamin C variants.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/gluco-d-gluco-c-pro.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/gluco-d-gluco-c-pro.jpg",
       "featured": false,
       "sort_order": 6
     },
@@ -1734,7 +1734,7 @@
       "description": "One-wash formula that removes lice, eggs, nymphs and nits.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/hairshield-anti-lice-cream-wash.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/hairshield-anti-lice-cream-wash.jpg",
       "featured": false,
       "sort_order": 15
     },
@@ -1747,7 +1747,7 @@
       "description": "Zinc phosphide rat bait in ready-to-use sachets.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/ratol-bait.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/ratol-bait.jpg",
       "featured": false,
       "sort_order": 3
     },
@@ -1760,7 +1760,7 @@
       "description": "Orange sore-throat lozenges in blister strips for counter sale.",
       "unit": null,
       "pack_size": "Strip of 10",
-      "image_url": "/products/cofsils-lozenges-strip-orange.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/cofsils-lozenges-strip-orange.jpg",
       "featured": false,
       "sort_order": 11
     },
@@ -1773,7 +1773,7 @@
       "description": "4-in-1 daily lotion with sunscreen, vitamin E, aloe vera and antioxidants.",
       "unit": null,
       "pack_size": "200 ml",
-      "image_url": "/products/bioline-moisturising-lotion.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/bioline-moisturising-lotion.jpg",
       "featured": false,
       "sort_order": 20
     },
@@ -1786,7 +1786,7 @@
       "description": "Herbal oil-based treatment for lice and nits.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/licel-lice-killer-hair-oil.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/licel-lice-killer-hair-oil.jpg",
       "featured": false,
       "sort_order": 16
     },
@@ -1799,7 +1799,7 @@
       "description": "Non-sticky mosquito repellent cream with natural ingredients, 8 hours of protection.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/odomos-naturals-mosquito-repellent-cream.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/odomos-naturals-mosquito-repellent-cream.jpg",
       "featured": false,
       "sort_order": 4
     },
@@ -1812,7 +1812,7 @@
       "description": "Non-poisonous glue board that traps rats, with peanut-butter scent.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/m-stick-rat-glue-board.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/m-stick-rat-glue-board.jpg",
       "featured": false,
       "sort_order": 4
     },
@@ -1825,7 +1825,7 @@
       "description": "Harmless-to-humans mouse and rat capture board with peanut-butter scent.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/m-r-gold-mouse-rat-capture.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/m-r-gold-mouse-rat-capture.jpg",
       "featured": false,
       "sort_order": 5
     },
@@ -1838,7 +1838,7 @@
       "description": "Rat cake for outdoor use; rats mostly die outdoors.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/ratol-rat-cake.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/ratol-rat-cake.jpg",
       "featured": false,
       "sort_order": 6
     },
@@ -1851,7 +1851,7 @@
       "description": "Premium condoms in assorted variants.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/unfold-premium-condoms.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/unfold-premium-condoms.jpg",
       "featured": false,
       "sort_order": 5
     },
@@ -1864,7 +1864,7 @@
       "description": "Pocket nasal inhaler with keychain for quick blocked-nose relief.",
       "unit": null,
       "pack_size": "0.5 ml",
-      "image_url": "/products/vicks-inhaler.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/vicks-inhaler.jpg",
       "featured": false,
       "sort_order": 12
     },
@@ -1877,7 +1877,7 @@
       "description": "Non-sticky mosquito repellent cream, clinically tested, 8 hours of protection.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/odomos-mosquito-repellent-cream.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/odomos-mosquito-repellent-cream.jpg",
       "featured": false,
       "sort_order": 6
     },
@@ -1890,7 +1890,7 @@
       "description": "Heavy duty zinc carbon AAA cells on a retail card.",
       "unit": null,
       "pack_size": "Card of 10",
-      "image_url": "/products/eveready-aaa-batteries.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/eveready-aaa-batteries.jpg",
       "featured": false,
       "sort_order": 7
     },
@@ -1903,7 +1903,7 @@
       "description": "Moisturising baby wipes with aloe vera for everyday cleaning.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/luvlap-moisturising-baby-wipes.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/luvlap-moisturising-baby-wipes.jpg",
       "featured": false,
       "sort_order": 5
     },
@@ -1916,7 +1916,7 @@
       "description": "Ayurvedic adulsa compound cough syrup with tulsi.",
       "unit": null,
       "pack_size": "100 ml",
-      "image_url": "/products/amrut-tulsiyukt-adulsa-cough-syrup.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/amrut-tulsiyukt-adulsa-cough-syrup.jpg",
       "featured": false,
       "sort_order": 12
     },
@@ -1929,7 +1929,7 @@
       "description": "Mosquito liquid vaporizer machine with refill; works against dengue, malaria and chikungunya mosquitoes.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/all-out-ultra-liquid-vaporizer.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/all-out-ultra-liquid-vaporizer.jpg",
       "featured": false,
       "sort_order": 8
     },
@@ -1942,7 +1942,7 @@
       "description": "Digital clinical thermometer with fast, accurate readings and fever alarm.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/paracip-digital-thermometer.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/paracip-digital-thermometer.jpg",
       "featured": false,
       "sort_order": 13
     },
@@ -1955,7 +1955,7 @@
       "description": "Pearls for effective cooling relief from indigestion, gas and stomach ache.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/dabur-pudin-hara-pearls.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/dabur-pudin-hara-pearls.jpg",
       "featured": false,
       "sort_order": 13
     },
@@ -1968,7 +1968,7 @@
       "description": "Ayurvedic proprietary anti-hair fall shampoo.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/indulekha-bringha-shampoo.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/indulekha-bringha-shampoo.jpg",
       "featured": false,
       "sort_order": 17
     },
@@ -1981,7 +1981,7 @@
       "description": "Instant energy glucose powder with vitamin D, in assorted flavours.",
       "unit": null,
       "pack_size": "200 g",
-      "image_url": "/products/glucomin-d-powder.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/glucomin-d-powder.jpg",
       "featured": false,
       "sort_order": 7
     },
@@ -1994,7 +1994,7 @@
       "description": "Bulk box of washproof medicated dressings for clinics and counters.",
       "unit": null,
       "pack_size": "1000 strips",
-      "image_url": "/products/hansaplast-washproof-1000s-box.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/hansaplast-washproof-1000s-box.jpg",
       "featured": false,
       "sort_order": 14
     },
@@ -2007,7 +2007,7 @@
       "description": "Large stainless steel nail clipper for manicure and pedicure use.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/stainless-steel-nail-cutter.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/stainless-steel-nail-cutter.jpg",
       "featured": false,
       "sort_order": 9
     },
@@ -2020,7 +2020,7 @@
       "description": "Pocket pack of Vicks VapoRub, relieves six cold symptoms.",
       "unit": null,
       "pack_size": "10 ml",
-      "image_url": "/products/vicks-vaporub-pocket-pack.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/vicks-vaporub-pocket-pack.jpg",
       "featured": false,
       "sort_order": 24
     },
@@ -2033,7 +2033,7 @@
       "description": "The classic VapoRub jar with the powerful scent, relieves six cold symptoms.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/vicks-vaporub.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/vicks-vaporub.jpg",
       "featured": false,
       "sort_order": 25
     },
@@ -2046,7 +2046,7 @@
       "description": "Mint sore-throat lozenges in blister strips for counter sale.",
       "unit": null,
       "pack_size": "Strip of 10",
-      "image_url": "/products/cofsils-lozenges-strip-mint.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/cofsils-lozenges-strip-mint.jpg",
       "featured": false,
       "sort_order": 12
     },
@@ -2059,7 +2059,7 @@
       "description": "Ammonia-free oil-enriched creme hair colour, shade 1.0 Deep Black, 15-minute action.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/garnier-black-naturals-deep-black.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/garnier-black-naturals-deep-black.jpg",
       "featured": false,
       "sort_order": 18
     },
@@ -2072,7 +2072,7 @@
       "description": "Ammonia-free oil-enriched creme hair colour, shade 2.0 Original Black, 15-minute action.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/garnier-black-naturals-original-black.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/garnier-black-naturals-original-black.jpg",
       "featured": false,
       "sort_order": 19
     },
@@ -2085,7 +2085,7 @@
       "description": "Strong ayurvedic balm for muscular pain and body ache.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/sloan-s-balm.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/sloan-s-balm.jpg",
       "featured": false,
       "sort_order": 26
     },
@@ -2098,7 +2098,7 @@
       "description": "Ayurvedic antimarks cream for oily skin.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/nomarks-antimarks-cream.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/nomarks-antimarks-cream.jpg",
       "featured": false,
       "sort_order": 21
     },
@@ -2111,7 +2111,7 @@
       "description": "Heavy duty zinc carbon AA cells on a retail card.",
       "unit": null,
       "pack_size": "Card of 10",
-      "image_url": "/products/eveready-aa-batteries.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/eveready-aa-batteries.jpg",
       "featured": false,
       "sort_order": 10
     },
@@ -2124,7 +2124,7 @@
       "description": "Cockroach chalk — draw a line and keep roaches out.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/krazy-lines-plus-cockroach-chalk.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/krazy-lines-plus-cockroach-chalk.jpg",
       "featured": false,
       "sort_order": 11
     },
@@ -2137,7 +2137,7 @@
       "description": "Ointment for cracks on the soles, fissures and fungal infection between fingers and toes.",
       "unit": null,
       "pack_size": "20 g",
-      "image_url": "/products/lichensa-ointment.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/lichensa-ointment.jpg",
       "featured": false,
       "sort_order": 22
     },
@@ -2150,7 +2150,7 @@
       "description": "Capsicum pain-relief plaster sheets in a dispenser jar.",
       "unit": null,
       "pack_size": "200 sheets",
-      "image_url": "/products/neptune-capsicum-plaster.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/neptune-capsicum-plaster.jpg",
       "featured": false,
       "sort_order": 15
     },
@@ -2163,7 +2163,7 @@
       "description": "Medicated corn caps for quicker relief, in a dispenser jar.",
       "unit": null,
       "pack_size": "200 caps",
-      "image_url": "/products/neptune-corn-caps.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/neptune-corn-caps.jpg",
       "featured": false,
       "sort_order": 23
     },
@@ -2176,7 +2176,7 @@
       "description": "Ayurvedic vati laxative for overnight relief from constipation.",
       "unit": null,
       "pack_size": "Pack of 10",
-      "image_url": "/products/zandu-nityam-tablets.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/zandu-nityam-tablets.jpg",
       "featured": false,
       "sort_order": 14
     },
@@ -2189,7 +2189,7 @@
       "description": "Twin-handle training sipper cup with a soft spout and lid, for babies moving on from the bottle.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/baby-sipper-cup-with-handles.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/baby-sipper-cup-with-handles.jpg",
       "featured": false,
       "sort_order": 6
     },
@@ -2202,7 +2202,7 @@
       "description": "Multipurpose stainless steel feeding bottle with a sealing cap, easy to sterilise and long lasting.",
       "unit": null,
       "pack_size": "125 ml · 250 ml · 300 ml",
-      "image_url": "/products/auto-flow-super-ultra-stainless-steel-feeding-bottle.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/auto-flow-super-ultra-stainless-steel-feeding-bottle.jpg",
       "featured": false,
       "sort_order": 7
     },
@@ -2215,7 +2215,7 @@
       "description": "Compact feeding bottle with a silicone nipple, boxed for retail display.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/auto-flow-royal-mini-feeding-bottle.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/auto-flow-royal-mini-feeding-bottle.jpg",
       "featured": false,
       "sort_order": 8
     },
@@ -2228,7 +2228,7 @@
       "description": "BPA-free manual breast pump that assembles and cleans in moments, supplied with a feeding bottle.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/auto-flow-manual-breast-pump.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/auto-flow-manual-breast-pump.jpg",
       "featured": false,
       "sort_order": 9
     },
@@ -2241,7 +2241,7 @@
       "description": "Rounded-edge clipper sized for infant nails, with a protective cover.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/baby-safety-nail-clipper.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/baby-safety-nail-clipper.jpg",
       "featured": false,
       "sort_order": 10
     },
@@ -2254,7 +2254,7 @@
       "description": "Replacement silicone nipples in both standard and wide neck fittings.",
       "unit": null,
       "pack_size": "Standard neck · Wide neck",
-      "image_url": "/products/silicone-bottle-nipple-standard-wide-neck.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/silicone-bottle-nipple-standard-wide-neck.jpg",
       "featured": false,
       "sort_order": 11
     },
@@ -2267,7 +2267,7 @@
       "description": "Rubberised bag for hot or cold compress, supplied with a soft printed cover.",
       "unit": null,
       "pack_size": "9 inch",
-      "image_url": "/products/hot-water-ice-bag-with-cover.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/hot-water-ice-bag-with-cover.jpg",
       "featured": false,
       "sort_order": 16
     },
@@ -2280,7 +2280,7 @@
       "description": "Orthodontic soother with pure refined glycerine, in a hygienic retail pack.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/auto-flow-deluxe-soother.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/auto-flow-deluxe-soother.jpg",
       "featured": false,
       "sort_order": 12
     },
@@ -2293,7 +2293,7 @@
       "description": "Soft silicone soother in a boxed retail pack.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/auto-flow-silicone-soother.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/auto-flow-silicone-soother.jpg",
       "featured": false,
       "sort_order": 13
     },
@@ -2306,7 +2306,7 @@
       "description": "Water-filled teether that can be chilled to soothe sore gums, in assorted shapes and colours.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/auto-flow-water-filled-toy-teether.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/auto-flow-water-filled-toy-teether.jpg",
       "featured": false,
       "sort_order": 14
     },
@@ -2319,7 +2319,7 @@
       "description": "Salon-style tint brushes for applying hair colour and henna evenly.",
       "unit": null,
       "pack_size": "Set of 2",
-      "image_url": "/products/hair-colour-applicator-brush-set.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/hair-colour-applicator-brush-set.jpg",
       "featured": false,
       "sort_order": 20
     },
@@ -2332,7 +2332,7 @@
       "description": "One-piece hygienic silicone soother shaped to the palate and non-deforming in use.",
       "unit": null,
       "pack_size": "2–6 months",
-      "image_url": "/products/chicco-physio-soft-soother.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/chicco-physio-soft-soother.jpg",
       "featured": false,
       "sort_order": 15
     },
@@ -2345,7 +2345,7 @@
       "description": "Mini feeding bottle with a spoon nipple, for feeds and cereal.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/auto-flow-smart-mini-feeding-bottle.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/auto-flow-smart-mini-feeding-bottle.jpg",
       "featured": false,
       "sort_order": 16
     },
@@ -2358,7 +2358,7 @@
       "description": "Long-handled nylon brushes for feeding bottles and nipples.",
       "unit": null,
       "pack_size": "Set of 2",
-      "image_url": "/products/feeding-bottle-cleaning-brush.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/feeding-bottle-cleaning-brush.jpg",
       "featured": false,
       "sort_order": 17
     },
@@ -2371,7 +2371,7 @@
       "description": "Silicone feeder that lets babies taste fruit safely, with an easy-grip handle.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/auto-flow-silicone-fruit-nibbler.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/auto-flow-silicone-fruit-nibbler.jpg",
       "featured": false,
       "sort_order": 18
     },
@@ -2384,7 +2384,7 @@
       "description": "Ultra-thin silicone nipple shields with a protective case, for comfortable nursing.",
       "unit": null,
       "pack_size": "2 pcs",
-      "image_url": "/products/auto-flow-silicone-nipple-shield.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/auto-flow-silicone-nipple-shield.jpg",
       "featured": false,
       "sort_order": 19
     },
@@ -2397,7 +2397,7 @@
       "description": "Baby nail clipper with a built-in magnifier for a clear view while trimming.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/auto-flow-super-deluxe-nail-clipper-with-magnifier.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/auto-flow-super-deluxe-nail-clipper-with-magnifier.jpg",
       "featured": false,
       "sort_order": 20
     },
@@ -2410,7 +2410,7 @@
       "description": "Steel feeding bottle with a silicone nipple and screw cap, rust free and easy to sterilise.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/ojas-stainless-steel-feeding-bottle.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/ojas-stainless-steel-feeding-bottle.jpg",
       "featured": false,
       "sort_order": 21
     },
@@ -2423,7 +2423,7 @@
       "description": "Two-in-one feeding cup with an LSR silicone spout and twin handles, in assorted colours.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/auto-flow-deluxe-2-in-1-friendship-cup.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/auto-flow-deluxe-2-in-1-friendship-cup.jpg",
       "featured": false,
       "sort_order": 22
     },
@@ -2436,7 +2436,7 @@
       "description": "BPA-free water-filled teethers in fruit shapes — strawberry, pineapple, tomato, watermelon, cherry, corn, brinjal, apple, orange, mango and more.",
       "unit": null,
       "pack_size": "4+ months",
-      "image_url": "/products/auto-flow-water-teether-fruit-shapes.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/auto-flow-water-teether-fruit-shapes.jpg",
       "featured": false,
       "sort_order": 23
     },
@@ -2449,7 +2449,7 @@
       "description": "Pure liquid silicone finger brush for cleaning a baby's gums and first teeth, with a hygiene case.",
       "unit": null,
       "pack_size": "With hygiene case · Standard",
-      "image_url": "/products/auto-flow-baby-gum-cleaner.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/auto-flow-baby-gum-cleaner.jpg",
       "featured": false,
       "sort_order": 24
     },
@@ -2462,7 +2462,7 @@
       "description": "Two-side velvet rubber hot water bag; the Super Deluxe comes with a washable cloth cover.",
       "unit": null,
       "pack_size": "Prestige · Junior 1 L · Economy 500 ml · Super Deluxe",
-      "image_url": "/products/auto-flow-hot-water-bag.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/auto-flow-hot-water-bag.jpg",
       "featured": false,
       "sort_order": 17
     },
@@ -2475,7 +2475,7 @@
       "description": "Feeding cup with a silicone straw and easy-grip handles, BPA free.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/auto-flow-smart-star-feeding-cup.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/auto-flow-smart-star-feeding-cup.jpg",
       "featured": false,
       "sort_order": 25
     },
@@ -2488,7 +2488,7 @@
       "description": "Straw feeding cup with twin handles and a flip lid, BPA free, in assorted colours.",
       "unit": null,
       "pack_size": null,
-      "image_url": "/products/auto-flow-super-star-feeding-cup.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/auto-flow-super-star-feeding-cup.jpg",
       "featured": false,
       "sort_order": 26
     },
@@ -2501,7 +2501,7 @@
       "description": "Extra soft junior toothbrushes with character handles, sold singly or in a four-brush box.",
       "unit": null,
       "pack_size": "2+ years",
-      "image_url": "/products/auto-flow-super-star-junior-tooth-brush.jpg",
+      "image_url": "https://uspjgcwrngugpkvwrwlh.supabase.co/storage/v1/object/public/product-images/auto-flow-super-star-junior-tooth-brush.jpg",
       "featured": false,
       "sort_order": 27
     }

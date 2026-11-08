@@ -20,7 +20,7 @@ product photographs in `images/`, `new-upload/` and `new-upload-2/`.
 | Framework | Next.js 15 (App Router) + TypeScript | Static catalogue pages, server-rendered SEO, API routes — one deployable |
 | Styling | Tailwind CSS v4 | No runtime cost, design tokens in `src/app/globals.css` |
 | Database | Supabase (Postgres) | Free tier, hosted, no server to maintain |
-| Images | Supabase Storage | Public CDN-backed bucket (seed images ship in `public/products/`) |
+| Images | Supabase Storage | Public bucket; `public/products/` keeps the source files |
 | Email | Resend | 3,000 free emails/month, clean HTML templates |
 | Chat alerts | Telegram Bot API | **Free**, one HTTPS call, no subscription |
 | Hosting | Vercel (or Netlify / Cloudflare Pages) | Free tier covers this traffic profile |
@@ -253,6 +253,30 @@ separate "pack details" field — it only ever repeated the pack sizes, so it wa
 Name, address, GST number, phone and email come from the printed catalogue and live in
 `src/lib/site.ts`; override any of them with the `NEXT_PUBLIC_BUSINESS_*` variables.
 The logo mark is inline SVG in `src/components/logo.tsx` — swap it for the real logo there.
+
+### Where the photographs live
+
+Product photographs are held in **Supabase Storage**, in the public `product-images`
+bucket, and each product's `image_url` is the bucket's URL. `next/image` still resizes
+and re-encodes them, so visitors get an optimised image from the site's own CDN.
+
+The copies in `public/products/` are no longer used by the site. They are kept as the
+source that `import-from-pdf.mjs` and `add-images.mjs` write to, and as a backup.
+
+To move any photographs that are still local paths up to Storage:
+
+```bash
+npm run images:to-storage -- --dry-run
+npm run images:to-storage
+```
+
+It uploads the file, repoints the product in both Supabase and `data/catalogue.json`,
+then checks the uploaded files actually load. Re-running it is harmless.
+
+> Re-running `import-from-pdf.mjs` or `add-images.mjs` writes local paths back into
+> `data/catalogue.json`. The live database keeps its Storage URLs — `npm run seed` only
+> adds products — so run `npm run images:to-storage` afterwards to bring the two back
+> into line.
 
 ### Re-importing from the printed PDF
 The catalogue was generated from `Maruthi Enterprises Catalogue.pdf`. To regenerate it after

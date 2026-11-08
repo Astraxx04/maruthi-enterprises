@@ -8,3 +8,8 @@ out
 next-env.d.ts
 catalogue-print/out
 .netlify
+
+# Product photographs are served from Supabase Storage. These are the source
+# files the import scripts write to — kept locally, not shipped with the repo.
+# Upload any new ones with: npm run images:to-storage
+public/products

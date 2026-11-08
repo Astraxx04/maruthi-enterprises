@@ -14,7 +14,8 @@
     "catalogue:images": "node scripts/add-images.mjs",
     "catalogue:import": "node scripts/import-from-pdf.mjs",
     "check:deploy": "node scripts/verify-catalogue.mjs && node --env-file=.env.local scripts/check-deploy.mjs",
-    "check:catalogue": "node scripts/verify-catalogue.mjs"
+    "check:catalogue": "node scripts/verify-catalogue.mjs",
+    "images:to-storage": "node --env-file=.env.local scripts/upload-images-to-storage.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",

@@ -9,9 +9,9 @@ Free on both tiers. Roughly 30 minutes end to end.
 | Newly uploaded images | Supabase Storage | Free — 1 GB | Yes |
 | Enquiry alerts | Resend and/or Telegram | Free | **Later** — see step 6 |
 
-The 185 product photographs already in `public/products/` ship with the repository
-and are served straight from Netlify's CDN — Supabase Storage is only used for
-images you upload from the admin later.
+Product photographs are served from Supabase Storage, so the site does not depend on
+the copies in `public/products/`. Those are kept as the source the import scripts write
+to. `npm run images:to-storage` uploads any that are still local.
 
 > **Notifications can wait.** Without them, enquiries are still saved to the database
 > and listed at `/admin/enquiries` with the full product list — you just have to go and
