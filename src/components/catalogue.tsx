@@ -7,9 +7,9 @@ import { ProductCard } from "./product-card";
 type SortKey = "name-asc" | "name-desc" | "category";
 
 const sortOptions: { value: SortKey; label: string }[] = [
+  { value: "category", label: "By category" },
   { value: "name-asc", label: "Name (A → Z)" },
   { value: "name-desc", label: "Name (Z → A)" },
-  { value: "category", label: "Category" },
 ];
 
 export function Catalogue({
@@ -25,7 +25,7 @@ export function Catalogue({
 }) {
   const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState(initialCategory);
-  const [sort, setSort] = useState<SortKey>("name-asc");
+  const [sort, setSort] = useState<SortKey>("category");
 
   // Keep the URL shareable without pulling in a Suspense boundary.
   useEffect(() => {
@@ -69,6 +69,29 @@ export function Catalogue({
     });
     return sorted;
   }, [products, query, category, sort]);
+
+  /**
+   * The default view: every category as its own section, in the admin's
+   * category order. Only when nothing narrows the list to one category.
+   */
+  const groups = useMemo(() => {
+    if (sort !== "category" || category !== "all") return null;
+    const byCategory = new Map<string, ProductWithCategory[]>();
+    for (const product of visible) {
+      const key = product.category_id;
+      const list = byCategory.get(key);
+      if (list) list.push(product);
+      else byCategory.set(key, [product]);
+    }
+    const ordered = categories
+      .filter((item) => byCategory.has(item.id))
+      .map((item) => ({ id: item.id, slug: item.slug as string | null, name: item.name, products: byCategory.get(item.id)! }));
+    // Products whose category was deleted still need a home.
+    const known = new Set(categories.map((item) => item.id));
+    const orphans = visible.filter((product) => !known.has(product.category_id));
+    if (orphans.length) ordered.push({ id: "other", slug: null, name: "Other products", products: orphans });
+    return ordered;
+  }, [visible, categories, sort, category]);
 
   const activeCategory = categories.find((item) => item.slug === category);
   const hasFilters = query.trim() !== "" || category !== "all";
@@ -187,8 +210,38 @@ export function Catalogue({
             <a href="/contact" className="btn btn-primary btn-sm">Request a product</a>
           </div>
         </div>
+      ) : groups ? (
+        <div className="space-y-10 sm:space-y-14">
+          {groups.map((group, groupIndex) => (
+            <section key={group.id} aria-labelledby={`cat-${group.id}`} className="scroll-mt-48">
+              <div className="mb-4 flex items-end justify-between gap-3 border-b border-line pb-3">
+                <h2 id={`cat-${group.id}`} className="text-lg font-bold text-ink sm:text-xl">
+                  {group.name}
+                  <span className="ml-2 text-sm font-medium text-muted">{group.products.length}</span>
+                </h2>
+                {group.slug && !query.trim() && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setCategory(group.slug!);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                    className="shrink-0 text-sm font-semibold text-brand-700 hover:underline"
+                  >
+                    See only these
+                  </button>
+                )}
+              </div>
+              <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
+                {group.products.map((product, index) => (
+                  <ProductCard key={product.id} product={product} priority={groupIndex === 0 && index < 4} />
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
       ) : (
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
           {visible.map((product, index) => (
             <ProductCard key={product.id} product={product} priority={index < 4} />
           ))}

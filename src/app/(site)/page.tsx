@@ -36,15 +36,15 @@ export default async function HomePage() {
             <span className="h-1.5 w-1.5 rounded-full bg-brand-400" aria-hidden="true" />
             Wholesale distributor · Bengaluru
           </p>
-          <h1 className="animate-rise mx-auto mt-6 max-w-3xl text-4xl font-bold leading-[1.05] text-ink sm:text-6xl">
-            Quality products.{" "}
-            <span className="bg-gradient-to-r from-brand-400 to-brand-800 bg-clip-text text-transparent">
+          <h1 className="animate-rise mx-auto mt-6 max-w-4xl font-bold leading-[1.02] text-ink">
+            <span className="block text-5xl tracking-tight sm:text-7xl lg:text-8xl">{site.name}</span>
+            <span className="mt-3 block bg-gradient-to-r from-brand-400 to-brand-800 bg-clip-text text-2xl text-transparent sm:text-4xl">
               Reliable supply.
             </span>
           </h1>
           <p className="animate-rise mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-            OTC healthcare, ayurvedic, baby care and personal care products. Pick what you need and we send a
-            quotation.
+            OTC healthcare, ayurvedic, baby care and personal care products. Pick what you need and we&apos;ll
+            deliver it to your doorstep.
           </p>
           <div className="animate-rise mt-9 flex flex-wrap justify-center gap-3">
             <Link href="/products" className="btn btn-primary px-6 py-3.5">

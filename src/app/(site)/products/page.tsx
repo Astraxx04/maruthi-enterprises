@@ -26,11 +26,6 @@ export default async function ProductsPage({
       <header className="py-10 sm:py-12">
         <p className="eyebrow">Catalogue</p>
         <h1 className="mt-2 text-3xl font-bold text-ink sm:text-4xl">All products</h1>
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft sm:text-base">
-          Search, filter and add the quantities you need — any quantity, no minimum order. Everything you select is
-          collected into one enquiry; submit it when you are ready and we will reply with a quotation. Prices are
-          shared on request.
-        </p>
       </header>
 
       <Catalogue
